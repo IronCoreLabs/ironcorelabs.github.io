@@ -9,6 +9,9 @@ layout: null
     <link rel="self" href="{{ site.url }}/feed.xml" />
     <updated>{{ site.time | date_to_xmlschema }}</updated>
     <id>{{ site.url }}</id>
+    <icon>{{ site.url }}/img/favicons/favicon-96x96.png</icon>
+    <rights>&copy; {{ site.time | date: '%Y' }} IronCore Labs</rights>
+    <logo>{{ site.url }}/img/logos/ironcore-logo-overunder-1280w-transparent.png</logo>
     <author>
       <name>{{ site.name }}</name>
     </author>
@@ -17,7 +20,7 @@ layout: null
         <title>{{ post.title | xml_escape }}</title>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
         <id>{{ site.url }}{{ post.id }}</id>
-        <link href="{{ site.url }}{{ post.url }}"/>
+        <link href="{{ site.url }}{{ post.url | replace: 'index.html', '' }}"/>
         <content type="html">{{ post.content | xml_escape }}</content>
       </entry>
     {% endfor %}

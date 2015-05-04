@@ -27,7 +27,7 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
   {% if page.excerpt %}
     <meta name="description" content="{{ page.excerpt| strip_html }}" >
   {% else %}
@@ -35,19 +35,19 @@
   {% endif %}
 
   <!-- The crufty stuff that probably doesn't matter -->
-  {% if page.is_post %}
-    <meta name="author" content="Oompa Loompas">
-  {% else %}
+  {% if page.author %}
     <meta name="author" content="{{ page.author }}">
+  {% else %}
+    <meta name="author" content="IronCore Staff">
   {% endif %}
 
   <!-- The open graph stuff for FB and Pinterest and others -->
     <meta property="og:site_name" content="{{ site.name }}" >
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
     <meta property="og:longitude" content="-105.20777980000003">
     <meta property="og:latitude" content="40.04065060000001">
   {% if page.image %}
-    <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+    <meta property="og:image" content="{{ page.image }}">
   {% else %}
     <meta property="og:image" content="{{ site.url }}/img/favicons/favicon-96x96.png">
   {% endif %}
@@ -81,7 +81,7 @@
   {% else %}
     <meta name="twitter:title" content="{{ site.name }} - {{ site.description }}" >
   {% endif %}
-    <meta name="twitter:url" content="{{ site.url }}{{ page.url}}">
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
     <meta name="twitter:site" content="{{ site.follow-us.twitter }}">
   {% if page.image %}
     <meta name="twitter:card" content="summary_large_image">

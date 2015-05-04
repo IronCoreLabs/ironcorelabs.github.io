@@ -1,2 +1,11 @@
 _site/
 .sass-cache/
+config.codekit
+.DS_Store
+.codekit-cache/
+node_modules
+bower_components
+*.map
+.tscache
+_drafts
+.baseDir.js

@@ -1,5 +1,24 @@
 /// <reference path="refs/jquery/jquery.d.ts" />
 /// <reference path="refs/stickyfill.d.ts" />
+// Redirect if someone access githubpages.io directly
+var hostname = window.location.hostname;
+if (/\.local$/.test(hostname)) {
+    hostname = "local";
+}
+switch (hostname) {
+    case 'ironcorelabs.com':
+    case 'localhost':
+    case 'local':
+        break;
+    default:
+        if (window.location.replace) {
+            window.location.replace('https://ironcorelabs.com/');
+        }
+        else {
+            window.location.href = 'https://ironcorelabs.com';
+        }
+        break;
+}
 $(function () {
     $('nav').Stickyfill();
     var email = $('#contactemail').text() + '@' + window.location.hostname;
