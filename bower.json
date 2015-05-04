@@ -1,0 +1,26 @@
+{
+  "name": "ironcorelabs.github.io",
+  "version": "0.1.0",
+  "homepage": "https://www.ironcorelabs.com/",
+  "authors": [
+    "IronCore Staff <staff@ironcorelabs.com>"
+  ],
+  "description": "IronCore Website",
+  "license": "none",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "_site",
+    ".sass-cache",
+    ".tscache",
+    "tests"
+  ],
+  "dependencies": {
+    "Stickyfill": "~1.1.2",
+    "immutable": "~3.7.2",
+    "underscore": "~1.8.3",
+    "modernizr": "~2.8.3"
+  }
+}

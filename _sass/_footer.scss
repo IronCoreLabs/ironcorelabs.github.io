@@ -1,0 +1,19 @@
+@charset 'UTF-8';
+
+.footer {
+  background-color: $gray-dark;
+  color: $gray-light;
+  margin-top: 15em;
+  min-height: 25em;
+
+  .row {
+    padding-top: 2em;
+  }
+
+  a {
+    color: $gray-lighter;
+    padding: 0 .2em;
+  }
+}
+
+@import 'mailchimp';

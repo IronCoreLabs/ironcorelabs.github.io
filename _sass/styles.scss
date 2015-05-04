@@ -1,0 +1,62 @@
+// Import Bootstrap Compass integration
+@import 'bootstrap-compass';
+
+// Import standard Bootstrap variables
+@import 'bootstrap-variables';
+
+// Import custom bootstrap variables
+@import 'variables';
+
+// Import Bootstrap for Sass
+@import 'bootstrap';
+
+// Import font awesome
+@import 'font-awesome-compass';
+@import 'font-awesome';
+
+
+//.posts > .post {
+//  padding-bottom: 2em;
+//  border-bottom: 1px solid $lightGray;
+//}
+//
+//.posts > .post:last-child {
+//  padding-bottom: 1em;
+//  border-bottom: none;
+//}
+
+
+img {
+  @include img-responsive;
+}
+.navbar {
+  @include opacity(.95);
+  // This is polyfilled with stickyfill.js, though that is 5.5k and could be much less.
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.banner {
+  background-color: #333;
+  color: #eee;
+}
+.banner-text {
+  text-align: center;
+}
+
+.stripe {
+  padding: 3em 0;
+  &:nth-child(even) {
+    background-color: $jumbotron-bg;
+  }
+}
+
+@import 'post';
+@import 'footer';
+
+
+
+
+@import 'highlights';

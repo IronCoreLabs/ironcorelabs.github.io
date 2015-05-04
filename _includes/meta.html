@@ -1,0 +1,125 @@
+  <!-- Title: either "Page Title - Site Name" or "Site Name - Site Description" but in any case clipped to 70 chars as elegantly as possible -->
+  <!-- See http://ecommerce.shopify.com/c/ecommerce-design/t/comparing-numbers-with-string-variables-in-liquid-37229 and http://moz.com/blog/meta-data-templates-123 for details on why we're trimming and the ugly hack we're using -->
+
+    {% if page.title %}
+      {% capture title_basic %}{{ title }}{{ page.title }}{% endcapture %}
+      {% capture title %}{{ title_basic }} - {% endcapture %}
+    {% endif %}
+    {% capture title %}{{ title }}{{ site.name }}{% endcapture %}
+    {% if page.url == '/index.html' or page.title  == false %} 
+      {% capture title %}{{ title }} – {{ site.description }} {% endcapture %}
+    {% endif %}
+
+    {% capture title_length %}{{ title | size | minus:70 }}{% endcapture %}
+    {% capture title_basic_length %}{{ title_basic | size | minus:70 }}{% endcapture %}
+    {% if title_length contains '-' %}
+      {% capture title_short %}{{ title }}{% endcapture %}
+    {% elsif title_basic_length contains '-' %}
+      {% capture title_short %}{{ title_basic }}{% endcapture %}
+    {% else %}
+      {% capture title_short %}{{ title_basic | truncate: 65, '...' }}{% endcapture %}
+    {% endif %}
+
+    <title>{{ title_short }}</title>
+
+  <!-- The important stuff -->
+    <meta charset="utf-8" >
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% if page.excerpt %}
+    <meta name="description" content="{{ page.excerpt| strip_html }}" >
+  {% else %}
+    <meta name="description" content="{{ site.description }}">
+  {% endif %}
+
+  <!-- The crufty stuff that probably doesn't matter -->
+  {% if page.is_post %}
+    <meta name="author" content="Oompa Loompas">
+  {% else %}
+    <meta name="author" content="{{ page.author }}">
+  {% endif %}
+
+  <!-- The open graph stuff for FB and Pinterest and others -->
+    <meta property="og:site_name" content="{{ site.name }}" >
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:longitude" content="-105.20777980000003">
+    <meta property="og:latitude" content="40.04065060000001">
+  {% if page.image %}
+    <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  {% else %}
+    <meta property="og:image" content="{{ site.url }}/img/favicons/favicon-96x96.png">
+  {% endif %}
+  {% if page.is_post %}
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="{{ page.date | date: "%Y-%m-%d" }}">
+    <meta property="article:author" content="{{ page.author }}">
+    {% for tag in page.tags %}
+      <meta property="article:tag" content="{{ tag }}">
+    {% endfor %}
+    {% if page.categories.size > 0 %}
+      <meta property="article:section" content="{{ page.categories | first }}">
+    {% endif %}
+  {% else %}
+    <meta property="og:type" content="website">
+  {% endif %}
+  {% if page.excerpt %}
+    <meta property="og:description" content="{{ page.excerpt | strip_html }}" >
+  {% else %}
+    <meta property="og:description" content="{{ site.description }}" >
+  {% endif %}
+  {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}" >
+  {% endif %}
+  <meta property="fb:admins" content="795750667171163" >
+    
+
+  <!-- The twitter stuff -->
+  {% if page.title %}
+    <meta name="twitter:title" content="{{ title_short }} - @{{ site.follow-us.twitter }}" >
+  {% else %}
+    <meta name="twitter:title" content="{{ site.name }} - {{ site.description }}" >
+  {% endif %}
+    <meta name="twitter:url" content="{{ site.url }}{{ page.url}}">
+    <meta name="twitter:site" content="{{ site.follow-us.twitter }}">
+  {% if page.image %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ page.image }}">
+  {% elsif page.thumbnail %}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="{{ page.thumbnail }}">
+  {% endif %}
+  {% if page.excerpt %}
+    <meta name="twitter:description" content="{{ page.excerpt | strip_html | truncate: 195, "..." }}">
+  {% else %}
+    <meta name="twitter:description" content="View the page on our site.">
+  {% endif %}
+
+  <!-- The google plus stuff -->
+    <meta itemprop="name" content="{{ title }}">
+  {% if page.excerpt %}
+    <meta itemprop="description" content="{{ page.excerpt | strip_html | truncate: 250, "..." }}">
+  {% endif %}
+  {% if page.image %}
+    <meta itemprop="image" content="{{ page.image }}">
+  {% endif %}
+  
+  <!-- The favicon stuff -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">

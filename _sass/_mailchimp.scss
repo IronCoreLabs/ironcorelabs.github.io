@@ -1,0 +1,56 @@
+// The SCSS linter will report a bunch of stuff in this file that we 
+// can't help.  Disabling inline.
+
+
+// Yes, it is overkill and a performance hit to nest id selectors,
+// but we need to be more specific than the crap mailchimp is adding
+// automatically to the page, so there you have it.
+
+// scss-lint:disable IdSelector, NestingDepth, QualifyingElement, SelectorFormat
+#mc_embed_signup {
+  #mc_embed_signup_scroll {
+    // On successful submission, this is made visible
+    #mce-success-response { 
+      @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
+      border: 1px solid $alert-success-border;
+      border-radius: $alert-border-radius;
+      margin-bottom: $line-height-computed;
+      padding: $alert-padding;
+    }
+    // On bad inputs like me@example and me@example.com
+    #mce-error-response { // message
+      @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+      border: 1px solid $alert-danger-border;
+      border-radius: $alert-border-radius;
+      margin-bottom: $line-height-computed;
+      padding: $alert-padding;
+    }
+    input.valid { // color the email input box, too
+      border: 1px solid $alert-danger-border;
+      
+      &:focus {
+        $shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px lighten($alert-danger-border, 20%);
+        @include box-shadow($shadow);
+        border-color: darken($alert-danger-border, 10%);
+      }
+    }
+    // On pre-submit validation failures like when there is no "@"
+    div.mce_inline_error { // injected right after failing form element
+      @include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text);
+      border: 1px solid $alert-warning-border;
+      border-radius: $alert-border-radius;
+      margin-bottom: $line-height-computed;
+      padding: $alert-padding;
+    }
+    input.mce_inline_error { // class added to input on pre-submit validation fail
+      border: 1px solid $alert-warning-border;
+      
+      &:focus {
+        $shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px lighten($alert-warning-border, 20%);
+        @include box-shadow($shadow);
+        border-color: darken($alert-warning-border, 10%);
+      }
+    }
+    
+  }
+}

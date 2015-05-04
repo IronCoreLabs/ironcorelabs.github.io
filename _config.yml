@@ -1,0 +1,148 @@
+#
+# This file contains configuration flags to customize your site
+#
+
+# Name of your site (displayed in the header)
+name: IronCore Labs
+
+# Short bio or description (displayed in the header)
+description: Simply secure data
+
+timezone: America/Denver
+
+mode: production
+
+paginate: 15
+paginate_path: "/news/:num"
+
+# Following two configs forced by github -- might as well test with them
+#safe: true
+#lsi: false
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "post"
+    values:
+      is_post: true
+      author: "Staff Writer"
+      layout: "post"
+  -
+    scope:
+      path: ""
+    values:
+      is_post: false
+      layout: "default"
+
+#
+# Flags below are optional
+#
+
+nav:
+  -
+    url: "/"
+    text: "Overview"
+  -
+    url: "/news/"
+    text: "News"
+    posts: true
+  -
+    url: "#contact"
+    text: "Contact"
+
+# Includes an icon in the footer for each username you enter
+follow-us:
+  dribbble:
+  email:
+  facebook: ironcorelabs
+  flickr:
+  github: ironcorelabs
+  instagram:
+  linkedin: ironcore-labs
+  pinterest:
+  rss: rss # just type anything here for a working RSS icon, make sure you set the "url" above!
+  twitter: ironcorelabs
+  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  youtube: # channel/<your_long_string> or user/<user-name>
+
+# Enter your Disqus shortname (not your username) to enable commenting on posts
+# You can find your shortname on the Settings page of your Disqus account
+disqus: ironcorelabs
+
+# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
+google_analytics: UA-60957313-1
+
+# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
+# Used for Sitemap.xml and your RSS feed
+# TODO: Setup CNAME
+url: https://ironcorelabs.com
+baseurl: ""
+
+# Square space has this: http://www.ironcorelabs.com/news/2015/3/9/it-begins
+markdown: kramdown
+highlighter: pygments
+permalink: /news/:year/:month/:day/:title/
+relative_permalinks: true
+
+# The release of Jekyll Now that you're using
+version: v1.1.0
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  sass_dir: _sass
+  #style: :compressed # You might prefer to debug using :expanded
+  style: :compressed
+  sourcemap: true
+  line_comments: false
+
+redcarpet:
+  extensions: ["tables", "autolink", "smart", "no_intra_emphasis"]
+
+kramdown:
+  input:          GFM
+  auto_ids:       true
+  auto_id_stripping: true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: true
+
+  coderay:
+    coderay_wrap:              div
+    coderay_line_numbers:      inline
+    coderay_line_number_start: 1
+    coderay_tab_width:         4
+    coderay_bold_every:        10
+    coderay_css:               style
+    
+# Use the following plug-ins
+gems:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jemoji
+  - jekyll-mentions
+  - jekyll-redirect-from
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - config.codekit
+  - CNAME
+  - ts
+  - config.rb
+  - bower_components
+  - package.json
+  - node_modules
+  - Gruntfile.js
+  - .editorconfig
+  - tsd.json
+  - bower.json
+  - manifest.json
+  - _config.yml
+  - _config-dev.yml
+  - TODO.md
+
