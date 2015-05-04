@@ -66,7 +66,10 @@ module.exports = function(grunt) {
     clean: [
       "_site",
       "js/**/*.map",
+      "js/min/all.min.js",
+      "js/all.ts.js",
       "css/**/*.map",
+      "css/styles.css",
       ".sass-cache",
       ".DS_Store",
       ".codekit-cache",
@@ -228,6 +231,7 @@ module.exports = function(grunt) {
         },
         files: {
           'js/min/all.min.js': [
+            'js/plugins.js',
             'js/all.ts.js',
             'bower_components/Stickyfill/src/stickyfill.js',
 //            'bower_components/immutable/dist/immutable.js',

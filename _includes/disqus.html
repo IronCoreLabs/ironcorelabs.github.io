@@ -2,6 +2,12 @@
 <div class="comments">
 	<div id="disqus_thread"></div>
   <!-- initialization script moved to main.ts -->
+  <script type="text/javascript">
+    var disqus_shortname = '{{ site.disqus }}';
+    var disqus_identifier = '{{ page.id }}';
+    var disqus_title = '{{ page.title }}';
+    var disqus_url = '{{ site.url }}{{ page.url }}';
+  </script>
 	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 {% elsif site.disqus %}

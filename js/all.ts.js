@@ -3,10 +3,6 @@
 // Redirect if someone access github.io directly
 // Don't even wait for DOM
 var hostname = window.location.hostname;
-var disqus_shortname = '{{ site.disqus }}';
-var disqus_identifier = '{{ page.id }}';
-var disqus_title = '{{ page.title }}';
-var disqus_url = '{{ site.url }}{{ page.url }}';
 if (/\.local$/.test(hostname)) {
     hostname = "local";
 }
@@ -44,7 +40,7 @@ $(function () {
         return String.fromCharCode(parseInt(v, 10) ^ idx);
     }).join('');
     $('#contacttel').attr('itemprop', 'telephone').attr('href', "tel:+1" + phone.replace(/-/g, '')).text(phone);
-    if ($('#disqus_thread').length) {
+    if ($('#disqus_thread').length && disqus_shortname) {
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
