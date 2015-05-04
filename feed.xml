@@ -10,7 +10,7 @@ layout: null
     <updated>{{ site.time | date_to_xmlschema }}</updated>
     <id>{{ site.url }}</id>
     <icon>{{ site.url }}/img/favicons/favicon-96x96.png</icon>
-    <rights>&copy; {{ site.time | date: '%Y' }} IronCore Labs</rights>
+    <rights>{{ site.time | date: '%Y' }} IronCore Labs</rights>
     <logo>{{ site.url }}/img/logos/ironcore-logo-overunder-1280w-transparent.png</logo>
     <author>
       <name>{{ site.name }}</name>
