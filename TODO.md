@@ -5,13 +5,14 @@ This is a list of outstanding items for the website.
 ## Top Priority
 
 - Linkcheck
-- Webmaster tools
+- [x] Webmaster tools
 - [x] Fix FB
 - SVG fallback?  - just gen images and do onerror trick
 - UTM
 - Use "summary" front matter when available for meta description and link
   - Add to news page and home page and try to make each unique.
 - git commit script
+- test the share links
 
 ## Testing / Linting
 

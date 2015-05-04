@@ -95,7 +95,7 @@
   {% if page.excerpt %}
     <meta name="twitter:description" content="{{ page.excerpt | strip_html | truncate: 195, "..." }}">
   {% else %}
-    <meta name="twitter:description" content="View the page on our site.">
+    <meta name="twitter:description" content="{{ site.long_description }}">
   {% endif %}
 
   <!-- The google plus stuff -->
