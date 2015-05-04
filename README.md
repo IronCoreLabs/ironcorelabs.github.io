@@ -26,7 +26,7 @@ Every post will need to start with "front matter" and then a proper title.  Here
   * tag just about every topic hit in the post and be thorough
 * category
   * Choose one category
-  * While this seems very similar to tags in some ways, it may in the future be used to separate different blogs.  There is a much smaller number of categories than tags.  
+  * While this seems very similar to tags in some ways, it may in the future be used to separate different blogs.  There is a much smaller number of categories than tags.
   * For right now, assume we use these categories:
     * **Security** - for blogging on our product or the state of the industry
     * **Startup** - for blogging about our status as a company or thoughts on building a startup, venture capital, etc.
@@ -34,9 +34,9 @@ Every post will need to start with "front matter" and then a proper title.  Here
     * **Good-Reads** - for references to other articles we find on the net
 * thumbnail
   * Always use full URL
-  * Used to make a thumbnail representing this page on twitter.  
-  * They will either crop it to 120x90px or 120x120px.  
-  * Must be under 1mb.  
+  * Used to make a thumbnail representing this page on twitter.
+  * They will either crop it to 120x90px or 120x120px.
+  * Must be under 1mb.
   * Probably best to generate these thumbnails ourselves.
 * image
   * Always use full URL
@@ -51,7 +51,7 @@ Every post will need to start with "front matter" and then a proper title.  Here
 When embedding video into a post, you will need to drop in some HTML.  If you're using youtube, go to the video on youtube, click on `share`, then click `embed` then copy and paste.  But wait, you need to modify that.  You'll get something like:
 
     <iframe width="420" height="315" src="https://www.youtube.com/embed/war0gHL26ns" frameborder="0" allowfullscreen></iframe>
-    
+
 First thing to do is delete the width and height.  We want our videos to be responsive.  Next, you don't need that frameborder stuff.  Next, we need to make it more XML like, so make `allowfullscreen="1"`.  Then we need to add classes and wrap in a div.  So it should end up looking like this if it is a **wide-aspect video:**
 
     <div class="embed-responsive embed-responsive-16by9">
@@ -75,7 +75,7 @@ To test locally, do the following:
 
     rvm use 2.1
     cd ~/path/to/project
-    gem install bundler 
+    gem install bundler
     bundle install
     pip install Pygments
     npm install -g grunt-cli
@@ -111,4 +111,12 @@ The dependencies seem a little out of control for such a small, static site, so 
 
 ## Other tools
 
-I also used `svgo` to optimize the svg files.  I'm just checking files in optimized instead of making a build step for that.
+I use `svgo` to optimize the svg files.  I'm just checking files in optimized instead of making a build step for that.
+
+For png files I'm using the `optipng` command.
+
+I'm also spell checking with `ispell` which can be installed with home brew (`brew install ispell`) like this:
+
+    ispell -p .ispell_english *.html news/*.html _posts/*.md _drafts/*.md
+
+Sadly, I can't make that work from grunt since grunt doesn't pass along a tty and ispell requires one.

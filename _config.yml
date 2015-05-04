@@ -146,4 +146,5 @@ exclude:
   - _config.yml
   - _config-dev.yml
   - TODO.md
+  - .ispell_english
 
