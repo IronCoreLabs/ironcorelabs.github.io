@@ -46,10 +46,24 @@ img {
   text-align: center;
 }
 
+.stripe-thumbnail {
+  @include make-md-column(4, $grid-gutter-width);
+}
+.stripe-text {
+  @include make-md-column(8, $grid-gutter-width);
+}
 .stripe {
   padding: 3em 0;
   &:nth-child(even) {
     background-color: $jumbotron-bg;
+  }
+  &:nth-child(odd) {
+    .stripe-thumbnail {
+      @include make-md-column-push(8);
+    }
+    .stripe-text {
+      @include make-md-column-pull(4);
+    }
   }
 }
 

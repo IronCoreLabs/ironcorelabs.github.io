@@ -13,7 +13,7 @@ Computer security today follows classic real-world military approaches: make a p
 
 In computer security, the perimeter is made up of firewalls.  The controlled entrance points are VPNs, WiFi and physical access.  The monitoring happens with intrusion detection systems and behavioral analysis -- the equivalent to motion detectors and video cameras and with the same shortcomings.  As another layer of security (we like layers), servers themselves are typically similarly protected with their own firewall and access controls.  
 
-This model has served us reasonably well for quite some time.  The major issues in the past have been a lack of thorough cameras or unmonitored cameras (aka intrusion detection), unintentionally opened entrances (backdoors), and untrusted individuals impersonating trusted ones to gain access (password theft or social engineering).
+This model has served us reasonably well for quite some time.  The major issues in the past have been a lack of thorough cameras or un-monitored cameras (aka intrusion detection), unintentionally opened entrances (backdoors), and untrusted individuals impersonating trusted ones to gain access (password theft or social engineering).
 
 In a perfect world, this is a reasonable approach with known and well understood risks and challenges.  But things are no longer so simple, nor controllable. Perimeters today are no more effective than a picket fence in the suburbs. So many things are let in and out of the perimeter, that it might as well not exist.  Below we break down these trends and make the case.
 
@@ -33,7 +33,7 @@ In a perfect world, this is a reasonable approach with known and well understood
 
 In an electronic world of borders, the borders are there to protect data.  But what if the data lives outside of the borders? The accelerating move to the cloud by enterprises means that company data is also moving to the cloud and outside of the established perimeter.  
 
-To generate trust, the cloud providers show that they, too, employ best practices for perimeter security and intrustion detection, but still the interfaces are public and the data now resides inside two perimeters and the surface area of the perimeter is greatly increased.  
+To generate trust, the cloud providers show that they, too, employ best practices for perimeter security and intrusion detection, but still the interfaces are public and the data now resides inside two perimeters and the surface area of the perimeter is greatly increased.  
 
 ### Mobile (aka Bring Your Own Device)
 
@@ -62,7 +62,7 @@ In short, defending the perimeter in the face of unmanaged devices is an epic ch
 
 ### App Explosion (aka Bring Your Own App)
 
-Even on company controlled devices, it is standard procedure for employees to install their own apps.  In a company provided cell phone, an employee will very likely want to install their preffered set of applications.  The same is true of laptops and any other device.
+Even on company controlled devices, it is standard procedure for employees to install their own apps.  In a company provided cell phone, an employee will very likely want to install their preferred set of applications.  The same is true of laptops and any other device.
 
 Employees today use the apps that they want to use or that make them productive even if it is against corporate policy.  For example, in my time at Oracle, it was against policy to use cloud services, but I commonly saw people using Evernote and Google Docs as effective ways to be productive and collaborate.  I don't have statistics on this trend, but I am quite certain that those services host treasure troves of company data for companies that don't sanction it.
 

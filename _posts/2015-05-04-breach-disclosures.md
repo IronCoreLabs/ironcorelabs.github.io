@@ -11,9 +11,9 @@ A lot of the press that we see and a lot of the data we have about companies tha
 
 ![Breach Disclosure Law Map Showing All States but New Mexico, South Dakota and Alabama](/img/posts/states-with-breach-disclosure-laws-655.png)
 
-As of right now, forty-seven states, D.C., Guam, Puerto Rico and the Virgin Islandes have breach disclosure laws as does the European Union and other countries.  Only New Mexico, South Dakato and Alabama in the U.S. don't require notice be given to consumers whose data has been inappropriately accessed.
+As of right now, forty-seven states, D.C., Guam, Puerto Rico and the Virgin Islands have breach disclosure laws as does the European Union and other countries.  Only New Mexico, South Dakota and Alabama in the U.S. don't require notice be given to consumers whose data has been inappropriately accessed.
 
-These laws vary a lot in terms of what they consider to be personal information, reporting requirements, mechanisms and timelines for disclosure, etc.  For example, California defines an email address as personal information, but many states limit the definition to just things like social security numbers, credit cards and health information.
+These laws vary a lot in terms of what they consider to be personal information, reporting requirements, mechanisms and time lines for disclosure, etc.  For example, California defines an email address as personal information, but many states limit the definition to just things like social security numbers, credit cards and health information.
 
 >> ## $201
 >> per customer is the average cost in the U.S. for notifying those affected by stolen data. Germany is the second highest in the world with $195 per customer on average.
@@ -22,10 +22,10 @@ These laws vary a lot in terms of what they consider to be personal information,
 
 The first state breach disclosure law went into effect in 2003.  In 2005 other states began to follow. Now virtually all states have these laws and a federal law to unify them (and consequently reduce the costs of disclosure) is in the works.
 
-If a company is breached, they will need to hire lawyers to help figure out what they have to do.  In some cases a company will have to do different things for different groups of customers depending on where the customer lives.  Often the disclosure timelines are at odds with the time required to fully investigate a breach to understand what may have been accessed.  This is not always easy to discern.  If a company is unsure, but knows that an attacker *might* have had access and can't prove that they didn't access data -- they still have to disclose to customers.
+If a company is breached, they will need to hire lawyers to help figure out what they have to do.  In some cases a company will have to do different things for different groups of customers depending on where the customer lives.  Often the disclosure time lines are at odds with the time required to fully investigate a breach to understand what may have been accessed.  This is not always easy to discern.  If a company is unsure, but knows that an attacker *might* have had access and can't prove that they didn't access data -- they still have to disclose to customers.
 
 
-In addition to state laws, in the U.S., the Health Insurance Portability and Accountablity Act (HIPAA) requires breaches of medical data to be disclosed to affected patients.
+In addition to state laws, in the U.S., the Health Insurance Portability and Accountability Act (HIPAA) requires breaches of medical data to be disclosed to affected patients.
 
 > HIPAA covered entities and their business associates [must] provide notification following a breach of unsecured protected health information. Similar breach notification provisions implemented and enforced by the Federal Trade Commission (FTC), apply to vendors of personal health records and their third party service providers 
 > -- [US Dept. of Health and Human Services](http://www.hhs.gov/ocr/privacy/hipaa/administrative/breachnotificationrule/)
