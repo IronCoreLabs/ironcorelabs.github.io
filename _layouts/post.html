@@ -16,7 +16,7 @@ layout: default
         / {{ page.author }}
       </div> 
     </header> 
-    <main class="entry">
+    <div class="entry">
       {{ content }}
       <footer>
         <h2>Comments</h2>
@@ -33,7 +33,7 @@ layout: default
           Next: <a href="{{ page.next.url }}">{{ page.next.title }}</a> <i class="fa fa-chevron-right"></i>
         {% endif %}
       </footer>
-    </main>
+    </div>
     <aside class="postsidebar hidden-print">
       <hr class="visible-xs visible-sm">
       {% if page.tags.size > 0 %}
@@ -58,15 +58,15 @@ layout: default
       
       <h5>Share</h5>
       <div class="share">
-        <a class="fa fa-twitter-square fa-2x" rel="nofollow" target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ site.url }}{{ page.url }}&via=ironcorelabs&related=ironcorelabs" title="Share on Twitter"><span class="sr-only">Twitter</span></a>
+        <a class="fa fa-twitter-square fa-2x" rel="nofollow" target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&amp;url={{ site.url }}{{ page.url }}&amp;via=ironcorelabs&amp;related=ironcorelabs" title="Share on Twitter"><span class="sr-only">Twitter</span></a>
         &nbsp;
-        <a class="fa fa-facebook-square fa-2x" rel="nofollow" target="_blank" href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}&p[title]={{ page.title | uri_escape }}" title="Share on Facebook"><span class="sr-only">Facebook</span></a>
+        <a class="fa fa-facebook-square fa-2x" rel="nofollow" target="_blank" href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}&amp;p[title]={{ page.title | uri_escape }}" title="Share on Facebook"><span class="sr-only">Facebook</span></a>
         &nbsp;
         <a class="fa fa-google-plus-square fa-2x" rel="nofollow" target="_blank" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+"><span class="sr-only">Google+</span></a>
         &nbsp;
-        <a class="fa fa-linkedin-square fa-2x" rel="nofollow" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title | uri_escape }}&summary={{ page.excerpt | strip_html | uri_escape }}&source=ironcorelabs.com" title="Share on LinkedIn"><span class="sr-only">LinkedIn</span></a>
+        <a class="fa fa-linkedin-square fa-2x" rel="nofollow" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ site.url }}{{ page.url }}&amp;title={{ page.title | uri_escape }}&amp;summary={{ page.excerpt | strip_html | uri_escape }}&amp;source=ironcorelabs.com" title="Share on LinkedIn"><span class="sr-only">LinkedIn</span></a>
         &nbsp;
-        <a class="fa fa-reddit-square fa-2x" rel="nofollow" target="_blank" href="http://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title | uri_escape }}" title="Share on Reddit"><span class="sr-only">Reddit</span></a>
+        <a class="fa fa-reddit-square fa-2x" rel="nofollow" target="_blank" href="http://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&amp;title={{ page.title | uri_escape }}" title="Share on Reddit"><span class="sr-only">Reddit</span></a>
       </div>
       
     </aside>
