@@ -3,7 +3,7 @@ tags: security trends stats internet-of-things firewall byod byoa mobile
 title: The Inevitable Demise of Perimeter Security
 author: Patrick Walsh
 category: Security
-image: https://ironcorelabs.com/img/rockclimb.jpg/img/posts/demise-of-perimeter-security-900.jpg
+image: https://ironcorelabs.com/img/posts/demise-of-perimeter-security-900.jpg
 ---
 
 
