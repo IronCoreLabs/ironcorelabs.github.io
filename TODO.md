@@ -1,20 +1,17 @@
 # TODO
 
-This is just a list of outstanding items for the website.
+This is a list of outstanding items for the website.
 
 ## Top Priority
 
-- [x] Sitemap
-- [x] Spellcheck
 - Linkcheck
 - Webmaster tools
-- Fix FB
+- [x] Fix FB
 - SVG fallback?  - just gen images and do onerror trick
-- [x] Logo image fallback meta
 - UTM
-- [x] Pull blocks over, images on top for mobile
 - Use "summary" front matter when available for meta description and link
   - Add to news page and home page and try to make each unique.
+- git commit script
 
 ## Testing / Linting
 
@@ -23,18 +20,7 @@ This is just a list of outstanding items for the website.
 - [ ] On dist, lint html
 - [ ] Check all generated files for broken links, inaccessible content
     - Use https://www.npmjs.com/package/grunt-check-pages in `grunt dist`
-- Cross browser and OS checks
-  - [x] Verify display of quotes on narrow and wide 
-  - [x] Verify svg logo display 
 - make sure i'm using the plugins.js file
-
-### Validation post-deploy
-
-- [x] https://dev.twitter.com/docs/cards/validation/validator
-- [ ] https://developers.facebook.com/tools/debug
-- [x] http://www.google.com/webmasters/tools/richsnippets
-- [-] http://developers.pinterest.com/rich_pins/validator/
-- [ ] Test RSS feed to make sure it works properly
 
 
 ## Optimization
@@ -56,20 +42,14 @@ This is just a list of outstanding items for the website.
 
     <meta name="twitter:description" property="og:description" itemprop="description" content="It ..." />
 
-## Templates
-
 ## Content
 
-### Images and Animations
-
-
-### Interactive Content
-
 - [ ] Breach data dashboard
+- [ ] Encryption blog article 
 
 ## Integrations
 
-- [ ] Facebook: see 
+- [x] Facebook: see 
   - https://www.facebook.com/insights/
   - https://developers.facebook.com/docs/platforminsights/domains
 
