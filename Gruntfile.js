@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(grunt) {
-  grunt.loadNpmTasks('grunt-shell');
+  //grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-compass');
@@ -15,6 +15,7 @@ module.exports = function(grunt) {
 
   // Show elapsed time after tasks run
   require('time-grunt')(grunt);
+  //require('load-grunt-tasks')(grunt);
 
 
   grunt.initConfig({

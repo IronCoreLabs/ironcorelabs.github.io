@@ -2,6 +2,20 @@
 
 This is just a list of outstanding items for the website.
 
+## Top Priority
+
+- [x] Sitemap
+- [x] Spellcheck
+- Linkcheck
+- Webmaster tools
+- Fix FB
+- SVG fallback?  - just gen images and do onerror trick
+- [x] Logo image fallback meta
+- UTM
+- [x] Pull blocks over, images on top for mobile
+- Use "summary" front matter when available for meta description and link
+  - Add to news page and home page and try to make each unique.
+
 ## Testing / Linting
 
 - [ ] Add pre-commit script to run `grunt dist` and abort if any issues are found
@@ -10,16 +24,16 @@ This is just a list of outstanding items for the website.
 - [ ] Check all generated files for broken links, inaccessible content
     - Use https://www.npmjs.com/package/grunt-check-pages in `grunt dist`
 - Cross browser and OS checks
-  - [ ] Verify display of quotes on narrow and wide 
-  - [ ] Verify svg logo display 
+  - [x] Verify display of quotes on narrow and wide 
+  - [x] Verify svg logo display 
 - make sure i'm using the plugins.js file
 
 ### Validation post-deploy
 
-- [ ] https://dev.twitter.com/docs/cards/validation/validator
+- [x] https://dev.twitter.com/docs/cards/validation/validator
 - [ ] https://developers.facebook.com/tools/debug
-- [ ] http://www.google.com/webmasters/tools/richsnippets
-- [ ] http://developers.pinterest.com/rich_pins/validator/
+- [x] http://www.google.com/webmasters/tools/richsnippets
+- [-] http://developers.pinterest.com/rich_pins/validator/
 - [ ] Test RSS feed to make sure it works properly
 
 
@@ -38,6 +52,9 @@ This is just a list of outstanding items for the website.
     - Use a custom font that includes the bits of fontawesome and other collections that we actually use.
     - See https://icomoon.io/app/#/select/font
 - Move disqus javascript to site-wide javascript conditional upon #disqus_thread being on the page (so it loads at the end of the page)
+- Combine some of the meta like on stackexchange.  Example:
+
+    <meta name="twitter:description" property="og:description" itemprop="description" content="It ..." />
 
 ## Templates
 
