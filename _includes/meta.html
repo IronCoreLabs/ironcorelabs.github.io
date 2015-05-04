@@ -41,7 +41,7 @@
     <meta name="author" content="IronCore Labs">
   {% endif %}
 
-  <meta property="fb:admins" content="795750667171163" />
+  <meta property="fb:admins" content="680489828" />
 
   <!-- The open graph stuff for FB and Pinterest and others -->
     <meta property="og:site_name" content="{{ site.name }}" >
@@ -51,7 +51,7 @@
   {% if page.image %}
     <meta property="og:image" content="{{ page.image }}">
   {% else %}
-    <meta property="og:image" content="{{ site.url }}/img/favicons/favicon-96x96.png">
+    <meta property="og:image" content="{{ site.url }}/img/logos/ironcore-logo-overunder-400w.png">
   {% endif %}
   {% if page.is_post %}
     <meta property="og:type" content="article">
@@ -90,6 +90,8 @@
   {% elsif page.thumbnail %}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="{{ page.thumbnail }}">
+  {% else %}
+    <meta name="twitter:image" content="{{ site.url }}/img/logos/ironcore-logo-overunder-400w.png">
   {% endif %}
   {% if page.excerpt %}
     <meta name="twitter:description" content="{{ page.excerpt | strip_html | truncate: 195, "..." }}">
@@ -107,6 +109,7 @@
   {% endif %}
   
   <!-- The favicon stuff -->
+    <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png">
