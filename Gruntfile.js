@@ -39,7 +39,7 @@ module.exports = function(grunt) {
           onlySameDomain: true,
           checkCaching: false,
           checkCompression: false,
-          maxResponseTime: 200,
+          maxResponseTime: 300,
           summary: true,
           linksToIgnore: [
           ]
