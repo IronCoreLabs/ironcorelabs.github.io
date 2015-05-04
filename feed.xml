@@ -1,27 +1,28 @@
 ---
 layout: null
 ---
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link href="{{ site.url }}"/>
-    <link rel="self" href="{{ site.url }}/feed.xml" />
-    <updated>{{ site.time | date_to_xmlschema }}</updated>
-    <id>{{ site.url }}</id>
-    <icon>{{ site.url }}/img/favicons/favicon-96x96.png</icon>
-    <rights>{{ site.time | date: '%Y' }} IronCore Labs</rights>
-    <logo>{{ site.url }}/img/logos/ironcore-logo-overunder-1280w-transparent.png</logo>
-    <author>
-      <name>{{ site.name }}</name>
-    </author>
+  <title type="text">{{ site.name | xml_escape }}</title>
+  <link rel="self" href="{{ site.url }}/feed.xml" type="application/atom+xml" />
+  <link rel="alternate" href="{{ site.url }}/news/" type="text/html" />
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <description>{{ site.description | xml_escape }}</description>
+  <id>{{ site.url }}</id>
+  <icon>{{ site.url }}/img/favicons/favicon-96x96.png</icon>
+  <rights>{{ site.time | date: '%Y' }} IronCore Labs</rights>
+  <logo>{{ site.url }}/img/logos/ironcore-logo-overunder-900w.png</logo>
     {% for post in site.posts %}
       <entry>
-        <title>{{ post.title | xml_escape }}</title>
-        <updated>{{ post.date | date_to_xmlschema }}</updated>
         <id>{{ site.url }}{{ post.id }}</id>
-        <link href="{{ site.url }}{{ post.url | replace: 'index.html', '' }}"/>
-        <content type="html">{{ post.content | xml_escape }}</content>
+        <title type="text">{{ post.title | xml_escape }}</title>
+        <published>{{ post.date | date_to_xmlschema }}</published>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <author>
+          <name>{{ post.author | xml_escape }}</name>
+        </author>
+        <link rel="alternate" href="{{ site.url }}{{ post.url | replace: 'index.html', '' }}" />
+        <summary type="html">{{ post.content | xml_escape }}</summary>
       </entry>
     {% endfor %}
 </feed>
