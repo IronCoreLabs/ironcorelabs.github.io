@@ -7,7 +7,7 @@ name: IronCore Labs
 
 # Short bio or description (displayed in the header)
 description: Simply secure data
-long_description: IronCore is dedicated to building accessible solutions to insecure data in a highly connected and border-less world.  We provide turnkey data security solutions for application developers.
+long_description: IronCore is dedicated to building accessible solutions to handling sensitive data in a highly connected and border-less world.  We provide turnkey data security solutions for application developers.
 
 timezone: America/Denver
 
@@ -142,7 +142,6 @@ exclude:
   - .editorconfig
   - tsd.json
   - bower.json
-  - manifest.json
   - _config.yml
   - _config-dev.yml
   - TODO.md

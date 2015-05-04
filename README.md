@@ -120,3 +120,5 @@ I'm also spell checking with `ispell` which can be installed with home brew (`br
     ispell -p .ispell_english *.html news/*.html _posts/*.md _drafts/*.md
 
 Sadly, I can't make that work from grunt since grunt doesn't pass along a tty and ispell requires one.
+
+You can use `grunt checkPages:production` to scan the live site and make sure the links there are in good shape.

@@ -124,6 +124,6 @@ We believe a better world is possible.  In this better world, each actor in the 
 
 This vision relies on simple to use, mostly invisible cryptography where servers have zero trust, individuals and specific devices can have their access revoked, data can be shared between organizations in a controlled manner, and breaching any given computer or network perimeter does not lead to a data-palooza for an attacker or rogue insider.
 
-Here at IronCore, we're building a future that does just that.  Stay tuned and join our infrequent mailing list (below) if you'd like to hear more.
+Here at IronCore, we're building a future that does just that.  Stay tuned and join our infrequent [mailing list](#contact) (below) if you'd like to hear more.
 
 

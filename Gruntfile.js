@@ -1,6 +1,11 @@
 'use strict';
 
 module.exports = function(grunt) {
+  var glob = require('glob');
+  var production_url = "https://ironcorelabs.com";
+  var localhost = require("os").hostname();
+  var dev_url = "http://"+localhost+":4000";
+
   //grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
@@ -11,6 +16,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-notify');
+  grunt.loadNpmTasks('grunt-check-pages');
 
 
   // Show elapsed time after tasks run
@@ -19,6 +25,43 @@ module.exports = function(grunt) {
 
 
   grunt.initConfig({
+    checkPages: {
+      dev: {
+        options: {
+          pageUrls: glob.sync('_site/**/*.html').map(function(file, idx, arr) {
+            return dev_url + file.replace('_site', '');
+          }),
+          checkLinks: true,
+          queryHashes: false,
+          noRedirects: false,
+          noLocalLinks: true,
+          noEmptyFragments: true,
+          onlySameDomain: true,
+          checkCaching: false,
+          checkCompression: false,
+          maxResponseTime: 200,
+          summary: true,
+          linksToIgnore: [
+          ]
+        }
+      },
+      production: {
+        options: {
+          pageUrls: glob.sync('_site/**/*.html').map(function(file, idx, arr) {
+            return production_url + file.replace('_site', '');
+          }),
+          checkLinks: true,
+          queryHashes: false,
+          noRedirects: true,
+          noLocalLinks: true,
+          noEmptyFragments: true,
+          checkCaching: false,
+          checkCompression: true,
+          maxResponseTime: 800,
+          summary: true
+        }
+      }
+    },
     pkg: grunt.file.readJSON('package.json'),
     clean: [
       "_site",
@@ -164,6 +207,7 @@ module.exports = function(grunt) {
         },
         files: {
           'js/min/all.min.js': [
+            'js/plugins.js',
             'js/all.ts.js',
             'bower_components/Stickyfill/src/stickyfill.js',
 //            'bower_components/immutable/dist/immutable.js',
@@ -202,7 +246,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('dev', function(target) {
     grunt.task.run([
-      'typescript:dev', 'uglify:dev', 'compass:dev', 'jekyll:dev', 'connect:server', 'watch'
+      'typescript:dev', 'uglify:dev', 'compass:dev', 'jekyll:dev', 'connect:server', 'checkPages:dev', 'watch'
     ]);
   });
   grunt.registerTask('build', function(target) {
