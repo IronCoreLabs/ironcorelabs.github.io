@@ -25,20 +25,20 @@
   <!-- The important stuff -->
     <meta charset="utf-8" >
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
   {% if page.excerpt %}
     <meta name="description" content="{{ page.excerpt| strip_html }}" >
   {% else %}
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{{ site.long_description }}">
   {% endif %}
 
   <!-- The crufty stuff that probably doesn't matter -->
   {% if page.author %}
     <meta name="author" content="{{ page.author }}">
   {% else %}
-    <meta name="author" content="IronCore Staff">
+    <meta name="author" content="IronCore Labs">
   {% endif %}
 
   <!-- The open graph stuff for FB and Pinterest and others -->
@@ -67,7 +67,7 @@
   {% if page.excerpt %}
     <meta property="og:description" content="{{ page.excerpt | strip_html }}" >
   {% else %}
-    <meta property="og:description" content="{{ site.description }}" >
+    <meta property="og:description" content="{{ site.long_description }}" >
   {% endif %}
   {% if page.title %}
     <meta property="og:title" content="{{ page.title }}" >
