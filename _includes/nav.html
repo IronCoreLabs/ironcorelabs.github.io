@@ -7,14 +7,12 @@
         <i class="icon-bar"></i>
         <i class="icon-bar"></i>
       </button>
-      <a class="navbar-brand" href="{{ site.baseurl }}/" style="width:12em;"><img src="/img/logos/ironcore-logo-side.svg" alt="{{ site.name }}" ></a>
+      <a class="navbar-brand" href="{{ site.baseurl }}/"><img src="/img/logos/ironcore-logo-side.svg" alt="{{ site.name }}" ></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       {% capture current_url %}{{ page.url | replace: 'index.html', '' }}{% endcapture %}
-          <!-- {{ page.url }} -->
       <ul class="nav navbar-nav">
         {% for e in site.nav %}
-          <!-- {{ e.url }} -->
           <li {% if e.url == current_url or (e.posts and page.is_post) %}class="active"{% endif %}><a href="{{ e.url }}">{{ e.text }}</a></li>
         {% endfor %}
       </ul>

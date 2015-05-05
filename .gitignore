@@ -10,4 +10,6 @@ bower_components
 _drafts
 .baseDir.js
 css/font-awesome
-
+validation-report.json
+validation-status.json
+*.bak

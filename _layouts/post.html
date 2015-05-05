@@ -58,11 +58,11 @@ layout: default
       
       <h5>Share</h5>
       <div class="share">
-        <a class="fa fa-twitter-square fa-2x" rel="nofollow" target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&amp;url={{ site.url }}{{ page.url }}&amp;via=ironcorelabs&amp;related=ironcorelabs" title="Share on Twitter"><span class="sr-only">Twitter</span></a>
+        <a class="fa fa-twitter-square fa-2x" rel="nofollow" target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}&amp;url={{ site.url | uri_escape }}{{ page.url }}&amp;via=ironcorelabs&amp;related=ironcorelabs" title="Share on Twitter"><span class="sr-only">Twitter</span></a>
         &nbsp;
-        <a class="fa fa-facebook-square fa-2x" rel="nofollow" target="_blank" href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}&amp;p[title]={{ page.title | uri_escape }}" title="Share on Facebook"><span class="sr-only">Facebook</span></a>
+        <a class="fa fa-facebook-square fa-2x" rel="nofollow" target="_blank" href="https://facebook.com/sharer.php?u={{ site.url | uri_escape }}{{ page.url }}&amp;p%5Btitle%5D={{ page.title | uri_escape }}" title="Share on Facebook"><span class="sr-only">Facebook</span></a>
         &nbsp;
-        <a class="fa fa-google-plus-square fa-2x" rel="nofollow" target="_blank" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+"><span class="sr-only">Google+</span></a>
+        <a class="fa fa-google-plus-square fa-2x" rel="nofollow" target="_blank" href="https://plus.google.com/share?url={{ site.url | uri_escape }}{{ page.url }}" title="Share on Google+"><span class="sr-only">Google+</span></a>
         &nbsp;
         <a class="fa fa-linkedin-square fa-2x" rel="nofollow" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ site.url }}{{ page.url }}&amp;title={{ page.title | uri_escape }}&amp;summary={{ page.excerpt | strip_html | uri_escape }}&amp;source=ironcorelabs.com" title="Share on LinkedIn"><span class="sr-only">LinkedIn</span></a>
         &nbsp;

@@ -17,6 +17,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-check-pages');
+  grunt.loadNpmTasks('grunt-htmllint');
+  grunt.loadNpmTasks('grunt-html-validation');
 
 
   // Show elapsed time after tasks run
@@ -25,11 +27,43 @@ module.exports = function(grunt) {
 
 
   grunt.initConfig({
+    validation: {
+      options: {
+//        reset: grunt.option('reset') || false,
+        stoponerror: true,
+      },
+      files: {
+        src: ['_site/**/*.html']
+      }
+    },
+    htmllint: {
+      dev: {
+        options: {
+          force: false,
+          htmllintrc: true,
+          plugins: [],
+
+        },
+        src: [ '_site/**/*.html' ]
+      },
+      dist: {
+        options: {
+          force: false,
+          htmllintrc: true,
+          plugins: [],
+        },
+        src: [
+          '_site/**/*.html'
+        ]
+      }
+    },
     checkPages: {
       dev: {
         options: {
           pageUrls: glob.sync('_site/**/*.html').map(function(file, idx, arr) {
             return dev_url + file.replace('_site', '');
+          }).filter(function(v) {
+            return !/\.md\//.test(v);
           }),
           checkLinks: true,
           queryHashes: false,
@@ -39,7 +73,7 @@ module.exports = function(grunt) {
           onlySameDomain: true,
           checkCaching: false,
           checkCompression: false,
-          maxResponseTime: 300,
+          maxResponseTime: 500,
           summary: true,
           linksToIgnore: [
           ]
@@ -49,6 +83,8 @@ module.exports = function(grunt) {
         options: {
           pageUrls: glob.sync('_site/**/*.html').map(function(file, idx, arr) {
             return production_url + file.replace('_site', '');
+          }).filter(function(v) {
+            return !/\.md\//.test(v);
           }),
           checkLinks: true,
           queryHashes: false,
@@ -65,6 +101,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     clean: [
       "_site",
+      "**/*.bak",
       "js/**/*.map",
       "js/min/all.min.js",
       "js/all.ts.js",
@@ -74,6 +111,7 @@ module.exports = function(grunt) {
       ".DS_Store",
       ".codekit-cache",
       ".tscache",
+      "validation-*.json",
     ],
     jekyll: {
       options: {
@@ -118,7 +156,7 @@ module.exports = function(grunt) {
           '!_site/**/*', // not anything in the output dir
           '!TODO.md', // don't rebuild when the TODO file changes
         ],
-        tasks: ['jekyll:dev']
+        tasks: ['jekyll:dev', 'validation', 'htmllint:dev']
       },
       compass: {
         files: [
@@ -129,6 +167,7 @@ module.exports = function(grunt) {
       typescript: {
         files: [
           'ts/*.ts',
+          'js/plugins.js',
           "!node_modules/**/*.ts"
         ],
         tasks: ['typescript:dev', 'uglify:dev', 'jekyll:dev']
@@ -250,7 +289,15 @@ module.exports = function(grunt) {
 
   grunt.registerTask('dev', function(target) {
     grunt.task.run([
-      'typescript:dev', 'uglify:dev', 'compass:dev', 'jekyll:dev', 'connect:server', 'checkPages:dev', 'watch'
+      'typescript:dev',
+      'uglify:dev',
+      'compass:dev',
+      'jekyll:dev',
+//      'validation',
+//      'htmllint:dev',
+      'connect:server',
+      'checkPages:dev',
+      'watch'
     ]);
   });
   grunt.registerTask('build', function(target) {
@@ -259,7 +306,10 @@ module.exports = function(grunt) {
       'typescript:dist',
       'uglify:dist',
       'compass:dist',
-      'jekyll:dist'
+      'jekyll:dist',
+      'validation',
+      'htmllint:dist',
+      'checkPages:dev'
     ]);
   });
   grunt.registerTask('dist', function(target) {

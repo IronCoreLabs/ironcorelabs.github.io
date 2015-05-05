@@ -1,0 +1,8 @@
+{
+  "indent-style": false,
+  "indent-width": false,
+  "id-class-style": false,
+  "tag-bans": ["style", "b"],
+  "attr-bans": ["style"],
+  "attr-name-style": false
+}

@@ -11,6 +11,8 @@
     "grunt-contrib-connect": "",
     "grunt-contrib-uglify": "",
     "grunt-contrib-watch": "",
+    "grunt-html-validation": "^0.1.18",
+    "grunt-htmllint": "^0.2.7",
     "grunt-jekyll": "",
     "grunt-notify": "^0.4.1",
     "grunt-postcss": "",
