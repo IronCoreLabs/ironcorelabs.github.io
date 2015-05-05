@@ -1,5 +1,3 @@
-  <!-- Title: either "Page Title - Site Name" or "Site Name - Site Description" but in any case clipped to 70 chars as elegantly as possible -->
-  <!-- See http://ecommerce.shopify.com/c/ecommerce-design/t/comparing-numbers-with-string-variables-in-liquid-37229 and http://moz.com/blog/meta-data-templates-123 for details on why we're trimming and the ugly hack we're using -->
 
     {% if page.title %}
       {% capture title_basic %}{{ title }}{{ page.title }}{% endcapture %}
@@ -27,6 +25,9 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+ {% if page.url != '/404.html' %}
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
   {% if page.excerpt %}
     <meta name="description" content="{{ page.excerpt| strip_html }}" >
@@ -125,3 +126,5 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/img/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
+{% endif %}

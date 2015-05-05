@@ -14,18 +14,6 @@
 @import 'font-awesome-compass';
 @import 'font-awesome';
 
-
-//.posts > .post {
-//  padding-bottom: 2em;
-//  border-bottom: 1px solid $lightGray;
-//}
-//
-//.posts > .post:last-child {
-//  padding-bottom: 1em;
-//  border-bottom: none;
-//}
-
-
 img {
   @include img-responsive;
 }
@@ -36,6 +24,9 @@ img {
   top: 0;
   z-index: 1000;
   overflow: hidden;
+}
+.navbar-brand {
+  width: 12em;
 }
 
 .banner {
@@ -48,16 +39,20 @@ img {
 
 .stripe-thumbnail {
   @include make-md-column(4, $grid-gutter-width);
+  img {
+    max-height: 300px;
+    margin: 1em auto;
+  }
 }
 .stripe-text {
   @include make-md-column(8, $grid-gutter-width);
 }
 .stripe {
   padding: 3em 0;
-  &:nth-child(even) {
+  &:nth-child(odd) {
     background-color: $jumbotron-bg;
   }
-  &:nth-child(odd) {
+  &:nth-child(even) {
     .stripe-thumbnail {
       @include make-md-column-push(8);
     }
@@ -69,8 +64,4 @@ img {
 
 @import 'post';
 @import 'footer';
-
-
-
-
 @import 'highlights';

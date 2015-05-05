@@ -6,7 +6,6 @@ category: Security
 image: https://ironcorelabs.com/img/posts/states-with-breach-disclosure-laws.png
 ---
 
-
 A lot of the press that we see and a lot of the data we have about companies that have been hacked is the result of breach disclosure laws.  In essence, these laws say that any _**unencrypted personal information**_ for customers that is accessed by an unauthorized person (who could also be an insider) must be disclosed to the affected customers.
 
 ![Breach Disclosure Law Map Showing All States but New Mexico, South Dakota and Alabama](/img/posts/states-with-breach-disclosure-laws-655.png)

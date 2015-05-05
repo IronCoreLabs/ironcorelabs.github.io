@@ -17,8 +17,8 @@ paginate: 15
 paginate_path: "/news/:num"
 
 # Following two configs forced by github -- might as well test with them
-#safe: true
-#lsi: false
+safe: true
+lsi: false
 
 defaults:
   -
@@ -117,7 +117,7 @@ kramdown:
     coderay_tab_width:         4
     coderay_bold_every:        10
     coderay_css:               style
-    
+
 # Use the following plug-ins
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
@@ -146,4 +146,7 @@ exclude:
   - _config-dev.yml
   - TODO.md
   - .ispell_english
+  - pre-commit.sh
+  - validation*.json
+  - .bak
 

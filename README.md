@@ -89,7 +89,15 @@ Then from the repo root, run grunt for local dev:
 
 And to package everything up nicely to get ready to push to github:
 
-    grunt optimize
+    grunt dist
+
+You must run `grunt dist` before checking things in and make sure you check in the generated CSS and JS files that aren't in .gitignore.
+
+Final step: make sure you install the git pre-commit hook:
+
+    ln -s pre-commit.sh .git/hooks/pre-commit
+    
+This will force run grunt dist when you try to commit something.  So yeah, it'll slow down your committing and be annoying if you've already done things right.  But its the right thing to do, so do it.
 
 ## Explanation of Dependencies
 
@@ -122,3 +130,24 @@ I'm also spell checking with `ispell` which can be installed with home brew (`br
 Sadly, I can't make that work from grunt since grunt doesn't pass along a tty and ispell requires one.
 
 You can use `grunt checkPages:production` to scan the live site and make sure the links there are in good shape.
+
+## Browser compatibility
+
+I used [browserstack.com](https://www.browserstack.com/) while testing.  That worked very well and I'd seriously consider purchasing to do more cross-device, operating system and browser testing.
+
+For support, we currently do not support IE8 and below.  On Windows 7, the SVG files show as broken.  In Windows XP, the TLS connection cannot be made and no connection to the site is possible.
+
+These are both fixable.  We could allow in-secure connections over http and we could give a backup image for when SVG isn't available.  That said, this is a security product.  Anyone using IE8 is probably beyond our help.
+
+In the world of odd, we style based on nth-child CSS selectors so that, for example, odd rows have a gray background and images on the right instead of the left.  Alas, browsers are wildly inconsistent in what they think is even and what is odd:
+
+| Browser | First Stripe Div Considered Odd |
+| ------- | ------------------------------- |
+| Chrome  | No                              |
+| Safari  | Yes                             |
+| Firefox | Yes                             |
+| Opera   | No                              |
+
+So much for consistency with webkit.  Some standards funkiness here.  I resolved the problem by putting an extra div wrapper around the stripe divs and that seems to have tamed the craziness.
+
+

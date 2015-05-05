@@ -4,19 +4,15 @@ This is a list of outstanding items for the website.
 
 ## Top Priority
 
-- SVG fallback?  - just gen images and do onerror trick
+- SVG fallback for IE8?  - just gen images and do onerror trick
 - UTM
 - Use "summary" front matter when available for meta description and link
   - Add to news page and home page and try to make each unique.
-- git commit script
 - test the share links
-- [x] obfuscate telephone
 
 ## Testing / Linting
 
-- [ ] Add pre-commit script to run `grunt dist` and abort if any issues are found
 - [ ] On dist, lint scss
-- [ ] On dist, lint html
 
 
 ## Optimization

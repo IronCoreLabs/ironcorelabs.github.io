@@ -308,8 +308,8 @@ module.exports = function(grunt) {
       'compass:dist',
       'jekyll:dist',
       'validation',
-      'htmllint:dist',
-      'checkPages:dev'
+      'htmllint:dist'
+//      'checkPages:dev'
     ]);
   });
   grunt.registerTask('dist', function(target) {

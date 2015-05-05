@@ -72,6 +72,7 @@ $(function() {
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(tw);
   }
   
+
   function poormanStickyfill() {
     var header = document.getElementById('header');
     var origOffsetY = header.offsetTop;
