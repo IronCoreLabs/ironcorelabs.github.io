@@ -1,6 +1,6 @@
 /// <reference path="refs/jquery/jquery.d.ts" />
 /// <reference path="refs/stickyfill.d.ts" />
-// Redirect if someone access github.io directly
+// Redirect if someone accesses github.io directly
 // Don't even wait for DOM
 var hostname = window.location.hostname;
 if (/\.local$/.test(hostname)) {
@@ -19,6 +19,10 @@ switch (hostname) {
             window.location.href = 'https://ironcorelabs.com';
         }
         break;
+}
+// Break out of any wrapping frames
+if (top.location != location) {
+    top.location.href = document.location.href;
 }
 // After load...
 $(function () {
