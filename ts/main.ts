@@ -1,6 +1,5 @@
 /// <reference path="refs/jquery/jquery.d.ts" />
 /// <reference path="refs/stickyfill.d.ts" />
-/// <reference path="refs/waypoint.d.ts" />
 
 declare var disqus_shortname: string;
 declare var disqus_identifier: string;
@@ -60,17 +59,6 @@ $(function() {
   $('#contacttel').attr('itemprop', 'telephone')
     .attr('href', "tel:+1"+phone.replace(/-/g,''))
     .text(phone);
-
-  // $('.stripe-thumbnail img' ).waypoint( {
-    // offset: '75%',
-    // handler: function() {
-      // console.log("waypoint!");
-      // console.log($(this));
-      // if (this.element) {
-        // $(this.element).addClass('img-animated');
-      // }
-    // }
-  // });
 
   if ($('#disqus_thread').length && disqus_shortname) {
     var dsq = document.createElement('script');
