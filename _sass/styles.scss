@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+
 // Import Bootstrap Compass integration
 @import 'bootstrap-compass';
 
@@ -37,11 +39,33 @@ img {
   text-align: center;
 }
 
+@import "compass/css3/animation";
+@import "compass/css3/transform";
+
+@-webkit-keyframes pop2 { 0% {
+    transform: scale(0.7, 0.7);
+    opacity: 0;
+  } 100% {
+    transform: scale(1,1);
+} }
+@keyframes pop2 { 0% { transform: scale(0.7, 0.7); opacity: 0; } 100% { transform: scale(1,1); } }
+
+@include keyframes(pop) {
+  0% { opacity: 0; @include transform(scale(0.7, 0.7)); }
+  100% { opacity: 1; @include transform(scale(1, 1)); }
+}
+
 .stripe-thumbnail {
   @include make-md-column(4, $grid-gutter-width);
   img {
     max-height: 300px;
     margin: 1em auto;
+    /* opacity: 0; */
+  }
+  img.img-animated {
+    opacity: 1;
+    width: auto;
+    @include animation(pop 1s 1 cubic-bezier(0.77, 0, .175, 1))
   }
 }
 .stripe-text {
