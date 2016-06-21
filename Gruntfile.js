@@ -257,7 +257,6 @@ module.exports = function(grunt) {
             'js/plugins.js',
             'js/all.ts.js',
             'bower_components/Stickyfill/src/stickyfill.js',
-//            'bower_components/jquery-waypoints/lib/jquery.waypoints.js',
 //            'bower_components/immutable/dist/immutable.js',
 //            'bower_components/underscore/underscore.js',
 //            'js/bootstrap/carousel.js',
