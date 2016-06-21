@@ -30,7 +30,7 @@ module.exports = function(grunt) {
     validation: {
       options: {
 //        reset: grunt.option('reset') || false,
-        stoponerror: true,
+        stoponerror: true
       },
       files: {
         src: ['_site/**/*.html']
@@ -41,8 +41,7 @@ module.exports = function(grunt) {
         options: {
           force: false,
           htmllintrc: true,
-          plugins: [],
-
+          plugins: []
         },
         src: [ '_site/**/*.html' ]
       },
@@ -50,7 +49,7 @@ module.exports = function(grunt) {
         options: {
           force: false,
           htmllintrc: true,
-          plugins: [],
+          plugins: []
         },
         src: [
           '_site/**/*.html'
@@ -111,31 +110,31 @@ module.exports = function(grunt) {
       ".DS_Store",
       ".codekit-cache",
       ".tscache",
-      "validation-*.json",
+      "validation-*.json"
     ],
     jekyll: {
       options: {
         bundleExec: true,
-        safe: true,
+        safe: true
       },
       dev: {
         options: {
           drafts: true,
           future: true,
-          config: '_config.yml,_config-dev.yml',
+          config: '_config.yml,_config-dev.yml'
         }
       },
       dist: {
         options: {
           drafts: false,
           future: false,
-          config: '_config.yml',
+          config: '_config.yml'
         }
       }
     },
     watch: {
       options: {
-        livereload: true,
+        livereload: true
       },
       configFiles: {
         files: [ 'Gruntfile.js' ],
@@ -154,7 +153,7 @@ module.exports = function(grunt) {
           '**/index.html',
           '*.xml',
           '!_site/**/*', // not anything in the output dir
-          '!TODO.md', // don't rebuild when the TODO file changes
+          '!TODO.md' // don't rebuild when the TODO file changes
         ],
         tasks: ['jekyll:dev', 'validation', 'htmllint:dev']
       },
@@ -175,7 +174,10 @@ module.exports = function(grunt) {
     },
     typescript: {
       dev: {
-        src: ["ts/*.ts", "!node_modules/**/*.ts"],
+        src: [
+          "ts/*.ts",
+          "!node_modules/**/*.ts"
+        ],
         dest: 'js/all.ts.js',
         options: {
           target: 'es5',
@@ -187,7 +189,10 @@ module.exports = function(grunt) {
         }
       },
       dist: {
-        src: ["ts/*.ts", "!node_modules/**/*.ts"],
+        src: [
+          "ts/*.ts",
+          "!node_modules/**/*.ts"
+        ],
         dest: 'js/all.ts.js',
         options: {
           target: 'es5',
@@ -201,21 +206,21 @@ module.exports = function(grunt) {
     },
     compass: {
       options: {
-        config: 'config.rb',
+        config: 'config.rb'
       },
       dist: {
         options: {
           environment: 'production',
           outputStyle: 'compressed',
           noLineComments: true,
-          force: true,
+          force: true
         }
       },
       dev: {
         options: {
           environment: 'development',
           outputStyle: 'expanded',
-          noLineComments: false,
+          noLineComments: false
         }
       }
     },
@@ -240,18 +245,19 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         mangle: false,
-        compress: true,
+        compress: true
       },
       dev: {
         options: {
           sourceMapIncludeSources: true,
-          sourceMap: true,
+          sourceMap: true
         },
         files: {
           'js/min/all.min.js': [
             'js/plugins.js',
             'js/all.ts.js',
             'bower_components/Stickyfill/src/stickyfill.js',
+//            'bower_components/jquery-waypoints/lib/jquery.waypoints.js',
 //            'bower_components/immutable/dist/immutable.js',
 //            'bower_components/underscore/underscore.js',
 //            'js/bootstrap/carousel.js',
@@ -259,14 +265,14 @@ module.exports = function(grunt) {
             'js/bootstrap/transition.js',
             'js/bootstrap/tab.js',
             'js/bootstrap/dropdown.js',
-            'js/bootstrap/button.js',
+            'js/bootstrap/button.js'
           ]
-        },
+        }
       },
       dist: {
         options: {
           sourceMapIncludeSources: false,
-          sourceMap: false,
+          sourceMap: false
         },
         files: {
           'js/min/all.min.js': [
@@ -280,10 +286,10 @@ module.exports = function(grunt) {
             'js/bootstrap/transition.js',
             'js/bootstrap/tab.js',
             'js/bootstrap/dropdown.js',
-            'js/bootstrap/button.js',
+            'js/bootstrap/button.js'
           ]
-        },
-      },
+        }
+      }
     }
   });
 
