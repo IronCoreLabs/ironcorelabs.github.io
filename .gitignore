@@ -13,3 +13,5 @@ css/font-awesome
 validation-report.json
 validation-status.json
 *.bak
+.idea
+ts/draft
