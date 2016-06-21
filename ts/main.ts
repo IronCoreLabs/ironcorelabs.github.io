@@ -8,7 +8,7 @@ declare var disqus_title: string;
 declare var disqus_url: string;
 
 
-// Redirect if someone access github.io directly
+// Redirect if someone accesses github.io directly
 // Don't even wait for DOM
 var hostname = window.location.hostname;
 
@@ -32,6 +32,7 @@ switch(hostname) {
 // Break out of any wrapping frames
 if (top.location != location) {
     top.location.href = document.location.href ;
+}
 
 // After load...
 $(function() {
