@@ -82,7 +82,7 @@ baseurl: ""
 
 # Square space has this: http://www.ironcorelabs.com/news/2015/3/9/it-begins
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 permalink: /news/:year/:month/:day/:title/
 relative_permalinks: true
 
@@ -149,4 +149,3 @@ exclude:
   - pre-commit.sh
   - validation*.json
   - .bak
-
