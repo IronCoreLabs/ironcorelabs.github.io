@@ -39,6 +39,11 @@ img {
   text-align: center;
 }
 
+.bot-hide {
+  position: absolute;
+  left: -5000px;
+}
+
 @import "compass/css3/animation";
 @import "compass/css3/transform";
 

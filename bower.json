@@ -19,8 +19,8 @@
   ],
   "dependencies": {
     "Stickyfill": "~1.1.2",
-    "immutable": "~3.7.2",
+    "immutable": "~3.8.1",
     "underscore": "~1.8.3",
-    "modernizr": "~2.8.3"
+    "modernizr": "~3.3.1"
   }
 }
