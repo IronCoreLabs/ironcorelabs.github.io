@@ -4,7 +4,7 @@
       {% capture title %}{{ title_basic }} - {% endcapture %}
     {% endif %}
     {% capture title %}{{ title }}{{ site.name }}{% endcapture %}
-    {% if page.url == '/index.html' or page.title  == false %} 
+    {% if page.url == '/index.html' or page.title  == false %}
       {% capture title %}{{ title }} – {{ site.description }} {% endcapture %}
     {% endif %}
 
@@ -21,12 +21,11 @@
     <title>{{ title_short }}</title>
 
   <!-- The important stuff -->
-    <meta charset="utf-8" >
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   
+
  {% if page.url != '/404.html' %}
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
   {% if page.excerpt %}
@@ -72,7 +71,7 @@
   {% if page.title %}
     <meta property="og:title" content="{{ page.title }}" >
   {% endif %}
-    
+
 
   <!-- The twitter stuff -->
   {% if page.title %}
@@ -106,7 +105,7 @@
   {% if page.image %}
     <meta itemprop="image" content="{{ page.image }}">
   {% endif %}
-  
+
   <!-- The favicon stuff -->
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png">

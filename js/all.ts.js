@@ -43,7 +43,9 @@ $(function () {
     var phone = $("#contacttel").text().split('-').map(function (v, idx) {
         return String.fromCharCode(parseInt(v, 10) ^ idx);
     }).join('');
-    $('#contacttel').attr('itemprop', 'telephone').attr('href', "tel:+1" + phone.replace(/-/g, '')).text(phone);
+    $('#contacttel').attr('itemprop', 'telephone')
+        .attr('href', "tel:+1" + phone.replace(/-/g, ''))
+        .text(phone);
     if ($('#disqus_thread').length && disqus_shortname) {
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
@@ -63,7 +65,8 @@ $(function () {
         var header = document.getElementById('header');
         var origOffsetY = header.offsetTop;
         function onScroll(e) {
-            window.scrollY >= origOffsetY ? header.classList.add('sticky') : header.classList.remove('sticky');
+            window.scrollY >= origOffsetY ? header.classList.add('sticky') :
+                header.classList.remove('sticky');
         }
         document.addEventListener('scroll', onScroll);
     }

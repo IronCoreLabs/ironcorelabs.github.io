@@ -18,7 +18,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-check-pages');
   grunt.loadNpmTasks('grunt-htmllint');
-  grunt.loadNpmTasks('grunt-html-validation');
+  grunt.loadNpmTasks('grunt-w3c-html-validation');
 
 
   // Show elapsed time after tasks run
@@ -100,6 +100,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     clean: [
       "_site",
+      "w3cErrors",
       "**/*.bak",
       "js/**/*.map",
       "js/min/all.min.js",
@@ -121,6 +122,7 @@ module.exports = function(grunt) {
         options: {
           drafts: true,
           future: true,
+          incremental: true,
           config: '_config.yml,_config-dev.yml'
         }
       },

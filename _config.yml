@@ -24,11 +24,11 @@ defaults:
   -
     scope:
       path: ""
-      type: "post"
+      type: "posts"
     values:
       is_post: true
       author: "Staff Writer"
-      layout: "post"
+      layout: "posts"
   -
     scope:
       path: ""
@@ -84,7 +84,6 @@ baseurl: ""
 markdown: kramdown
 highlighter: pygments
 permalink: /news/:year/:month/:day/:title/
-relative_permalinks: true
 
 # The release of Jekyll Now that you're using
 version: v1.1.0
@@ -149,4 +148,3 @@ exclude:
   - pre-commit.sh
   - validation*.json
   - .bak
-
