@@ -82,7 +82,7 @@ baseurl: ""
 
 # Square space has this: http://www.ironcorelabs.com/news/2015/3/9/it-begins
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 permalink: /news/:year/:month/:day/:title/
 
 # The release of Jekyll Now that you're using
