@@ -1,135 +1,135 @@
 @charset "UTF-8";
 
-.post {
-  @include make-row($grid-gutter-width);
-  img {
-    margin: 0 auto;
-    padding: $thumbnail-padding;
-    line-height: $line-height-base;
-    background-color: $thumbnail-bg;
-    border: 1px solid $thumbnail-border;
-    border-radius: $thumbnail-border-radius;
-    @include transition(all .2s ease-in-out);
-    @include img-responsive;
-  }
-  .heading {
-    @include make-md-column(12, $grid-gutter-width);
-    margin-bottom: 3em;
-  }
-  .attribution {
-    color: $text-muted;
-  }
-  .postsidebar {
-    @include make-md-column(3, $grid-gutter-width);
-    h2, h3, h4, h5 {
-      text-transform: uppercase;
-    }
-    ul.related {
-      padding-left:0;
-      list-style: none;
-      li {
-        text-indent: -.6em;
-        &:before {
-          content: "• ";
-          color: $text-muted;
-        }
-      }
-    }
-  }
-  .entry {
-    @include make-md-column(9, $grid-gutter-width);
-    h1, h2, h3, h4, h5, h6 {
-      @include clearfix;
-      clear:both;
-    }
-    blockquote {
-      border: none;
-      padding: 0;
-    }
-    > blockquote > p {
-      /* default sizing for small screens */
-      font-size: 1.2em;
-      position: relative;
-      margin: 1.8em .8em;
-      
-      /* medium wide screens */
-      @media (min-width: $screen-tablet) {
-        margin-left: 2.8em;
-        font-size: 1.4em;
-      }
-      color: $gray;
-      font-style: italic;
-      quotes: "\201C" "\201D";
-      &:before {
-        color: $lightGray;
-        left: -.5em;
-        top: -.5em;
-        content: open-quote;
-        position:absolute;
-        font-size: 4em;
-      }
-    }
-    blockquote em {
-      font-size: 14px;
-      &:before {
-        content: "\2014 \2009";
-      }
-    }
-    > blockquote > blockquote {
-      padding-bottom: 1em;
-      background-color: $lightGray;
-      font-size: 1.1em;
-      font-style: italic;
-      color: $gray;
-      text-align: center;
-      @include make-md-column(5);
-      @media (min-width: $screen-desktop) {
-        float: right;
-        margin-left: $grid-gutter-width;
-      }
-      h1, h2, h3, h4, h5, h6, {
-        color: red;
-        font-size:300%;
-        font-weight: bold;
-      }
-      b, strong {
-        color: red;
-        font-size: 150%;
-      }
-    }
-  }
-  .comments {
-    margin-top: 10px;
-  }
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
-  }
-}
-
-.share {
-  a {
-    text-decoration: none;
-  }
-}
-
-.posts {
-  article:nth-child(even) {
-    background-color: #eee;
-  }
-  article {
-    padding: .4em .4em .8em .4em;
-  }
-  h4 {
-    small {
-      display:block;
-    }
-  }
-}
-
-.twitter-container {
-  margin-top: 3em;
-  @media (min-width: $screen-desktop) {
-    margin-top: 0;
-  }
-}
+// .post {
+//   @include make-row($grid-gutter-width);
+//   img {
+//     margin: 0 auto;
+//     padding: $thumbnail-padding;
+//     line-height: $line-height-base;
+//     background-color: $thumbnail-bg;
+//     border: 1px solid $thumbnail-border;
+//     border-radius: $thumbnail-border-radius;
+//     @include transition(all .2s ease-in-out);
+//     @include img-responsive;
+//   }
+//   .heading {
+//     @include make-md-column(12, $grid-gutter-width);
+//     margin-bottom: 3em;
+//   }
+//   .attribution {
+//     color: $text-muted;
+//   }
+//   .postsidebar {
+//     @include make-md-column(3, $grid-gutter-width);
+//     h2, h3, h4, h5 {
+//       text-transform: uppercase;
+//     }
+//     ul.related {
+//       padding-left:0;
+//       list-style: none;
+//       li {
+//         text-indent: -.6em;
+//         &:before {
+//           content: "• ";
+//           color: $text-muted;
+//         }
+//       }
+//     }
+//   }
+//   .entry {
+//     @include make-md-column(9, $grid-gutter-width);
+//     h1, h2, h3, h4, h5, h6 {
+//       @include clearfix;
+//       clear:both;
+//     }
+//     blockquote {
+//       border: none;
+//       padding: 0;
+//     }
+//     > blockquote > p {
+//       /* default sizing for small screens */
+//       font-size: 1.2em;
+//       position: relative;
+//       margin: 1.8em .8em;
+//
+//       /* medium wide screens */
+//       @media (min-width: $screen-tablet) {
+//         margin-left: 2.8em;
+//         font-size: 1.4em;
+//       }
+//       color: $gray;
+//       font-style: italic;
+//       quotes: "\201C" "\201D";
+//       &:before {
+//         color: $lightGray;
+//         left: -.5em;
+//         top: -.5em;
+//         content: open-quote;
+//         position:absolute;
+//         font-size: 4em;
+//       }
+//     }
+//     blockquote em {
+//       font-size: 14px;
+//       &:before {
+//         content: "\2014 \2009";
+//       }
+//     }
+//     > blockquote > blockquote {
+//       padding-bottom: 1em;
+//       background-color: $lightGray;
+//       font-size: 1.1em;
+//       font-style: italic;
+//       color: $gray;
+//       text-align: center;
+//       @include make-md-column(5);
+//       @media (min-width: $screen-desktop) {
+//         float: right;
+//         margin-left: $grid-gutter-width;
+//       }
+//       h1, h2, h3, h4, h5, h6, {
+//         color: red;
+//         font-size:300%;
+//         font-weight: bold;
+//       }
+//       b, strong {
+//         color: red;
+//         font-size: 150%;
+//       }
+//     }
+//   }
+//   .comments {
+//     margin-top: 10px;
+//   }
+//   .read-more {
+//     text-transform: uppercase;
+//     font-size: 15px;
+//   }
+// }
+//
+// .share {
+//   a {
+//     text-decoration: none;
+//   }
+// }
+//
+// .posts {
+//   article:nth-child(even) {
+//     background-color: #eee;
+//   }
+//   article {
+//     padding: .4em .4em .8em .4em;
+//   }
+//   h4 {
+//     small {
+//       display:block;
+//     }
+//   }
+// }
+//
+// .twitter-container {
+//   margin-top: 3em;
+//   @media (min-width: $screen-desktop) {
+//     margin-top: 0;
+//   }
+// }
