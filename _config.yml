@@ -45,9 +45,8 @@ nav:
     url: "/"
     text: "Overview"
   -
-    url: "/news/"
-    text: "News"
-    posts: true
+    url: "https://blog.ironcorelabs.com/"
+    text: "Blog"
   -
     url: "#contact"
     text: "Contact"
@@ -148,3 +147,6 @@ exclude:
   - pre-commit.sh
   - validation*.json
   - .bak
+  - .idea
+  - w3cErrors
+  - .Ulysses-favorites.plist

@@ -4,51 +4,13 @@ This is the source for the IronCore Labs website and blog hosted by github.
 
 # Writing Posts
 
-Start by adding your post to the `_drafts` directory (create it if you don't have it) using its working title as the name of the file, for example, `my-post-title.md`.  You can feel free to check this in if you want to collaborate with others before it is posted.
-
-Every post will need to start with "front matter" and then a proper title.  Here are the elements you will want to consider adding:
-
-    ---
-    title: The Inevitable Demise of Perimeter Security
-    author: Patrick Walsh
-    tags: security trends stats internet-of-things perimeter firewall
-    category: Security
-    image: /img/rockclimb.jpg
-    ---
-
-* title
-  * This should align with the filename for the most part
-* author
-  * Published posts will default to "Staff Writer" if you forget this.
-* tags
-  * Please use tags liberally for SEO and browsability (we'll increase browsability later)
-  * Separate tags with spaces - they must be one word.  If you need to put two together, use a dash, like: `internet-of-things`.
-  * tag just about every topic hit in the post and be thorough
-* category
-  * Choose one category
-  * While this seems very similar to tags in some ways, it may in the future be used to separate different blogs.  There is a much smaller number of categories than tags.
-  * For right now, assume we use these categories:
-    * **Security** - for blogging on our product or the state of the industry
-    * **Startup** - for blogging about our status as a company or thoughts on building a startup, venture capital, etc.
-    * **Engineering** - for blogging about technical topics and tools
-    * **Good-Reads** - for references to other articles we find on the net
-* thumbnail
-  * Always use full URL
-  * Used to make a thumbnail representing this page on twitter.
-  * They will either crop it to 120x90px or 120x120px.
-  * Must be under 1mb.
-  * Probably best to generate these thumbnails ourselves.
-* image
-  * Always use full URL
-  * Used to make a larger image on twitter and elsewhere.  This is generally preferred.
-  * Must be under 1mb.
-  * Must be at least 280px x 150px in size
+All blog posts should now be written on Medium.
 
 ## Embedding Media
 
 ### Video
 
-When embedding video into a post, you will need to drop in some HTML.  If you're using youtube, go to the video on youtube, click on `share`, then click `embed` then copy and paste.  But wait, you need to modify that.  You'll get something like:
+When embedding video into a page, you will need to drop in some HTML.  If you're using youtube, go to the video on youtube, click on `share`, then click `embed` then copy and paste.  But wait, you need to modify that.  You'll get something like:
 
     <iframe width="420" height="315" src="https://www.youtube.com/embed/war0gHL26ns" frameborder="0" allowfullscreen></iframe>
 
@@ -96,7 +58,7 @@ You must run `grunt dist` before checking things in and make sure you check in t
 Final step: make sure you install the git pre-commit hook:
 
     ln -s pre-commit.sh .git/hooks/pre-commit
-    
+
 This will force run grunt dist when you try to commit something.  So yeah, it'll slow down your committing and be annoying if you've already done things right.  But its the right thing to do, so do it.
 
 ## Explanation of Dependencies
@@ -149,5 +111,3 @@ In the world of odd, we style based on nth-child CSS selectors so that, for exam
 | Opera   | No                              |
 
 So much for consistency with webkit.  Some standards funkiness here.  I resolved the problem by putting an extra div wrapper around the stripe divs and that seems to have tamed the craziness.
-
-
