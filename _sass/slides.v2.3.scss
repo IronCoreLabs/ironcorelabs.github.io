@@ -309,6 +309,36 @@ h2.hero {
     margin-bottom: 1rem;
   }
 }
+#recent-tweets {
+  margin-top: 2rem;
+}
+
+.whiteSlide #twitter-latest p {
+  color: #000;
+}
+#twitter-latest {
+  p {
+    font-family: $fontSansSerifHeading;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: $white;
+  }
+  .timePosted::before {
+    @extend .fa;
+    content: $fa-var-twitter;
+    opacity: 0.6;
+  }
+  a[data-scribe="element:hashtag"] {
+    color: $red;
+  }
+  .interact { display: none; }
+  p.timePosted a {
+    font-family: $fontSansSerifBody;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    font-style: italic;
+  }
+}
 
 .image-container {
   margin-top: 4em;

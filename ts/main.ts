@@ -1,6 +1,7 @@
 /// <reference path="refs/jquery/jquery.d.ts" />
 /// <reference path="refs/stickyfill.d.ts" />
 /// <reference path="refs/svg4everybody.d.ts" />
+/// <reference path="refs/twitter-fetch.d.ts" />
 
 declare var disqus_shortname: string;
 declare var disqus_identifier: string;
@@ -78,6 +79,20 @@ $(function() {
     dsq.async = true;
     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  }
+
+  if ($('#twitter-latest').length) {
+    var config = {
+      "id": "594367675494600704",
+      "maxTweets": 5,
+      "domId": "twitter-latest",
+      "enableLinks": true,
+      "showUser": false,
+      "showImages": false,
+      "showTime": true,
+      "lang": "en"
+    }
+    twitterFetcher.fetch(config);
   }
 
   if ($('#twitter-container').length) {

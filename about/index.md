@@ -49,6 +49,17 @@ Our goal is to eliminate the daily breaches seen in the news. If sensitive data 
 </div>
 {% include slides/slideEnd.html background="/img/about/writing.jpg" %}
 
+{% include slides/slideStart.html id="tweets" header="Recent Tweets" classes="fade-8" %}
+
+<h2 class="ae-1">Recent Tweets</h2>
+<div id="twitter-latest" class="ae-2"></div>
+<div class="center">
+  <a href="https://twitter.com/ironcorelabs" class="button round uppercase deepRed ae-5 fromCenter cropBottom">All Tweets</a>
+</div>
+
+{% include slides/slideEnd.html background="/img/about/birds.jpg" %}
+
+
 
 {% include slides/slideStart.html id="contact" header="Contact Us" classes="fade-8" %}
 <div markdown="1">
@@ -58,29 +69,29 @@ You can find us across social media, on github, phone and via email.
 
 <ul class="contactButtons">
   <li class="ae-1 fromLeft">
-    <a href="https://twitter.com/ironcorelabs">
+    <a href="https://twitter.com/{{ site.follow-us.twitter }}">
       <i class="fa fa-twitter"></i>
       <span class="contactLabel">Twitter</span>
-      <span class="contactAddress">@ironcorelabs</span>
+      <span class="contactAddress">@{{ site.follow-us.twitter }}</span>
     </a>
   </li>
   <li class="ae-2 fromLeft">
-    <a href="https://linkedin.com/company/ironcore-labs">
+    <a href="https://linkedin.com/company/{{ site.follow-us.linkedin }}">
       <i class="fa fa-linkedin"></i>
       <span class="contactLabel">LinkedIn</span>
-    <span class="contactAddress">/company/ironcore-labs</span></a>
+    <span class="contactAddress">/company/{{ site.follow-us.linkedin }}</span></a>
   </li>
   <li class="ae-3 fromLeft">
-    <a href="https://facebook.com/ironcorelabs">
+    <a href="https://facebook.com/{{ site.follow-us.facebook }}">
     <i class="fa fa-facebook"></i>
     <span class="contactLabel">Facebook</span>
-    <span class="contactAddress">ironcorelabs</span></a>
+    <span class="contactAddress">{{ site.follow-us.facebook }}</span></a>
   </li>
   <li class="ae-4 fromLeft">
-    <a href="https://github.com/ironcorelabs">
+    <a href="https://github.com/{{ site.follow-us.github }}">
     <i class="fa fa-github"></i>
     <span class="contactLabel">Github</span>
-    <span class="contactAddress">ironcorelabs</span></a>
+    <span class="contactAddress">{{ site.follow-us.github }}</span></a>
   </li>
   <li class="ae-5 fromLeft">
     <i class="fa fa-envelope"></i>

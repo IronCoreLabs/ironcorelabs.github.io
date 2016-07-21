@@ -36,7 +36,7 @@
           </li>
         {% endfor %}
         <li>
-          <a href="http://twitter.com/ironcorelabs" target="_blank">
+          <a href="http://twitter.com/{{ site.follow-us.twitter }}" target="_blank">
             <i class="fa fa-twitter h20 fa-lg"></i>
             <span class="sr-only">Twitter</span>
           </a>
@@ -46,7 +46,7 @@
   </div>
   <div class="sections compact hidden">
     <div class="left">
-      <a href="{{ site.baseurl }}">
+      <a href="{{ site.baseurl }}/">
         <div class="hide-text show-image navlogo {% if page.hidelogofirstslide %}headerlogohiddenfirstslide{% endif %}">
           IronCore Labs
         </div>
@@ -65,10 +65,10 @@
 </nav>
 
 <!-- Sidebar -->
-<nav class="sidebar blueGray" data-sidebar-id="1">
+<nav class="sidebar" data-sidebar-id="1">
   <div class="close hide-text show-image img-close">Close</div>
   <div class="content">
-    <a href="{{ site.baseurl }}" class="logo">
+    <a href="{{ site.baseurl }}/" class="logo">
       <div class="hide-text show-image img-ironcore-logo-overunder-inverse-transparent">IronCore Labs</div>
     </a>
     <ul class="mainMenu uppercase">
@@ -82,12 +82,13 @@
       {% endfor %}
     </ul>
     <ul class="social">
-      <li><a href="https://twitter.com/ironcorelabs" title="Follow us on twitter"><i class="fa fa-twitter fa-2x"></i></a></li>
+      <li><a href="https://twitter.com/{{ site.follow-us.twitter }}" title="Follow us on twitter"><i class="fa fa-twitter fa-2x"></i></a></li>
       <li><a href="https://blog.ironcorelabs.com/feed" title="Follow us with RSS"><i class="fa fa-rss fa-2x"></i></a></li>
-      <li><a href="https://linkedin.com/company/ironcore-labs" title="Follow us on LinkedIn"><i class="fa fa-linkedin fa-2x"></i></a></li>
-      <li><a href="https://github.com/ironcorelabs" title="Follow us on Github"><i class="fa fa-github fa-2x"></i></a></li>
-      <li><a href="https://facebook.com/ironcorelabs" title="Follow us on Facebook"><i class="fa fa-facebook fa-2x"></i></a></li>
+      <li><a href="https://linkedin.com/company/{{ site.follow-us.linkedin }}" title="Follow us on LinkedIn"><i class="fa fa-linkedin fa-2x"></i></a></li>
+      <li><a href="https://github.com/{{ site.follow-us.github }}" title="Follow us on Github"><i class="fa fa-github fa-2x"></i></a></li>
+      <li><a href="https://facebook.com/{{ site.follow-us.facebook }}" title="Follow us on Facebook"><i class="fa fa-facebook fa-2x"></i></a></li>
     </ul>
+    {% comment %}
     <div class="contact" itemscope itemtype="http://schema.org/LocalBusiness ">
       <span itemprop="name" class="sr-only">IronCore Labs</span>
       <a href="#contact" class="contactemail">info</a><br>
@@ -99,6 +100,7 @@
       IronCore Labs, Inc.
       All rights reserved.
     </div>
+    {% endcomment %}
 
   </div>
 </nav>

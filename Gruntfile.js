@@ -166,6 +166,10 @@ module.exports = function(grunt) {
         ],
         tasks: ['jekyll:dev']  //, 'validation', 'htmllint:dev']
       },
+      grunticon: {
+        files: ['*.svg'],
+        tasks: ['grunticon']
+      },
       compass: {
         files: [
           '_sass/**/*.scss'
@@ -282,6 +286,7 @@ module.exports = function(grunt) {
             'js/vendor/svg4everybody.js',
             'js/vendor/slidesv2.3/plugins.js',
             'js/vendor/slidesv2.3/slides.js',
+            'bower_components/twitter-fetcher/js/twitterFetcher.js',
             'js/all.ts.js'
           ],
           'js/min/all.min.js': [
@@ -309,6 +314,7 @@ module.exports = function(grunt) {
             'js/vendor/svg4everybody.js',
             'js/vendor/slidesv2.3/plugins.js',
             'js/vendor/slidesv2.3/slides.js',
+            'bower_components/twitter-fetcher/js/twitterFetcher.js',
             'js/all.ts.js'
           ],
           'js/min/all.min.js': [
