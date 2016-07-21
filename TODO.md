@@ -4,6 +4,11 @@ This is a list of outstanding items for the website.
 
 ## Top Priority
 
+- Add integrity hash to default.html generated after javascript is generated
+- Use SVG library to reduce downloads
+
+## Medium Priority
+
 - SVG fallback for IE8?  - just gen images and do onerror trick
 - UTM
 - Use "summary" front matter when available for meta description and link
@@ -37,4 +42,3 @@ This is a list of outstanding items for the website.
 
 - [ ] Breach data dashboard
 - [ ] Encryption blog article
-
