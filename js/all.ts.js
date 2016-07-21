@@ -8,6 +8,7 @@ if (/\.local$/.test(hostname) || window.location.protocol == "file:") {
     hostname = "local";
 }
 switch (hostname) {
+    case 'ironcore-website-beta.herokuapp.com':
     case 'ironcorelabs.com':
     case 'localhost':
     case 'local':
