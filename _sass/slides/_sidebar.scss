@@ -1,0 +1,247 @@
+/***
+ *       _____       _      _
+ *      / ___/( )   | |    | |
+ *     | (___  _  __| | ___| |__   __ _ _ ___
+ *      \___ \| |/ _` |/ _ | '_ \ / _` | '__/
+ *      ____) | | (_| |  __| |_) | (_| | |
+ *     /_____/|_|\__,_|\___|_.__/ \__,_|_|
+ *
+ *
+ */
+.sidebar {
+  font-family:$fontSansSerifHeading;
+  position:fixed;
+  top:0;
+  right:0;
+  width:$small-screen-max-size;
+  max-width:90%;
+  height:100%;
+  color:#fff;
+  z-index:500;
+  background:rgba(34,34,34,1);
+  -webkit-transition:-webkit-transform 0.5s, visibility 0s;
+  transition:transform 0.5s, visibility 0s;
+  -webkit-transform:translateX(100%);
+  -ms-transform:translateX(100%);
+  transform:translateX(100%);
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+.sidebarShown .sidebar.visible {
+  -webkit-transform:translateX(0%);
+  -ms-transform:translateX(0%);
+  transform:translateX(0%);
+  opacity:1;
+}
+
+.sidebar .content {
+  padding:40px;
+  overflow-y:auto;
+  position:relative;
+}
+
+/* if you use centered content in a sidebar */
+.sidebar .wrap {
+   padding:0;
+}
+
+.sidebarShown .slide.selected .content {
+  overflow:hidden;
+}
+
+.sidebar.left {
+  right:inherit;
+  left:0;
+  -webkit-transform:translateX(-100%);
+  transform:translateX(-100%);
+}
+
+.sidebar.top {
+	top: 0;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.sidebar.bottom {
+	bottom: 0;
+  top:inherit;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+}
+
+/* ELEMENTS */
+.sidebar .logo {
+  padding:0;
+  font-size:0;
+  margin-bottom:35px;
+}
+
+.sidebar .close {
+  position:absolute;
+  top:0;
+  right:0;
+  cursor:pointer;
+  padding:14px;
+  font-size:0;
+  opacity:0.5;
+  z-index:101;
+  -webkit-transition:0.25s;
+  transition:0.25s;
+}
+
+.sidebar:hover .close:hover {
+  opacity:1;
+}
+
+.sidebar .close svg {
+  width:30px;
+  height:30px;
+  fill:#fff;
+}
+
+
+/* menu items */
+.sidebar .uppercase li a {
+  text-transform:uppercase;
+  letter-spacing:0.15em;
+}
+
+.sidebar ul {
+  line-height:2.21;
+  margin-bottom:25px;
+  display:block;
+  font-size:0;
+}
+
+.sidebar a {
+  display:inline-block;
+  color:#fff;
+  fill:#fff;
+}
+
+.sidebar a:hover {
+  opacity:0.6;
+}
+
+.sidebar .mainMenu li a {
+  font-size:1.1875rem;
+  font-weight:700;
+}
+
+.sidebar .mainMenu.small li a {
+  font-size:0.9375rem;
+}
+
+.sidebar .subMenu li {
+  font-weight:400;
+  text-transform:none;
+  letter-spacing:0px;
+  opacity:0.7;
+}
+
+.sidebar .subMenu li {
+  font-size:1.25rem;
+}
+
+.sidebar .subMenu.small li {
+  font-size:0.9375rem;
+}
+
+/* social */
+.sidebar .social {
+  margin-top:40px;
+}
+
+.sidebar .social li {
+  display:inline-block;
+  margin-right:20px;
+}
+
+.sidebar .social li:last-child {
+   margin-right:0;
+}
+
+.sidebar .social li a {
+  font-size:0;
+  padding:0;
+}
+
+.sidebar .social li a svg {
+  width:24px;
+  height:24px;
+}
+
+
+/* sidebar sizes */
+.sidebar.small ul {
+  margin-bottom:17px;
+}
+
+.sidebar.small .content {
+  padding:30px;
+}
+
+.sidebar.small .social {
+  margin-top:30px;
+}
+
+.sidebar .social.small li {
+  margin-right:12px;
+}
+
+.sidebar .social.small li a svg {
+  width:16px;
+  height:16px;
+}
+
+.sidebar .large li a {
+  font-size:1.875rem;
+}
+
+.sidebar .light li a {
+  font-weight:100;
+}
+
+.sidebar .social.medium li a svg {
+  width:18px;
+  height:18px;
+}
+
+.sidebar .social.medium li {
+  margin-right:14px;
+}
+
+
+/* SIDEBAR ANIMATION */
+.page-loaded.sidebarShown .slide.selected {
+	-webkit-transform:scale(0.95) !important;
+  transform:scale(0.95) !important;
+  pointer-events:none;
+  opacity:0.5 !important;
+}
+
+.sidebarShown .panel.top {
+   opacity:0;
+}
+
+.sidebarShown .panel.bottom {
+  opacity:0.5;
+  -webkit-transform:scale(0.95) translateY(-10%);
+  transform:scale(0.95) translateY(-10%);
+}
+
+/* animation */
+.page-loaded.sidebarShown .panel,
+.page-loaded.sidebarShown .slide.selected,
+.page-loaded.sidebarShown .slide.selected:after,
+.sidebar {
+  -webkit-transition:-webkit-transform 0.5s, opacity 0.5s !important;
+  transition:transform 0.5s, opacity 0.5s !important;
+}

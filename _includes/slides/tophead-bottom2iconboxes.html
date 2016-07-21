@@ -1,0 +1,43 @@
+{% include slides/slideStart.html classes=include.classes id=include.id lightbackground=include.lightbackground header=include.header %}
+
+        <div class="fix-10-12">
+          {% if include.header %}
+            <h1 class="small ae-1">
+              {% if include.superheader %}<div class="micro superheader">{{ include.superheader }}</div>{% endif %}
+              {{ include.header }}
+              {% if include.subheader %}<div class="micro subheader">{{ include.subheader }}</div>{% endif %}
+            </h1>
+          {% endif %}
+          {% if include.details %}
+            <div class="ae-2">
+              <p markdown="1">{{ include.details }}</p>
+            </div>
+          {% endif %}
+
+          <ul class="grid equal left">
+            <li class="col-6-12 ae-3 equalElement">
+              {% if include.box1image %}
+                <img width="72" height="72" src="{{ include.box1image }}" alt="{{ include.box1imageAlt }}"/>
+              {% elsif include.box1imageClass %}
+                <div class="h72 hide-text show-image {{ include.box1imageClass }}">
+                  {{ include.box1imageAlt }}
+                </div>
+              {% endif %}
+              <h3 class="uppercase center">{{ include.box1head }}</h3>
+              <p class="small" markdown="1">{{ include.box1body }}</p>
+            </li>
+            <li class="col-6-12 ae-3 equalElement">
+              {% if include.box2image %}
+                <img class="icon-62" width="72" height="72" src="{{ include.box2image }}" alt="{{ include.box2imageAlt }}"/>
+              {% elsif include.box2imageClass %}
+                <div class="h72 hide-text show-image {{ include.box2imageClass }}">
+                  {{ include.box2imageAlt }}
+                </div>
+              {% endif %}
+              <h3 class="uppercase center">{{ include.box2head }}</h3>
+              <p class="small" markdown="1">{{ include.box2body }}</p>
+            </li>
+          </ul>
+        </div>
+
+{% include slides/slideEnd.html background=include.background backgroundTop=include.backgroundTop %}

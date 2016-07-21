@@ -1,0 +1,250 @@
+/***
+ *      _____                 _
+ *     |  __ \               | |
+ *     | |__) __ _ _ __   ___| |____
+ *     |  ___/ _` | '_ \ / _ | / __/
+ *     | |  | (_| | | | |  __| \__ \
+ *     |_|   \__,_|_| |_|\___|_/___/
+ *
+ *
+ */
+.panel {
+  font-family:$fontSansSerifHeading;
+  position:fixed;
+  left:0;
+  width:100%;
+  padding:1.5% 1.8%;
+  z-index:200;
+  text-align:center;
+  font-size:1.375rem;
+  pointer-events:none;
+
+  -webkit-backface-visibility:hidden;
+  backface-visibility:hidden;
+
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+
+  -webkit-transform:translate3d(0,0,0);
+  transform:translate3d(0,0,0);
+}
+
+.slides.whiteSlide .panel {
+  color:#303030;
+}
+
+/* ipad portrait and smaller */
+@media screen and (max-width:($medium-screen-max-size + 1px)) {.panel { padding:2.78% 5%;}}
+
+.panel.large {
+  padding:2.78% 5%;
+}
+
+.panel.small {
+   padding-top:14px;
+   padding-bottom:14px;
+}
+
+.panel.top { top:0; }
+
+.panel.bottom { bottom:0; }
+
+.panel.top {
+  -webkit-transform:translate3d(0,-100%,0);
+  transform:translate3d(0,-100%,0);
+  opacity:0;
+}
+
+.panel.bottom {
+  -webkit-transform:translate3d(0,100%,0);
+  transform:translate3d(0,100%,0);
+  opacity:0;
+}
+
+.page-loaded .panel {
+  -webkit-transform:translate3d(0,0,0);
+  transform:translate3d(0,0,0);
+  opacity:1;
+  -webkit-transition:-webkit-transform 0.5s, opacity 0.5s, padding 0.5s;
+  transition:transform 0.5s, opacity 0.5s, padding 0.5s;
+}
+
+.panel .hidden,
+.panel .hidden * {
+  display:none;
+}
+
+.scroll .panel.hideOnScroll.top,
+.scroll .panel.hideOnScroll.bottom {
+   position:fixed;
+}
+
+.panel.hideOnScroll.top.hide {
+   -webkit-transform:translateY(-100%) !important;
+   transform:translateY(-100%) !important;
+   opacity:0;
+}
+
+.panel.hideOnScroll.bottom.hide {
+   -webkit-transform:translateY(100%) !important;
+   transform:translateY(100%) !important;
+   opacity:0;
+}
+
+.panel .sections {
+  display:table;
+  width:100%;
+  font-size:0;
+}
+
+.panel svg {
+  fill:#fff;
+  width:22px;
+  height:22px;
+}
+.slides.whiteSlide .panel svg {
+  fill:#303030;
+}
+
+.sections > div {
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+  width:33.33333%;
+  white-space:nowrap;
+  font-size:1.375rem;
+  height:50px
+}
+.sections > div.auto {
+   width:0.1%;
+}
+
+.sections > div * {
+  pointer-events:all;
+}
+
+.sections .left {
+   text-align:left;
+}
+
+.sections .right {
+  text-align:right;
+}
+
+.sections .center {
+  text-align:center;
+}
+
+.sections .menu {
+  white-space:nowrap;
+  display:inline-block;
+  padding:0 20px;
+  font-size:0;
+}
+
+.sections .menu li {
+  font-size:1.375rem;
+  display:inline-block;
+  margin:0 10px;
+}
+
+.sections .menu.small li {
+  font-size: 1.125rem;
+  margin: 0 4px;
+}
+
+.sections .menu li a {
+   padding:4px 10px 5px;
+}
+
+.sections .menu.uppercase {
+  font-weight:600;
+}
+
+.sections .menu.uppercase li {
+  font-size:1.0625rem;
+  margin:0 20px;
+  letter-spacing:0.15em;
+}
+
+.sections .menu.uppercase.small li {
+  font-size:0.875rem;
+  margin:0 10px;
+}
+
+.sections .center.space {
+   padding:0 20px;
+}
+.sections .right.space {
+   padding-left:20px;
+}
+.sections .left.space {
+   padding-right:20px;
+}
+
+.sections .right ul.crop {
+  padding-right:0;
+}
+.sections .left ul.crop {
+  padding-left:0;
+}
+.sections .left ul.crop li:first-child {
+  margin-left:0;
+}
+.sections .right ul.crop li:last-child {
+  margin-right:0;
+}
+
+.sections a:not(.button):hover {
+  opacity:0.75;
+  -webkit-transition:0.15s;
+  transition:0.15s;
+}
+
+.panel .button {
+  display:inline-block;
+  border-radius:50px;
+  padding-left:20px;
+  padding-right:20px;
+  background:#fff;
+  color:#303030;
+  font-size:1.25rem;
+  margin:0;
+  vertical-align:middle;
+}
+
+.panel .button.small {
+   font-size:1.125rem;
+}
+
+.panel .button.micro {
+	font-size: 1rem;
+	padding: 12px 22px;
+}
+
+.panel .nextSlide,
+.panel .prevSlide {
+  width:24px;
+  height:24px;
+  position:relative;
+  top:5px;
+}
+
+.panel .button + .button {
+   margin-left:10px;
+}
+
+.slides.whiteSlide .panel .menuButton {
+   background:#303030;
+   color:#fff;
+}
+
+.panel .button.menuButton.stroke {
+   color:#fff;
+}
+
+.slides.whiteSlide .panel .button.menuButton.stroke {
+   color:#303030;
+}

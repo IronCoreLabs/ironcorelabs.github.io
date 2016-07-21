@@ -3,13 +3,13 @@
   <head>
     {% include meta.html %}
 
-    <link rel="alternate" type="application/atom+xml" title="{{ site.name }} - {{ site.description }}" href="/feed.xml" />
+    <link id="feedLink" rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }} RSS" href="https://blog.ironcorelabs.com/feed">
     <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
-    {% if page.url != '/' %}
+    {% unless page.hidenav %}
       {% include nav.html %}
-    {% endif %}
+    {% endunless %}
 
 <!--    <div class="main" role="main">-->
       {{ content }}
@@ -17,8 +17,8 @@
 
     {% include footer.html %}
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="><\/script>')</script>
 
     <script src="/js/min/all.min.js"></script>
 

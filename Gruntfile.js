@@ -19,6 +19,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-check-pages');
   grunt.loadNpmTasks('grunt-htmllint');
   grunt.loadNpmTasks('grunt-w3c-html-validation');
+  grunt.loadNpmTasks('grunt-grunticon');
+
+
+
+
 
 
   // Show elapsed time after tasks run
@@ -30,6 +35,7 @@ module.exports = function(grunt) {
     validation: {
       options: {
 //        reset: grunt.option('reset') || false,
+        relaxerror: ['Attribute “markdown” not allowed on element “div” at this point.'],
         stoponerror: true
       },
       files: {
@@ -107,6 +113,7 @@ module.exports = function(grunt) {
       "js/all.ts.js",
       "css/**/*.map",
       "css/styles.css",
+      "_sass/output",
       ".sass-cache",
       ".DS_Store",
       ".codekit-cache",
@@ -148,20 +155,20 @@ module.exports = function(grunt) {
         files: [
           '_posts/*',
           '_layouts/*',
-          '_includes/*',
+          '_includes/**',
           '_drafts/*',
           'img/**/*.{jpg,png,svg}',
           '*.{html,yml,md}',
-          '**/index.html',
+          '**/index.{html,md}',
           '*.xml',
           '!_site/**/*', // not anything in the output dir
           '!TODO.md' // don't rebuild when the TODO file changes
         ],
-        tasks: ['jekyll:dev', 'validation', 'htmllint:dev']
+        tasks: ['jekyll:dev']  //, 'validation', 'htmllint:dev']
       },
       compass: {
         files: [
-          '_sass/*.scss'
+          '_sass/**/*.scss'
         ],
         tasks: ['compass:dev', 'jekyll:dev']
       },
@@ -244,6 +251,22 @@ module.exports = function(grunt) {
         }
       }
     },
+    grunticon: {
+        myIcons: {
+            files: [{
+                expand: true,
+                // cwd: 'example/source',
+                src: ['img/home/*.svg', 'img/logos/*.svg', 'img/about/*.svg', 'img/tech/*.svg', 'img/products/*.svg'], //, 'img/icons/*.svg'],
+                dest: "_sass/output"
+            }],
+            options: {
+              cssprefix: ".img-",
+              inheritviewbox: true,
+              template: '_sass/svgtemplate.hbs',
+              datasvgcss: '_images.scss',
+            }
+        },
+    },
     uglify: {
       options: {
         mangle: false,
@@ -255,6 +278,12 @@ module.exports = function(grunt) {
           sourceMap: true
         },
         files: {
+          'js/min/slides.min.js': [
+            'js/vendor/svg4everybody.js',
+            'js/vendor/slidesv2.3/plugins.js',
+            'js/vendor/slidesv2.3/slides.js',
+            'js/all.ts.js'
+          ],
           'js/min/all.min.js': [
             'js/plugins.js',
             'js/all.ts.js',
@@ -276,6 +305,12 @@ module.exports = function(grunt) {
           sourceMap: false
         },
         files: {
+          'js/min/slides.min.js': [
+            'js/vendor/svg4everybody.js',
+            'js/vendor/slidesv2.3/plugins.js',
+            'js/vendor/slidesv2.3/slides.js',
+            'js/all.ts.js'
+          ],
           'js/min/all.min.js': [
             'js/plugins.js',
             'js/all.ts.js',
@@ -297,6 +332,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dev', function(target) {
     grunt.task.run([
       'typescript:dev',
+      'grunticon',
       'uglify:dev',
       'compass:dev',
       'jekyll:dev',
@@ -312,6 +348,7 @@ module.exports = function(grunt) {
       'clean',
       'typescript:dist',
       'uglify:dist',
+      'grunticon',
       'compass:dist',
       'jekyll:dist',
       'validation',

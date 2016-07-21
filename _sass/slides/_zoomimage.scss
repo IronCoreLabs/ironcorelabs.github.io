@@ -1,0 +1,69 @@
+/***
+ *      ______                       _____
+ *     |___  /                      |_   _|
+ *        / / ___   ___  _ __ ___     | |  _ __ ___   __ _  __ _  ___
+ *       / / / _ \ / _ \| '_ ` _ \    | | | '_ ` _ \ / _` |/ _` |/ _ \
+ *      / /_| (_) | (_) | | | | | |  _| |_| | | | | | (_| | (_| |  __/
+ *     /_____\___/ \___/|_| |_| |_| |_____|_| |_| |_|\__,_|\__, |\___/
+ *                                                          __/ |
+ *                                                         |___/
+ */
+
+[data-action="zoom"] {
+  cursor:pointer;
+  cursor:-webkit-zoom-in;
+  cursor:-moz-zoom-in;
+}
+
+.zoom-img,
+.zoom-img-wrap {
+  position:relative;
+  -webkit-transition:all 0.5s;
+  transition:all 0.5s;
+  -webkit-transition-timing-function:cubic-bezier(.2,0,.3,1) !important;
+  transition-timing-function:cubic-bezier(.2,0,.3,1) !important;
+}
+
+img.zoom-img {
+  cursor:pointer;
+  cursor:-webkit-zoom-out;
+  cursor:-moz-zoom-out;
+}
+
+.zoom-overlay {
+  background:rgba(17, 17, 17, 1);
+  position:fixed;
+  top:-9999px;
+  left:-9999px;
+  right:-9999px;
+  bottom:-9999px;
+  pointer-events:none;
+  filter:"alpha(opacity=0)";
+  opacity:0;
+  -webkit-transition:opacity 0.5s;
+  transition:opacity 0.5s;
+}
+
+.zoom-overlay-open .zoom-overlay {
+  filter:"alpha(opacity=90)";
+  opacity:0.9;
+}
+
+.zoom-overlay-open .side,
+.zoom-overlay-open .panel {
+   opacity:0;
+  -webkit-transition-delay:0s;
+  transition-delay:0s;
+}
+
+.zoom-overlay-open,
+.zoom-overlay-transitioning {
+  cursor:default;
+}
+
+.zoom-img-parent {
+  position:relative;
+  z-index:1000;
+}
+
+

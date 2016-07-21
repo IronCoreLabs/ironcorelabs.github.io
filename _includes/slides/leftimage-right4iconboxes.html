@@ -1,0 +1,86 @@
+{% include slides/slideStart.html classes=include.classes id=include.id lightbackground=include.lightbackground header=include.header %}
+        <div class="fix-12-12">
+          <ul class="grid">
+            {% if include.image %}
+            <li class="col-6-12 left ae-1" data-action="zoom">
+              <img class="" src="{{ include.image }}" alt="{{ include.imageAlt }}"/>
+            </li>
+            {% elsif include.imageClass %}
+            <li class="col-6-12 left ae-1">
+              <div class="hide-text show-image {{ include.imageClass }}" data-action="zoom">
+                {{ include.imageClassAlt }}
+              </div>
+            </li>
+            {% endif %}
+
+            <li class="col-6-12 left">
+              {% if include.header %}
+              <h1 class="small ae-2">
+                {% if include.superheader %}<div class="micro superheader">{{ include.superheader }}</div>{% endif %}
+                {{ include.header }}
+                {% if include.subheader %}<div class="micro subheader">{{ include.subheader }}</div>{% endif %}
+              </h1>
+              {% endif %}
+              {% if include.details %}
+              <div class="ae-3">
+                <p>{{ include.details }}</p>
+              </div>
+              {% endif %}
+
+              <ul class="grid equal later">
+                <li class="col-6-12 ae-4 equalElement">
+                  {% if include.box1image %}
+                    <img class="icon-62" width="34" height="34" src="{{ include.box1image }}" alt="{{ include.box1imageAlt }}"/>
+                  {% elsif include.box1imageClass %}
+                    <div class="icon-62 h3rem hide-text show-image {{ include.box1imageClass }}">
+                      {{ include.box1imageAlt }}
+                    </div>
+                  {% endif %}
+                  <h3 class="uppercase">{{ include.box1head }}</h3>
+                  <p class="small">{{ include.box1body }}</p>
+                </li>
+                <li class="col-6-12 ae-4 equalElement">
+                  {% if include.box2image %}
+                    <img class="icon-62" width="34" height="34" src="{{ include.box2image }}" alt="{{ include.box2imageAlt }}"/>
+                  {% elsif include.box2imageClass %}
+                    <div class="icon-62 h3rem hide-text show-image {{ include.box2imageClass }}">
+                      {{ include.box2imageAlt }}
+                    </div>
+                  {% endif %}
+                  <h3 class="uppercase">{{ include.box2head }}</h3>
+                  <p class="small">{{ include.box2body }}</p>
+                </li>
+                <li class="col-6-12 ae-4 equalElement">
+                  {% if include.box3image %}
+                    <img class="icon-62" width="34" height="34" src="{{ include.box3image }}" alt="{{ include.box3imageAlt }}"/>
+                  {% elsif include.box3imageClass %}
+                    <div class="icon-62 h3rem hide-text show-image {{ include.box3imageClass }}">
+                      {{ include.box3imageAlt }}
+                    </div>
+                  {% endif %}
+                  <h3 class="uppercase">{{ include.box3head }}</h3>
+                  <p class="small">{{ include.box3body }}</p>
+                </li>
+                <li class="col-6-12 ae-4 equalElement">
+                  {% if include.box4image %}
+                    <img class="icon-62" width="34" height="34" src="{{ include.box4image }}" alt="{{ include.box4imageAlt }}"/>
+                  {% elsif include.box4imageClass %}
+                    <div class="icon-62 h3rem hide-text show-image {{ include.box4imageClass }}">
+                      {{ include.box4imageAlt }}
+                    </div>
+                  {% endif %}
+                  <h3 class="uppercase">{{ include.box4head }}</h3>
+                  <p class="small">{{ include.box4body }}</p>
+                </li>
+              </ul>
+            </li>
+
+
+
+
+
+
+
+          </ul>
+        </div>
+{% include slides/slideEnd.html background=include.background backgroundTop=include.backgroundTop %}

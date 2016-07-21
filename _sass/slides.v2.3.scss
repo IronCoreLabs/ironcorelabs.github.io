@@ -1,0 +1,473 @@
+/*
+
+   _____ _       _              _____  _____ _____
+  / ___/| (•)   | |           / ____// ____/ ____/  v 2.3
+ | (___ | |_  __| | ___ ____ | |    | (___| (___
+  \___ \| | |/ _` |/ _ / __/ | |     \___ \ ___ \
+  ____) | | | (_| |  __\__ \ | |____ ____) |___) |
+ /_____/|_|_|\__,_|\___/___/  \_____/_____/_____/
+
+
+This file contains styles that are necessary for proper work
+of your Slides Project.
+
+http://designmodo.com/slides/
+
+*/
+
+// File broken out into parts
+@import 'reset';
+@import 'variables';
+@import 'slides/fonts';
+@import 'slides/misc';
+@import 'slides/elements';
+@import 'slides/typography';
+@import 'slides/main';
+@import 'slides/buttons';
+@import 'slides/forms';
+@import 'slides/colors';
+@import 'slides/slides';
+@import 'slides/grid';
+@import 'slides/panels';
+@import 'slides/preloader';
+@import 'slides/side';
+@import 'slides/share';
+@import 'slides/sidebar';
+@import 'slides/popup';
+@import 'slides/zoomimage';
+@import 'slides/slider';
+@import 'slides/effects';
+@import 'slides/custom';
+
+
+// From here down is custom IronCore bits
+@import 'output/images';
+@import 'font-awesome-compass';
+@import 'font-awesome';
+@import 'highlights';
+
+html {
+  font-size: $fontSizeBase;
+}
+@media screen and (max-width:$medium-screen-max-size) {
+  html {
+    font-size: 15px;
+  }
+  .hero {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width:$small-screen-max-size) {
+  html {
+    font-size: 14px;
+  }
+  .hero {
+    font-size: 1.5rem;
+  }
+}
+
+
+.sticky {
+  position: sticky; // polyfilled in js
+}
+.fixed {
+  position: fixed;
+}
+.hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.show-image {
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+a.show-image, a > .show-image {
+  display: inline-block;
+}
+.w35 {
+  width: 35px;
+}
+.w100 {
+  width: 100px;
+}
+.w200 {
+  width: 200px;
+}
+.w100pct {
+  width: 100%;
+}
+.h20 {
+  height: 20px;
+}
+.h25 {
+  height: 25px;
+}
+.h30 {
+  height: 30px;
+}
+.h35 {
+  height: 35px;
+}
+.h100pct {
+  height: 100%;
+}
+.h72 {
+  height: 72px;
+}
+.h100 {
+  height: 100px;
+}
+.h200 {
+  height: 200px;
+}
+.h256 {
+  height: 256px;
+}
+.h300 {
+  height: 300px;
+}
+.h400 {
+  height: 400px;
+}
+.h500 {
+  height: 500px;
+}
+.h600 {
+  height: 600px;
+}
+.hauto {
+  height: auto;
+}
+.h4x {
+  line-height: 400%;
+}
+.h3x {
+  line-height: 300%;
+}
+.h35x {
+  line-height: 350%;
+}
+.h2x {
+  line-height: 200%;
+}
+.h25x {
+  line-height: 250%;
+}
+.h15x {
+  line-height: 150%;
+}
+.h1em {
+  height: 1em;
+}
+.h3rem {
+  height: 3rem;
+}
+h2.hero {
+  line-height: 45px;
+  letter-spacing: -1px;
+  text-transform: none;
+}
+
+.panel .button.actionButton {
+  opacity: 0.7;
+  &:hover {
+    opacity: 1.0;
+  }
+}
+.panel .button.actionButton i {
+  position:absolute;
+  color: #999;
+  font-size: 30px;
+  top: 8px;
+  left: 11px;
+}
+.sidebar .logo, .sidebar .logo > div {
+  height: 100px;
+  width: 100%;
+}
+.sidebar .social li a {
+  font-size: 14px !important;
+}
+.firstSlide .headerlogohiddenfirstslide {
+  visibility: hidden;
+}
+.bottom ul.social {
+  margin-bottom: 1rem;
+}
+.bottom .social li {
+  display: none;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+.copyright {
+  font-size: 0.5rem;
+  opacity: 0.5;
+}
+.lastSlideOnly {
+  display: none;
+}
+.lastSlide .lastSlideOnly {
+  display: block;
+}
+.lastSlide .exceptLastSlide {
+  display: none;
+}
+#code {
+  .show-image {
+    background-position: top center;
+    height: 600px;
+  }
+  h1  {
+    letter-spacing: 0;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  h1 .superheader {
+    text-align: left;
+  }
+  h1 .subheader {
+    text-align: center;
+  }
+}
+#fortress {
+  .wrap {
+    vertical-align: top;
+  }
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+#distributed {
+  h1 {
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .subheader {
+    letter-spacing: 0.1em;
+    text-transform: lowercase;
+  }
+}
+#zero {
+  h2 {
+    font-size: 6.25rem;
+    @media screen and (max-width:$medium-screen-max-size) {
+      font-size: 2rem;
+    }
+  }
+}
+#provable {
+  .wrap {
+    vertical-align: top;
+  }
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+#so-called-best-practices {
+  .img-data-on-screen {
+    margin: 0;
+  }
+}
+#desk {
+  .show-image {
+    background-position-y: top;
+  }
+  h1 {
+    letter-spacing: 0;
+    .subheader {
+      text-transform: none;
+    }
+  }
+  p.details {
+    font-style: italic;
+    font-size: 1rem;
+    @extend .textRed;
+  }
+}
+#end-to-end {
+  li {
+    margin-bottom: 3rem;
+  }
+}
+#productselector {
+  .show-image {
+    margin-bottom: 1rem;
+  }
+}
+
+.image-container {
+  margin-top: 4em;
+}
+.quotation-mark {
+  text-align: center;
+  font-family: $fontSerifHeading;
+  font-size: 14rem;
+  margin: 0;
+  padding: 0;
+  opacity: .7;
+  line-height: 5rem;
+}
+.quote {
+  font-family: $fontSerifHeading;
+  // text-transform: none;
+  letter-spacing: 0.05rem;
+  /* word-spacing: .2em; */
+  // text-align: left;
+  line-height: 1.5em;
+  font-size: 2.5rem;
+  opacity: 1;
+  // font-weight: normal;
+  @media screen and (max-width:$medium-screen-max-size) {
+    line-height: 1.2em;
+    font-size: 1.5rem;
+  }
+}
+.author {
+  font-family: $fontSerifHeading;
+  opacity: 0.7;
+  padding-top: 1em;
+}
+.tophead-rightdesc {
+  .hero {
+    margin-top: 4rem;
+    font-size: 3rem;
+  }
+  @media screen and (max-width:$medium-screen-max-size) {
+    .superheader {
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+    }
+    .hero {
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+  }
+}
+.topquote-bottom2iconboxes li {
+  margin-bottom: 2rem;
+}
+.whiteSlide.fade.fade-1 .content, .whiteSlide.fade-1 .content {
+  background: rgba(255, 255, 255, 0.1)
+}
+.whiteSlide.fade.fade-2 .content, .whiteSlide.fade-2 .content {
+  background: rgba(255, 255, 255, 0.2)
+}
+.whiteSlide.fade.fade-3 .content, .whiteSlide.fade-3 .content {
+  background: rgba(255, 255, 255, 0.3)
+}
+.whiteSlide.fade.fade-4 .content, .whiteSlide.fade-4 .content {
+  background: rgba(255, 255, 255, 0.4)
+}
+.whiteSlide.fade.fade-5 .content, .whiteSlide.fade-5 .content {
+  background: rgba(255, 255, 255, 0.5)
+}
+.whiteSlide.fade.fade-6 .content, .whiteSlide.fade-6 .content {
+  background: rgba(255, 255, 255, 0.6)
+}
+.whiteSlide.fade.fade-7 .content, .whiteSlide.fade-7 .content {
+  background: rgba(255, 255, 255, 0.7)
+}
+.whiteSlide.fade.fade-8 .content, .whiteSlide.fade-8 .content {
+  background: rgba(255, 255, 255, 0.8)
+}
+.whiteSlide.fade.fade-9 .content, .whiteSlide.fade-9 .content {
+  background: rgba(255, 255, 255, 0.9)
+}
+
+.navlogo {
+  @extend .img-ironcore-logo-side-inverse-transparent;
+  width: 200px;
+  height: 31px
+}
+.whiteSlide .navlogo {
+  @extend .img-ironcore-logo-side;
+}
+.firstSlide.lastSlide .side .navigation {
+  visibility: hidden;
+}
+.caption {
+  font-style: italic;
+}
+strong, b, .bold {
+  font-weight: bold;
+}
+i, em {
+  font-style:italic;
+}
+section a {
+  text-decoration: underline;
+}
+code {
+  font-size: 80%;
+  background-color: #eee;
+}
+
+pre.highlight > code {
+  font-size: 110%;
+  line-height: 150%;
+}
+
+.contactButtons {
+  li {
+    display: inline-block;
+    min-width: (12 * 0.8rem);
+    margin-bottom: 1rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  i {
+    font-size: 3rem;
+    display:block;
+    margin:0;
+    padding:0;
+  }
+  .contactLabel {
+    font-weight: bold;
+    display:block;
+    margin:0;
+    padding:0;
+  }
+  .contactAddress {
+    display:block;
+    margin:0;
+    padding:0;
+    font-size: 0.8rem;
+    color: $gray;
+  }
+  & li:hover, & li:active, & li:focus {
+    color: $blue;
+    .contactAddress {
+      color: $blue;
+    }
+  }
+
+}
+
+.button.disabled {
+  background-color: $gray;
+  color: $lightGray;
+  cursor: default;
+  &:hover, &:active {
+    background-color: $lightGray;
+    color: $white;
+    top: 0;
+    -webkit-box-shadow:none;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,42 @@
+{% include slides/slideStart.html classes=include.classes id=include.id lightbackground=include.lightbackground header=include.header %}
+
+        <div class="fix-12-12">
+          <ul class="grid">
+            <li class="col-7-12 left cell-28">
+              {% if include.header %}
+              <h1 class="small ae-1 fromLeft">
+                {% if include.superheader %}<div class="micro superheader">{{ include.superheader }}</div>{% endif %}
+                {{ include.header }}
+                {% if include.subheader %}<div class="micro subheader">{{ include.subheader }}</div>{% endif %}
+              </h1>
+              {% endif %}
+              {% if include.details %}
+              <div class="ae-2 fromLeft">
+                <p>{{ include.details }}</p>
+              </div>
+              {% endif %}
+              {% if include.buttonText && include.buttonUrl %}
+              <a href="{{ include.buttonUrl }}" class="button round uppercase deepRed ae-3 fromCenter cropBottom">{{ include.buttonText }}</a>
+              {% endif %}
+            </li>
+            {% if include.image %}
+            <li class="col-5-12 ae-1" data-action="zoom">
+              <img class="shiftImage" src="{{ include.image }}" alt="{{ include.imageAlt }}"/>
+            </li>
+            {% elsif include.imageClass %}
+            <li class="col-5-12 ae-1">
+              <div class="shiftImage show-image {{ include.imageClass }}" data-action="zoom">
+                {{ include.imageClassAlt }}
+              </div>
+            </li>
+            {% elsif include.detailsRight %}
+            <li class="col-5-12 ae-1 fromRight">
+              <div>
+                <p markdown="1">{{ include.detailsRight }}</p>
+              </div>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+
+{% include slides/slideEnd.html background=include.background backgroundTop=include.backgroundTop %}

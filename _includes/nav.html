@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default {% if include.inverse %}navbar-inverse{% endif %}">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -7,7 +7,10 @@
         <i class="icon-bar"></i>
         <i class="icon-bar"></i>
       </button>
-      <a class="navbar-brand" href="{{ site.baseurl }}/"><img src="/img/logos/ironcore-logo-side.svg" alt="{{ site.name }}" ></a>
+
+      {% unless include.hidelogo %}
+      <a class="navbar-brand" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/img/logos/ironcore-logo-side.svg" alt="{{ site.name }}" ></a>
+      {% endunless %}
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       {% capture current_url %}{{ page.url | replace: 'index.html', '' }}{% endcapture %}

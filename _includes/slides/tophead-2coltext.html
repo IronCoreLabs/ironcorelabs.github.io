@@ -1,0 +1,24 @@
+{% include slides/slideStart.html classes=include.classes id=include.id lightbackground=include.lightbackground header=include.header %}
+        <div class="fix-10-12">
+          {% if include.header %}
+            <h1 class="fromCenter ae-1">
+              {% if include.superheader %}<div class="micro superheader">{{ include.superheader }}</div>{% endif %}
+              {{ include.header }}
+              {% if include.subheader %}<div class="micro subheader">{{ include.subheader }}</div>{% endif %}
+            </h1>
+          {% endif %}
+          {% if include.details %}
+            <p class="sansSerifHeading ae-3 opaque">{{ include.details }}</p>
+          {% endif %}
+        </div>
+        <div class="fix-12-12">
+          <ul class="grid">
+            <li class="col-6-12 left ae-5 fromBottom">
+              <p>{{ include.col1 }}</p>
+            </li>
+            <li class="col-6-12 left ae-6 fromBottom">
+              <p>{{ include.col2 }}</p>
+            </li>
+          </ul>
+        </div>
+{% include slides/slideEnd.html background=include.background backgroundTop=include.backgroundTop %}

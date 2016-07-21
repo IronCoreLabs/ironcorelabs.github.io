@@ -1,9 +1,10 @@
 /// <reference path="refs/jquery/jquery.d.ts" />
 /// <reference path="refs/stickyfill.d.ts" />
+/// <reference path="refs/svg4everybody.d.ts" />
 // Redirect if someone accesses github.io directly
 // Don't even wait for DOM
 var hostname = window.location.hostname;
-if (/\.local$/.test(hostname)) {
+if (/\.local$/.test(hostname) || window.location.protocol == "file:") {
     hostname = "local";
 }
 switch (hostname) {
@@ -26,26 +27,35 @@ if (top.location != location) {
 }
 // After load...
 $(function () {
-    $('nav').Stickyfill();
+    if ($('.sticky').Stickyfill) {
+        $('.sticky').Stickyfill();
+    }
+    svg4everybody();
     var form = document.getElementById('mc-embedded-subscribe-form');
-    form.reset = function () {
-        // override the reset function -- its the only way we know
-        // mailchimp had success submitting the form.
-        $('#mc-embedded-subscribe-form .input-group').hide(1000);
-    };
+    if (form) {
+        form.reset = function () {
+            // override the reset function -- its the only way we know
+            // mailchimp had success submitting the form.
+            $('#mc-embedded-subscribe-form .input-group').hide(1000);
+        };
+    }
     // De-obfuscate email address
-    var email = $('#contactemail').text() + '@' + window.location.hostname;
-    $('#contactemail').text(email);
-    $('#contactemail').attr('href', 'mailto:' + email);
+    $('.contactemail').each(function (idx, emailEl) {
+        var email = $(emailEl).text() + '@' + window.location.hostname;
+        $(emailEl).text(email);
+        $(emailEl).attr('href', 'mailto:' + email);
+    });
     // De-obfuscate phone number
     // to obfuscate, start with a number and do this:
     // "123-456-789".split('').map(function(v, idx) { return v.charCodeAt(0) ^ idx; }).join("-");
-    var phone = $("#contacttel").text().split('-').map(function (v, idx) {
-        return String.fromCharCode(parseInt(v, 10) ^ idx);
-    }).join('');
-    $('#contacttel').attr('itemprop', 'telephone')
-        .attr('href', "tel:+1" + phone.replace(/-/g, ''))
-        .text(phone);
+    $(".contacttel").each(function (idx, phoneEl) {
+        var phone = $(phoneEl).text().split('-').map(function (v, idx) {
+            return String.fromCharCode(parseInt(v, 10) ^ idx);
+        }).join('');
+        $(phoneEl).attr('itemprop', 'telephone')
+            .attr('href', "tel:+1" + phone.replace(/-/g, ''))
+            .text(phone);
+    });
     if ($('#disqus_thread').length && disqus_shortname) {
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
