@@ -1,4 +1,5 @@
 source "http://rubygems.org"
+ruby '2.1.5'
 
 # Align versions with https://pages.github.com/versions/
 gem 'rdoc'

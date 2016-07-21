@@ -13,8 +13,8 @@ timezone: America/Denver
 
 mode: production
 
-paginate: 15
-paginate_path: "/news/:num"
+#paginate: 15
+#paginate_path: "/news/:num"
 
 # Following two configs forced by github -- might as well test with them
 safe: true
@@ -124,6 +124,9 @@ kramdown:
     coderay_bold_every:        10
     coderay_css:               style
 
+jekyll_auth:
+  ssl: true
+
 # Use the following plug-ins
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
@@ -164,3 +167,4 @@ exclude:
   - Rakefile
   - config.ru
   - vendor
+  - .env
