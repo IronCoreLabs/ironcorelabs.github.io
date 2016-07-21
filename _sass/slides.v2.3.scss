@@ -244,7 +244,7 @@ h2.hero {
 }
 #fortress {
   .wrap {
-    vertical-align: top;
+    vertical-align: middle;
   }
   h1 {
     text-transform: uppercase;
@@ -271,7 +271,7 @@ h2.hero {
 }
 #provable {
   .wrap {
-    vertical-align: top;
+    vertical-align: middle;
   }
   h1 {
     text-transform: uppercase;
@@ -417,7 +417,7 @@ code {
   background-color: #eee;
 }
 
-pre.highlight > code {
+pre > code {
   font-size: 110%;
   line-height: 150%;
 }

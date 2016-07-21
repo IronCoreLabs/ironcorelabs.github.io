@@ -45,15 +45,15 @@ nav:
     url: "/"
     text: "Overview"
   -
-    url: "/technology"
+    url: "/technology/"
     text: "Technology"
   -
-    url: "/products"
+    url: "/products/"
     text: "Products"
 
 navright:
   -
-    url: "/about"
+    url: "/about/"
     text: "About Us"
   -
     url: "https://blog.ironcorelabs.com/"

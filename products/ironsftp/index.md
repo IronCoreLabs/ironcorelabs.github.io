@@ -44,11 +44,11 @@ The user experience with IronSFTP is nearly identical to standard SFTP with new 
 
 For now, you will need to download and build `ironsftp` manually. Packages for various distributions will come soon.
 
-```bash
-> git clone git@github.com:IronCoreLabs/ironssh.git
-> cd ironssh
-> make
-```
+{% highlight bash %}
+    > git clone git@github.com:IronCoreLabs/ironssh.git
+    > cd ironssh
+    > make
+{% endhighlight %}
 
 
 </div>
