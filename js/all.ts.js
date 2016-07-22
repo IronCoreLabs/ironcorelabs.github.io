@@ -95,4 +95,24 @@ $(function () {
         }
         document.addEventListener('scroll', onScroll);
     }
+    var prevMenuItem = $('nav.sidebar .mainMenu li.active').prev();
+    var nextMenuItem = $('nav.sidebar .mainMenu li.active').next();
+    $(window).on("keydown", function (e) {
+        if (e.target.nodeName != "INPUT" && e.target.nodeName != "TEXTAREA") {
+            console.dir(e);
+            /* [ ← ] */
+            if (e.keyCode === 37) {
+                if (prevMenuItem.length) {
+                    e.preventDefault();
+                    console.log("left");
+                    window.location.href = prevMenuItem.children('a').attr('href');
+                }
+            }
+            else if (e.keyCode === 39) {
+                e.preventDefault();
+                console.log("right");
+                window.location.href = nextMenuItem.children('a').attr('href');
+            }
+        }
+    });
 });
