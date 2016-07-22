@@ -20,14 +20,20 @@ lightbackground: 1
   id="what"
   classes="fade-8"
   header="What we do"
-  box1head="Plumbing of the future"
+  box1head="Foundation for the future"
   box1body="We're building a next generation of application security for the next generation of enterprise could applications. IronCore is focused on highly usable security that gets out of the way and scales to massive numbers of users and amounts of data. We're building access controls and identities that don't rely on shared secrets and trusted servers, or even trusted applications. **This is the future of digital data.**"
   box2head="Modern, Solid Engineering"
-  box2body="We're very opinionated about what constitutes _good software_. We're craftspeople building solid and demonstrably correct software using [functional programming][funcprog] paradigms that use referential transparency, eschew global state and side effects. Contrast this to the [shoddy software][shoddysoftware] underlying many existing security libraries. **We build for security and reliability.**"
+  box2body="We're very opinionated about what constitutes _good software_. We're craftspeople building solid and demonstrably correct software using [functional programming][funcprog] paradigms that use referential transparency, eschew global state and side effects. Contrast this to the [outdated software][shoddysoftware] underlying many existing security libraries. **We build for security and reliability.**"
   background="/img/about/rock-climbing.jpg"
   backgroundTop="1"
 %}
 
+
+{% comment %}
+
+Second sentence too wordy.
+
+{% endcomment %}
 
 {% include slides/slideStart.html id="future" header="Where we're going" classes="fade-8" %}
 <div markdown="1">
@@ -48,6 +54,13 @@ Our goal is to eliminate the daily breaches seen in the news. If sensitive data 
 
 </div>
 {% include slides/slideEnd.html background="/img/about/writing.jpg" %}
+
+
+{% comment %}
+
+Really ugly.
+
+{% endcomment %}
 
 {% include slides/slideStart.html id="tweets" header="Recent Tweets" classes="fade-8" %}
 

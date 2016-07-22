@@ -12,7 +12,6 @@ bodyClasses: whiteSlide
   background="/img/tech/tech-lines.jpg"
 %}
 
-
 {% include slides/topquote-bottom2iconboxes.html
   id="end-to-end"
   header="End-to-End"
@@ -39,7 +38,6 @@ bodyClasses: whiteSlide
   background="/img/tech/desk-wood.jpg"
 %}
 
-
 {% include slides/tophead-bottom2iconboxes.html
   id="pki"
   header="Crypto Family"
@@ -54,6 +52,17 @@ bodyClasses: whiteSlide
   background="/img/tech/office-building.jpg"
 %}
 
+{% comment %}
+
+Make header smaller.
+
+Use bullets.  Too many words.
+
+Darken background.
+
+Remove??
+
+
 {% include slides/tophead-2coltext.html
   id="provable"
   header="<div class='h1em show-image img-fingerprint'></div>Provable Access Control"
@@ -61,6 +70,8 @@ bodyClasses: whiteSlide
   col2="The other part of access control involves policy.  Things like write-access, sharing policies (limitations on who a piece of data can be shared with, for example), access pattern enforcement (stopping the wholesale download of a database) and so forth are managed entirely by the server and trust in the server is required for these access control elements to work."
   background="/img/tech/microscope.jpg"
 %}
+
+{% endcomment %}
 
 {% include slides/left4iconboxes-rightimage.html
   id="standards-based"
@@ -80,13 +91,32 @@ bodyClasses: whiteSlide
 %}
 
 {% include slides/leftimage-right4iconboxes.html
+  id="client"
+  header="Cross Device"
+  subheader="Support across platforms and devices"
+  box1head="Android"
+  box1body="SDKs available for Android phone and mobile devices."
+  box1imageClass="fa fa-android"
+  box2head="iOS"
+  box2body="SDKs available for iPhone and iPad."
+  box2imageClass="fa fa-apple"
+  box3head="Web"
+  box3body="JavaScript SDK available for web and other JavaScript environments such as node.js and Electron."
+  box3imageClass="fa fa-desktop"
+  box4head="Anywhere"
+  box4body="C code and RESTful APIs allow integration from any Internet connected device."
+  box4imageClass="fa fa-globe"
+  image="/img/tech/multi-device.jpg"
+  lightbackground="1"
+%}
+
+{% include slides/tophead-bottom4iconboxes.html
   id="misc"
-  imageClass="img-lock-everywhere h500"
-  box1head="Revocation"
-  box1body="Stolen and compromised devices, employees who leave the company and other events bring us to the issue of removing granted access. IronCore has built access revocation in such that revoking access is painless."
-  box2head="Crypto at Scale"
-  box2body="Unlimited group sizes, unlimited numbers of records and the ability to easily remove users from groups without performance impact. In short, IronCore's tech is game changing for public key encryption in the enterprise."
-  box3head="Sharing Across Domains"
+  box1head="Crypto at Scale"
+  box1body="Unlimited group sizes, unlimited numbers of records and the ability to easily remove users from groups without performance impact. In short, IronCore's tech is game changing for public key encryption in the enterprise."
+  box2head="Revocation"
+  box2body="Stolen and compromised devices, employees who leave the company and other events bring us to the issue of removing granted access. IronCore has built access revocation in such that revoking access is painless."
+  box3head="Share Between Orgs"
   box3body="No more silos. Control data even as it gets shared outside of your company. Revoke access at will. No more spreadsheets in email leading to immediate loss of control of sensitive data."
   box4head="Cross Platform"
   box4body="Web, iOS and Android SDKs are being built to bring best-practice data security to all major devices. Plus APIs for use by internet connected devices are coming soon."

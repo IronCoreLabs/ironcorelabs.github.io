@@ -1,7 +1,7 @@
 <section
   class="slide fade kenBurns {% if include.lightbackground or page.lightbackground %}whiteSlide{% endif %} {{ include.classes }}" {% if include.id %}name="{{ include.id }}"
   id="{{ include.id }}"
-  data-title="{{ include.header | default:include.id | capitalize | strip_html | replace: '"', '\'' }}"{% endif %}>
+  data-title="{{ include.header | default:include.id | capitalize | strip_html | replace: '"', '' }}"{% endif %}>
   <div class="content">
     <div class="container">
       <div class="wrap">
