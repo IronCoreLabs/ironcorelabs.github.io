@@ -33,7 +33,7 @@ bodyClasses: whiteSlide
   id="desk"
   classes="fade-6"
   header="Storing Keys on the Server"
-  subheader="Like locking a drawer but leaving the key on the desk"
+  subheader="Like locking a drawer but leaving the key on the desk."
   details="This is common, but really bad practice."
   imageClass="img-desk-key h400"
   background="/img/tech/desk-wood.jpg"

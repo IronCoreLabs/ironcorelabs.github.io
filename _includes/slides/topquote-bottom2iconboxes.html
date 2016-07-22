@@ -13,7 +13,7 @@
               {% if include.box1image %}
                 <img class="ae-4 w35 h35" src="{{ include.box1image }}" alt="{{ include.box1imageAlt }}"/>
               {% elsif include.box1imageClass %}
-                <div class="ae-4 w35 h35 hide-text show-image {{ include.box1imageClass }}">
+                <div class="ae-4 h35 hide-text show-image {{ include.box1imageClass }}">
                   {{ include.box1imageAlt }}
                 </div>
               {% endif %}
@@ -24,7 +24,7 @@
               {% if include.box2image %}
                 <img class="ae-4 w35 h35" src="{{ include.box2image }}" alt="{{ include.box2imageAlt }}"/>
               {% elsif include.box2imageClass %}
-                <div class="ae-4 hide-text w35 h35 show-image {{ include.box2imageClass }}">
+                <div class="ae-4 hide-text h35 show-image {{ include.box2imageClass }}">
                   {{ include.box2imageAlt }}
                 </div>
               {% endif %}
