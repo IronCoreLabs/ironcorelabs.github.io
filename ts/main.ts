@@ -84,11 +84,11 @@ $(function() {
   if ($('#twitter-latest').length) {
     var config = {
       "id": "594367675494600704",
-      "maxTweets": 5,
+      "maxTweets": 6,
       "domId": "twitter-latest",
       "enableLinks": true,
       "showUser": false,
-      "showImages": false,
+      "showImages": true,
       "showTime": true,
       "lang": "en"
     }

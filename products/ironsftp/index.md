@@ -2,7 +2,7 @@
 layout: slides
 title: IronSFTP End-to-End Encrypted SFTP
 lightbackground: 1
-transition: scroll
+transition: cards
 bodyclasses: whiteSlide
 ---
 

@@ -317,11 +317,39 @@ h2.hero {
   color: #000;
 }
 #twitter-latest {
+  li {
+    position: relative;
+    float: left;
+    width: 48%;
+    min-height: 10rem;
+    background-color: rgba(255,255,255,0.6);
+    -webkit-box-shadow: 10px 10px 26px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 26px -13px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 26px -13px rgba(0,0,0,0.75);
+    box-sizing: border-box;
+    padding: 1rem;
+    overflow: hidden;
+    margin-right: 1%;
+    margin-bottom: 1rem;
+  }
+  @media screen and (max-width:$medium-screen-max-size) {
+    li {
+      float: none;
+      width: 100%;
+      min-height: 5rem;
+    }
+  }
   p {
     font-family: $fontSansSerifHeading;
     font-size: 1rem;
     margin-bottom: 1rem;
     color: $white;
+  }
+  .timePosted {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
   }
   .timePosted::before {
     @extend .fa;
@@ -338,6 +366,12 @@ h2.hero {
     opacity: 0.6;
     font-style: italic;
   }
+  .media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
 }
 #client {
   .hide-text {
@@ -348,7 +382,31 @@ h2.hero {
     margin-bottom: 10px;
   }
 }
+#sales {
+  h2 {
+    font-size: 4rem;
+    @media screen and (max-width:$medium-screen-max-size) {
+      font-size: 2rem;
+    }
+  }
+}
 
+#credits {
+  img {
+    max-width: 150px;
+    height: auto;
+  }
+  ul ul li {
+    margin-left: 175px;
+    list-style-type: disc;
+  }
+  ol li {
+    list-style-type: disc;
+  }
+  h2 {
+    margin-top: 1em;
+  }
+}
 .image-container {
   margin-top: 4em;
 }

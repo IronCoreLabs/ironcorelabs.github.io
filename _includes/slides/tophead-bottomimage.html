@@ -14,9 +14,10 @@
           </div>
           {% endif %}
         </div>
-        <div class="fix-10-12 toCenter image-container">
+        {% if include.image or include.imageClass %}
+        <div class="fix-10-12 toCenter image-container" data-action="zoom">
           {% if include.image %}
-            <img class="wide ae-3" src="{{ include.image }}" alt="{{ include.imageAlt }}"/>
+            <img class="wide ae-3" src="{{ include.image }}" alt="{{ include.imageAlt }}" />
           {% elsif include.imageClass %}
             <div class="wide ae-3 show-image hide-text {{ include.imageClass }}" data-action="zoom">
               {{ include.imageClassAlt }}
@@ -26,6 +27,7 @@
             <p class="ae-3 center small caption">{{ include.imageCaption }}</p>
           {% endif %}
         </div>
+        {% endif %}
         {% if include.buttonText and include.buttonUrl %}
         <a href="{{ include.buttonUrl }}" class="button round uppercase deepRed ae-3 fromCenter cropBottom">{{ include.buttonText }}</a>
         {% endif %}
