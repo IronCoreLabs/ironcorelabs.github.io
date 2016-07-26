@@ -331,6 +331,31 @@ h2.hero {
     overflow: hidden;
     margin-right: 1%;
     margin-bottom: 1rem;
+    &:active, &:focus, & *:focus {
+      overflow: visible;
+      .tweet {
+        font-size: 150%;
+      }
+      .media {
+        position: relative;
+        z-index: 1;
+        &::before {
+          content: '';
+        }
+      }
+      .media img {
+        -webkit-filter: none;
+        filter: none;
+        opacity: 1;
+      }
+    }
+    &:active .media, &:focus .media, & *:focuse {
+      height: auto;
+      overflow: visible;
+    }
+    &:hover {
+      cursor: zoom-in;
+    }
   }
   @media screen and (max-width:$medium-screen-max-size) {
     li {
@@ -370,7 +395,30 @@ h2.hero {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.3;
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+    opacity: 1;
+    z-index: -1;
+    img {
+      filter: blur(2px);
+      -webkit-filter: blur(2px);
+      -moz-filter: blur(2px);
+      -o-filter: blur(2px);
+      -ms-filter: blur(2px);
+      filter: url("data:image/svg+xml;utf8,<svg xmlns=\'w3.org/2000/svg\'><filter id=\'blur\' x=\'0\' y=\'0\'><feGaussianBlur stdDeviation=\'3\'/></filter></svg>#blur");
+      filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='2');
+      opacity: 0.4;
+    }
+    &::before {
+      @extend .fa;
+      content: $fa-var-search-plus;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      cursor: pointer;
+    }
   }
 }
 #client {

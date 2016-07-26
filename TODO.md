@@ -5,7 +5,6 @@ This is a list of outstanding items for the website.
 ## Top Priority
 
 - Add integrity hash to default.html generated after javascript is generated
-- Browserstack test
 - mailchimp test
 
 ## Medium Priority

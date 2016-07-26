@@ -9,7 +9,7 @@ lightbackground: 1
   header="Why we're here"
   classes="fade-8"
   details="We believe the current generation of cloud applications are fundamentally insecure."
-  col1="When we think about what we might want to build next -- the next great business productivity solution, an internet-connected gutter cleaner or a the next big social network -- first we need a foundation for security."
+  col1="When we think about what we might want to build next – the next great business productivity solution, an Internet-connected Swiss Army knife or a the next big social marketplace -- first we need a foundation for security."
   col2="Today's threat model requires more than just [perimeter security][perimsec].  Sensitive data in real life isn't left out in the open for anyone with access to an office, it's put inside locked offices, drawers or safes.  We need digital safes for all of our sensitive data."
   col3="[90% of security incidents][worseningsecurity] are due to application vulnerabilities. Typically the application has super user access to all of its data so hacking the app can lead to massive data downloads. **We're here to change that equation.**"
   background="/img/about/space.jpg"
