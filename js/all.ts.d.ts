@@ -6,4 +6,5 @@ declare var disqus_shortname: string;
 declare var disqus_identifier: string;
 declare var disqus_title: string;
 declare var disqus_url: string;
+declare function changeSlide(direction: string): void;
 declare var hostname: string;

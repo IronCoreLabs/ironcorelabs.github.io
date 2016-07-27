@@ -8,6 +8,7 @@ declare var disqus_identifier: string;
 declare var disqus_title: string;
 declare var disqus_url: string;
 
+declare function changeSlide(direction: string): void;
 
 // Redirect if someone accesses github.io directly
 // Don't even wait for DOM
@@ -133,7 +134,13 @@ $(function() {
           e.preventDefault();
           window.location.href = nextMenuItem.children('a').attr('href');
         }
+
+      /* space */
+      } else if (e.keyCode === 32) {
+        e.preventDefault();
+        changeSlide('increase');
       }
+
     }
   });
 

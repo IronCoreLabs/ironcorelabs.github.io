@@ -112,6 +112,10 @@ $(function () {
                     window.location.href = nextMenuItem.children('a').attr('href');
                 }
             }
+            else if (e.keyCode === 32) {
+                e.preventDefault();
+                changeSlide('increase');
+            }
         }
     });
 });
