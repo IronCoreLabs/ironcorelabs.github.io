@@ -639,3 +639,18 @@ nav .left .active a::before {
   content: $fa-var-caret-right;
   margin-right: 5px;
 }
+input:focus:invalid ~ input[type="submit"] {
+  @extend .button.disabled;
+}
+input:focus:invalid {
+  background-color: lighten($yellow, 30%);
+  outline:none;
+  border: 1px solid $yellow;
+  box-shadow: 0 0 10px $yellow;
+}
+input:focus:valid {
+  background-color: lighten($green, 35%);
+  outline:none;
+  border: 1px solid $green;
+  box-shadow: 0 0 10px $green;
+}
