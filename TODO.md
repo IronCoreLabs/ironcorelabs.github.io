@@ -5,8 +5,6 @@ This is a list of outstanding items for the website.
 ## Top Priority
 
 - Add integrity hash to default.html generated after javascript is generated
-- Home page review
-    - After fortress, explain breach disclosure laws
 - Tech page review
     - Can I put the desk key quips on the same slide as the Wired quote and have 0K and E2E on the next slide under a heading like, "Better Key Handling"?
     - Cross device slide -- add a footnote saying that these are coming with the IronSDK product and link to products page.
