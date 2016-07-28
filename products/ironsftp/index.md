@@ -15,7 +15,7 @@ bodyclasses: whiteSlide
    header="Overview"
    id="overview"
    details="
-An open-source [fork of OpenSSH][ironssh] and drop-in replacement for command-line SFTP, **IronSFTP** brings painless end-to-end encryption to existing servers running SSH. Encryption keys are automatically derived from the SSH key and the public keys are published to the server.  Uploaded files are encrypted to the person uploading and optionally encrypted to other users. Key files and encryption is compatible with [GPG 2.1+][gpg21] and uses the \"[safe][safecurves]\" elliptic curve Curve25519.
+IronSFTP is an open-source [fork of OpenSSH][ironssh] and drop-in replacement for command-line SFTP. **IronSFTP** brings painless end-to-end encryption to existing servers running SSH. Encryption keys are automatically derived from the SSH key and the public keys are published to the server.  Uploaded files are encrypted to the person uploading and optionally to other users. Key files and encryption are compatible with [GPG 2.1+][gpg21] and uses the \"[safe][safecurves]\" elliptic curve Curve25519.
 
 The user experience with IronSFTP is nearly identical to standard SFTP with new commands for sharing files with other users.
    "
@@ -25,9 +25,9 @@ The user experience with IronSFTP is nearly identical to standard SFTP with new 
 {% include slides/tophead-3coltext.html
   id="least-privilege"
   header="The Power of Least Privilege"
-  col1="In security, the principle of least privilege says that for any piece of data, only those users, components or systems that need to access it should be able to access it. When uploading files to servers, **it's hard to know who may have access** to a file now or in the future -- who has root, can get root, and how might filesystem permissions change?"
-  col2="SSH is terrific for encrypting communications between client and server, but once files are uploaded, that protection is gone. The server is assumed to be a secure and fully trusted environment, but in practice, servers are hacked and malicious or curious users with access poke around at files that they shouldn't. **It makes sense to take reasonable precautions when it comes to sensitive data.**"
-  col3="When dealing with sensitive data such as customer data, employee data, product designs, etc., using IronSFTP reduces potential problems by making sure only users who have a need to read the files will have the capability to do so. Encrypting files with IronSFTP is easier than just about any other approach and much simpler than manually encrypting and decrypting files when uploading and downloading."
+  col1="In security, the principle of least privilege says, for any piece of data, only those users, components or systems who must have access should have it. When uploading files to servers, **it's hard to know who may have access** to a file now or in the future -- who has root, can get root, and how might filesystem permissions or group memberships change?"
+  col2="SSH is terrific for encrypting communications between client and server, but once files are uploaded, that protection is gone. The server is assumed to be a secure and fully trusted environment, but in practice, servers are hacked and malicious or curious users with access poke around at files that they shouldn't. **It makes sense to take reasonable precautions when it comes to sensitive data.** That's why we built IronSFTP."
+  col3="When dealing with sensitive data such as customer data, employee data, product designs, etc., using IronSFTP reduces the risk of theft by making sure only users who have a need to read the files will have the capability to do so. Encrypting files with IronSFTP is easier than just about any other approach and much simpler than manually encrypting and decrypting files when uploading and downloading."
 %}
 
 {% include slides/lefthead-rightimage.html
