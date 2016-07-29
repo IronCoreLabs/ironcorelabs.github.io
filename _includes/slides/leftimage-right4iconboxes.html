@@ -74,13 +74,9 @@
                 </li>
               </ul>
             </li>
-
-
-
-
-
-
-
           </ul>
+          {% if include.footnote %}
+          <p class="micro italic center footnote">{{ include.footnote }}</p>
+          {% endif %}
         </div>
 {% include slides/slideEnd.html background=include.background backgroundTop=include.backgroundTop %}

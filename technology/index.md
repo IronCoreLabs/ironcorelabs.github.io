@@ -13,7 +13,7 @@ bodyClasses: whiteSlide
 %}
 
 {% include slides/topquote-bottomimage.html
-  id="key-on-server"  
+  id="key-on-server"
   quote="**PLENTY OF COMPANIES** brag that their communications app is encrypted. But that marketing claim demands a followup question: **WHO HAS THE KEY**?"
   author="<a href='https://www.wired.com/2014/11/hacker-lexicon-end-to-end-encryption/' target='_blank'><u>Wired</u></a>"
   classes="fade-6"
@@ -84,6 +84,7 @@ bodyClasses: whiteSlide
   box4body="C code and RESTful APIs allow integration from any Internet connected device."
   box4imageClass="fa fa-globe"
   image="/img/tech/multi-device.jpg"
+  footnote="* Coming soon. See <a href='/products/'>products section</a> for details on IronSDK."
   lightbackground="1"
 %}
 
