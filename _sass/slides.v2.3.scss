@@ -300,8 +300,11 @@ h2.hero {
   }
 }
 #end-to-end {
-  li {
-    margin-bottom: 3rem;
+  h3 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.625rem;
   }
 }
 #productselector {
@@ -312,7 +315,16 @@ h2.hero {
 #recent-tweets {
   margin-top: 2rem;
 }
-
+#key-on-server {
+  .caption {
+    @extend .red;
+    padding: 0.4em;
+    margin-top: 0.4em;
+  }
+  .image-container {
+    margin-top: 2em;
+  }
+}
 .whiteSlide #twitter-latest p {
   color: #000;
 }
