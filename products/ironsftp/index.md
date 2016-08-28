@@ -42,12 +42,27 @@ The user experience with IronSFTP is nearly identical to standard SFTP with new 
 
 ## Install
 
-For now, you will need to download and build `ironsftp` manually. Packages for various distributions will come soon.
+### RedHat, CentOS, Debian and Ubuntu
+
+IronSFTP requires OpenSSL 1.0.2 or above. This means it will only work on newer operating systems including RedHat Enterprise 7; CentOS 7; Fedora 22, 23, 24; Debian Stretchy; and Ubuntu Wily, Xenial, Yakkety.  Packages for these operating systems are hosted on packagecloud.io.  To install deb and rpm packages:
+
+1. Add the [packagcloud.io repository][packagecloud]
+2. For Debian and Ubuntu: `sudo apt-get install ironssh`. <br>For RedHat and CentOS: `sudo yum install ironssh`.
+
+### MacOS
+
+Homebrew installation will be coming soon. In the meantime, see instructions for building from source.
+
+### Building From Source
+
+To build from source, make sure you have a version of OpenSSL that is 1.0.2 or greater, then follow these instructions, modified as needed to locate dependencies:
 
 {% highlight bash %}
     > git clone git@github.com:IronCoreLabs/ironssh.git
     > cd ironssh
-    > make
+    > autoreconf
+    > ./configure --with-ssl-dir=/usr/local/opt/openssl
+    > make ironsftp && make install
 {% endhighlight %}
 
 
@@ -56,7 +71,7 @@ For now, you will need to download and build `ironsftp` manually. Packages for v
 
 {% include slides/header-hero-button-centered.html
   header="Docs"
-  details="Documentation is on the repository with GitHub."
+  details="Documentation is on the repository with GitHub and in the man pages."
   buttonUrl="https://github.com/IronCoreLabs/ironssh"
   buttonText="<i class='fa fa-github'></i> View GitHub Repo"
 %}
@@ -64,3 +79,4 @@ For now, you will need to download and build `ironsftp` manually. Packages for v
 [ironssh]: https://github.com/IronCoreLabs/ironssh
 [safecurves]: https://safecurves.cr.yp.to/
 [gpg21]: https://www.gnupg.org/faq/whats-new-in-2.1.html
+[packagecloud]: https://packagecloud.io/ironcorelabs/ironssh/install

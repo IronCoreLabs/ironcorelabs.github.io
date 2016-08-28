@@ -66,6 +66,17 @@ html {
   }
 }
 
+ol {
+  list-style: decimal outside;
+  margin: 0 1em;
+  padding-bottom: 2em;
+  padding-left: 2em;
+  opacity: 0.8;
+  li {
+    font-size: 1.4em;
+    line-height: 1.385;
+  }
+}
 
 .sticky {
   position: sticky; // polyfilled in js

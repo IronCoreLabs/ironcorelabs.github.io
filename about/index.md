@@ -9,7 +9,7 @@ lightbackground: 1
   header="Why we're here"
   classes="fade-8"
   details="We believe the current generation of cloud applications are fundamentally insecure."
-  col1="When we think about what we might want to build next: kick-ass cloud CRM, ERP, health EMR, digital markets or finanial management, we know that the first thing we need to build is an exceptionally strong foundation for security."
+  col1="When we think about what we might want to build next: kick-ass cloud CRM, ERP, health EMR, digital markets or financial management, we know that the first thing we need to build is an exceptionally strong foundation for security."
   col2="This foundation needs to be far stronger than current practices and much more than just network-based [perimeter protection][perimsec].  Confidential paper documents aren't just left out for anyone to stumble-upon.  The digital world needs equivalent and equally usable security for digital data."
   col3="[90% of security incidents][worseningsecurity] are due to application vulnerabilities. The application typically has full access to all users' data so a hacker exploiting the app leads to disastrous results. **We're here to change that equation.**"
   background="/img/about/space.jpg"
@@ -23,7 +23,7 @@ lightbackground: 1
   box1head="Foundation for the future"
   box1body="We're building a better foundation for the next generation of enterprise cloud applications. IronCore is focused on highly usable interfaces that get out of the way and scale to massive numbers of users and large amounts of data. We're building access controls and identities that don't rely on shared secrets and trusted servers, or even trusted applications. **This is the future of digital data.**"
   box2head="Modern, Solid Engineering"
-  box2body="We're very opinionated about what constitutes _good software_. We're craftspeople building solid and reliable software using [functional programming][funcprog] paradigms that use principles of math to make software more testable, unerstandable, and less prone to unforeseen and unhandled errors. Contrast this to the [outdated software][shoddysoftware] underlying many existing security libraries. **We build for security and reliability.**"
+  box2body="We're very opinionated about what constitutes _good software_. We're craftspeople building solid and reliable software using [functional programming][funcprog] paradigms that use principles of math to make software more testable, understandable, and less prone to unforeseen and unhandled errors. Contrast this to the [outdated software][shoddysoftware] underlying many existing security libraries. **We build for security and reliability.**"
   background="/img/about/rock-climbing.jpg"
   backgroundTop="1"
 %}
