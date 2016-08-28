@@ -1,0 +1,270 @@
+/* typography */
+
+a {
+  color:inherit;
+  text-decoration:none;
+  -webkit-transition:0.35s;
+  transition:0.35s;
+}
+
+a:hover {
+  opacity:0.75;
+}
+
+h1,
+.h1 {
+  font-family:$fontSansSerifHeading;
+  font-size:5.5rem;
+  line-height:1.05;
+  letter-spacing:-0.06em;
+  font-weight:400;
+	margin-bottom:18px;
+  margin-left:-0.05em;
+}
+
+h1.mega,
+.h1.mega {
+  font-size:10rem;
+  margin-bottom:50px;
+	letter-spacing: -0.025em;
+}
+
+h1.huge,
+.h1.huge {
+  font-size:7.5rem;
+  margin-bottom:50px;
+}
+
+h1.small,
+.h1.small {
+  font-size:3.75rem;
+}
+
+h1.micro,
+.h1.micro, h1 .micro {
+  font-size:1.8rem;
+  text-transform:uppercase;
+  margin: 0;
+  opacity: 0.7;
+}
+
+h2,
+.h2 {
+  font-family:$fontSansSerifHeading;
+  font-size:2.1875rem;
+  text-transform:uppercase;
+  line-height:1.17;
+  letter-spacing:0.2em;
+  font-weight:700;
+  margin-bottom:30px;
+}
+
+h2.small,
+.h2.small {
+  font-size:1.4375rem;
+}
+
+h2.micro,
+.h2.micro, h2 .micro {
+  font-size:1.1875rem;
+  text-transform:uppercase;
+  margin: 0;
+  opacity: 0.7;
+}
+
+h2.huge,
+.h2.huge {
+  font-size:2.8125rem;
+}
+
+h3,
+.h3 {
+  font-size:1.5625rem;
+  font-family:$fontSansSerifHeading;
+  margin-bottom:12px;
+  font-weight:600;
+  margin-left:-0.01em;
+}
+
+h3.large,
+.h3.large {
+  font-size:2rem;
+}
+
+h3.little,
+.h3.little {
+  font-size:1.375rem;
+}
+
+h3.small,
+.h3.small {
+  font-size:1.1875rem;
+}
+
+h3.micro,
+.h3.micro {
+  font-size:1rem;
+}
+
+h3 + h1,
+.h3 + .h1 {
+   margin-top:30px;
+}
+
+h3.uppercase,
+.h3.uppercase {
+  font-size:1.1875rem;
+}
+
+h3.small.uppercase,
+.h3.small.uppercase {
+   font-size:0.8125rem;
+}
+
+h1 + h3,
+.h1 + .h3 {
+  margin-top:2.8125rem;
+}
+
+h4,
+.h4 {
+  font-size:1.375rem;
+  font-family:$fontSansSerifHeading;
+  margin-bottom:10px;
+  font-weight:600;
+}
+
+h4.micro,
+.h4.micro {
+  font-size:0.75rem;
+}
+
+h5,
+.h5 {
+  font-size:1.1875rem;
+  font-family:$fontSansSerifHeading;
+  font-weight:600;
+  margin-bottom:3px;
+}
+
+h4.small,
+.h4.small {
+  font-size:1.0625rem;
+  margin-bottom:0.5em;
+}
+
+h5.small,
+.h5.small {
+  font-size:0.875rem;
+  margin-bottom:0.5em;
+}
+
+p {
+  font-family:$fontSansSerifBody;
+  font-size:1.625rem;
+  line-height:1.385;
+  margin-bottom:30px;
+  opacity:0.8;
+}
+
+.hero {
+  font-size:2.25rem;
+  line-height:1.25;
+  letter-spacing:-1px;
+  font-weight:100;
+}
+
+p.large {
+   font-size:2rem;
+   line-height:1.4;
+}
+
+p.small {
+  font-size:1.375rem;
+  line-height:1.22727273;
+  margin-bottom:20px;
+}
+
+p.tiny {
+  font-size:1.0625rem;
+  line-height:1.29441;
+  letter-spacing:0.5px;
+  margin-bottom:20px;
+}
+
+p.micro,
+p.mirco /* sorry folks */ {
+  font-size:1rem;
+  line-height:1.22727273;
+  margin-bottom:20px;
+  margin-top:2px;
+}
+
+p:not(.hero) + p {
+  margin-top:-20px;
+}
+
+p + h2,
+p + .h2 {
+  margin-top:60px;
+}
+
+small {
+  font-size:1.0625rem;
+  line-height:1.3;
+}
+
+small.small {
+   font-size:0.875rem;
+   line-height:1.28;
+}
+
+.uppercase {
+  text-transform:uppercase !important;
+  letter-spacing:0.15em !important;
+  text-indent:0.1em !important; /* neat */
+  font-weight:700 !important;
+}
+.lowercase {
+  text-transform:lowercase;
+  letter-spacing:0em;
+  font-weight:300;
+}
+
+
+@media screen and (max-width:$medium-screen-max-size) {
+
+  h1,
+  .h1 {
+    font-size:3.125rem;
+  }
+
+  h1.mega,
+  .h1.mega {
+    font-size:4.375rem;
+  }
+
+  h1.huge,
+  .h1.huge {
+    font-size:3.75rem;
+  }
+
+  h1.small,
+  .h1.small {
+    font-size:2.5rem;
+  }
+
+  .mobileCrop { margin:0 !important;}
+  .mobileCropBottom { margin-bottom:0 !important;}
+  .mobileCropTop { margin-top:0 !important;}
+  .mobileCropLeft { margin-left:0 !important;}
+  .mobileCropRight { margin-right:0 !important;}
+}
+
+
+@media screen and (max-width:$small-screen-max-size) {
+  h1.huge,
+  .h1.huge {
+    font-size:3.125rem;
+  }
+}

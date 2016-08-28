@@ -1,0 +1,30 @@
+{% include slides/slideStart.html classes=include.classes id=include.id lightbackground=include.lightbackground header=include.header %}
+  <div class="fix-10-12">
+    {% if include.quote %}
+    <svg class="ae-1 h35 w35" viewBox="0 0 36 30" xmlns="http://www.w3.org/2000/svg"><path d="M12.272-.055c-8.16 3.995-12.07 10.2-12.07 18.19 0 6.97 2.72 11.172 7.99 11.172 3.74 0 6.545-2.72 6.545-6.97 0-3.825-2.972-6.205-6.545-6.205-.255 0-.595 0-.85.085 0-5.1 2.55-8.245 7.65-10.795l-2.72-5.44zm20.145 0c-8.16 3.995-12.155 10.2-12.155 18.19 0 6.97 2.805 11.172 8.072 11.172 3.74 0 6.46-2.72 6.46-6.97 0-3.825-2.89-6.205-6.46-6.205-.255 0-.595 0-.85.085 0-5.1 2.55-8.245 7.65-10.795l-2.72-5.44z"></path></svg>
+    <div class="fix-10-12 ae-2">
+      <p class="large serifHeading quote" markdown="1">{{ include.quote }}</p>
+    </div>
+    {% endif %}
+
+    {% if include.author %}
+      <div class="ae-3">&mdash; {{ include.author }}</div>
+    {% endif %}
+  </div>
+
+  <div class="fix-10-12 toCenter image-container" data-action="zoom">
+          {% if include.image %}
+            <img class="wide ae-3" src="{{ include.image }}" alt="{{ include.imageAlt }}" />
+          {% elsif include.imageClass %}
+            <div class="wide ae-3 show-image hide-text {{ include.imageClass }}" data-action="zoom">
+              {{ include.imageClassAlt }}
+            </div>
+          {% endif %}
+  </div>
+  <div class="fix-7-12">
+    {% if include.imageCaption %}
+      <p class="ae-3 center caption">{{ include.imageCaption }}</p>
+    {% endif %}
+  </div>
+
+{% include slides/slideEnd.html background=include.background backgroundTop=include.backgroundTop %}

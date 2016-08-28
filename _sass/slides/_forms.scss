@@ -1,0 +1,121 @@
+/* forms */
+form {
+  font-size:0;
+  margin-top:-5px;
+}
+
+form input[type="text"],
+form input[type="name"],
+form input[type="email"],
+form input[type="password"],
+form input[type="tel"],
+form textarea {
+  background:#fff;
+  padding:13px 19px 14px;
+  font-family:$fontSansSerifBody;
+  border:none;
+  font-size:1.125rem;
+  color:#242424;
+  outline:none;
+  border-radius:3px;
+  width:100%;
+  max-width:230px;
+  font-weight:600;
+
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+}
+
+
+  .slide.whiteSlide form input[type="text"],
+  .slide.whiteSlide form input[type="name"],
+  .slide.whiteSlide form input[type="email"],
+  .slide.whiteSlide form input[type="password"],
+  .slide.whiteSlide form input[type="tel"],
+  .slide.whiteSlide form textarea {
+    -webkit-box-shadow: 0 0 0 1px rgba(41,41,41,0.2) inset;
+    box-shadow: 0 0 0 1px rgba(41,41,41,0.2) inset;
+    border-radius:4px;
+  }
+
+form input[type="text"].wide,
+form input[type="name"].wide,
+form input[type="email"].wide,
+form input[type="password"].wide,
+form textarea.wide {
+  max-width:100%;
+  margin-left:0;
+  margin-right:0;
+}
+
+
+form textarea {
+  max-height:200px;
+  max-width:100%;
+  min-height:130px;
+}
+
+
+form textarea.round {
+  border-radius:15px !important;
+}
+
+
+form input[type="text"],
+form input[type="name"],
+form input[type="email"],
+form input[type="password"],
+form input[type="tel"],
+form textarea,
+form input.button {
+  margin:5px;
+}
+
+form input.stroke,
+form textarea.stroke {
+    -webkit-box-shadow: 0 0 0 1px rgba(41,41,41,0.2) inset;
+    box-shadow: 0 0 0 1px rgba(41,41,41,0.2) inset;
+}
+
+form.wide input,
+form.wide textarea {
+  width:100%;
+  margin:8px 0;
+}
+
+
+form.center input,
+form.center textarea {
+  text-align:center;
+}
+
+form label {
+  display:block;
+  margin-top:20px;
+  margin-bottom:5px;
+}
+
+form > label:first-of-type {
+  margin-top:10px;
+}
+
+form label.uppercase {
+  font-size:0.875rem;
+}
+
+@media screen and (max-width:$medium-screen-max-size) {
+
+  form input,
+  form textarea {
+    margin-left:auto !important;
+    margin-right:auto !important;
+    width:100%;
+    max-width:350px !important;
+    display:block !important;
+  }
+
+  form label {
+	  margin-top: 30px;
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/Article">
+  <head>
+    {% include meta.html %}
+
+    <link id="feedLink" rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }} RSS" href="https://blog.ironcorelabs.com/feed">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/slides.v2.3.css">
+  </head>
+  <body id="{{ page.path | remove: ".html" | remove: ".md" | replace: "/", "-" | handleize }}" class="fast animated slides {% if page.transition %}{{ page.transition }}{% elsif layout.transition %}{{ layout.transition }}{% else %}cards{% endif %} {{ layout.bodyclasses }} {{ page.bodyclasses }}">
+    {% unless page.hidenav %}
+      {% include slidesnav.html %}
+    {% endunless %}
+
+<!--    <div class="main" role="main">-->
+      {{ content }}
+<!--    </div> /.main -->
+
+    {% include slidesfooter.html %}
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="{{ site.baseurl }}/js/vendor/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="><\/script>')</script>
+
+    <script src="{{ site.baseurl }}/js/min/slides.min.js"></script>
+
+    {% if site.mode == "dev" %}
+      <script src="//localhost:35729/livereload.js"></script>
+    {% else %}
+      {% include analytics.html %}
+    {% endif %}
+    {% include slidespreloader.html %}
+  </body>
+</html>

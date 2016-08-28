@@ -1,0 +1,13 @@
+{% include slides/slideStart.html classes=include.classes id=include.id lightbackground=include.lightbackground header=include.header %}
+        <div class="fix-10-12 toLeft left">
+          <div class="ae-2 fromLeft crop">
+            <p class="quotation-mark">&ldquo;</p>
+            <p class="quote">
+              {{ include.quote }}
+            </p>
+          </div>
+          <div class="ae-3 fromLeft crop">
+            <p class="author">&mdash; {{ include.author }}</p>
+          </div>
+        </div>
+{% include slides/slideEnd.html background=include.background backgroundTop=include.backgroundTop %}

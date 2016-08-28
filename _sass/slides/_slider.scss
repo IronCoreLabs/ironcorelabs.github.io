@@ -1,0 +1,53 @@
+/***
+ *       _____ _ _     _
+ *      / ___/| (_)   | |
+ *     | (___ | |_  __| | ___ _ __
+ *      \___ \| | |/ _` |/ _ \ '__/
+ *      ____) | | | (_| |  __/ |
+ *     /_____/|_|_|\__,_|\___/_|
+ *
+ *
+ */
+.slider {
+  position:relative;
+}
+
+.slider.clickable {
+  cursor:pointer;
+}
+
+.slider.autoHeight {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.slider > li {
+  display:none;
+  top:0;
+  left:0;
+  opacity:0;
+  -webkit-transition:opacity 0.35s;
+  transition:opacity 0.35s;
+  pointer-events:none;
+}
+
+.slider > li.selected {
+  display:block;
+  opacity:1;
+  -webkit-transition:opacity 0.35s;
+  transition:opacity 0.35s;
+  pointer-events:all;
+}
+
+.controller li {
+  cursor:pointer;
+}
+
+.controller li.selected {
+  cursor:default;
+  pointer-events:none;
+}
+
+
+
+

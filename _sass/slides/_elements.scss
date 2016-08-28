@@ -1,0 +1,60 @@
+/*
+
+   _____ _       _              _____  _____ _____
+  / ___/| (•)   | |           / ____// ____/ ____/  v 2.3
+ | (___ | |_  __| | ___ ____ | |    | (___| (___
+  \___ \| | |/ _` |/ _ / __/ | |     \___ \ ___ \
+  ____) | | | (_| |  __\__ \ | |____ ____) |___) |
+ /_____/|_|_|\__,_|\___/___/  \_____/_____/_____/
+
+
+This file contains styles that are necessary for proper work
+of your Slides Project.
+
+http://designmodo.com/slides/
+
+*/
+
+html{
+  margin:0;
+  padding:0;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+body{
+  position: absolute;
+  width:100%;
+  height:100%;
+}
+
+html, body {
+	max-width:100%;
+	overflow-x:hidden;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color:transparent;
+}
+
+html.scrollable,
+html.scrollable body {
+  overflow-y:auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+a {
+  cursor:pointer;
+}
+img {
+   max-width:100%;
+   display:inline-block;
+}
+img.rounded { border-radius:3px; }
+a:hover {
+  -webkit-transition:0.15s;
+  transition:0.15s;
+}
+
+svg {
+  -webkit-transition:0.15s;
+  transition:0.15s;
+}

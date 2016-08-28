@@ -1,10 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Raleway:300,500,800|Source+Sans+Pro:100,300,400,600,700,900);
 
 // Import Bootstrap Compass integration
 @import 'bootstrap-compass';
 
 // Import standard Bootstrap variables
-@import 'bootstrap-variables';
+@import 'bootstrap/variables';
+// @import 'bootstrap-variables';
 
 // Import custom bootstrap variables
 @import 'variables';
@@ -38,10 +39,47 @@ img {
 .banner-text {
   text-align: center;
 }
+.banner-image {
+  max-width: 50em;
+}
 
 .bot-hide {
   position: absolute;
   left: -5000px;
+}
+
+.banner-header {
+  // position: relative;
+  min-height: 25em;
+  background-size: contain;
+  background-position: center top;
+  color: white;
+  border-top: 1px solid rgba(255,255,255,0.5);
+  h2 {
+    // position: absolute;
+    // bottom: 0;
+    padding: 0.5em 0;
+    font-size: 5em;
+  }
+  .btn {
+    background-color: transparent;
+    color: white;
+    &:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+  }
+}
+
+.banner-bricks {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/home/brick-banner.png);
+  background-size: cover;
+  background-position: center center;
+  text-align: right;
+}
+.banner-vault {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/home/vault-banner.png);
+  background-size: cover;
+  background-position: center center;
 }
 
 @import "compass/css3/animation";

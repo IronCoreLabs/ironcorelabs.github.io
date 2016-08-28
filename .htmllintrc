@@ -3,6 +3,6 @@
   "indent-width": false,
   "id-class-style": false,
   "tag-bans": ["style", "b"],
-  "attr-bans": ["style"],
+  "attr-bans": ["align", "background", "bgcolor", "border", "frameborder", "longdesc", "marginwidth", "marginheight", "scrolling", "width"],
   "attr-name-style": false
 }

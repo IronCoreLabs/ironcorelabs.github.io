@@ -1,0 +1,17 @@
+{% include slides/slideStart.html classes=include.classes id=include.id lightbackground=include.lightbackground header=include.header %}
+
+        <div class="fix-10-12">
+          {% if include.header %}
+          <h1 class="small ae-1">{{ include.header }}</h1>
+          {% endif %}
+          {% if include.details %}
+          <div class="ae-2">
+            <p class="hero">{{ include.details }}</p>
+          </div>
+          {% endif %}
+          {% if include.buttonText && include.buttonUrl %}
+          <a href="{{ include.buttonUrl}}" class="button round uppercase deepRed ae-5 fromCenter cropBottom">{{ include.buttonText }}</a>
+          {% endif %}
+        </div>
+
+{% include slides/slideEnd.html background=include.background backgroundTop=include.backgroundTop %}

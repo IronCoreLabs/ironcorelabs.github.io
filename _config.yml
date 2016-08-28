@@ -7,14 +7,14 @@ name: IronCore Labs
 
 # Short bio or description (displayed in the header)
 description: Simply secure data
-long_description: IronCore is dedicated to building accessible solutions to handling sensitive data in a highly connected and border-less world.  We provide turnkey data security solutions for application developers.
+long_description: IronCore is dedicated to building easy-to-use solutions to handling sensitive data in a highly connected and border-less world.  We provide turnkey data security solutions for application developers.
 
 timezone: America/Denver
 
 mode: production
 
-paginate: 15
-paginate_path: "/news/:num"
+#paginate: 15
+#paginate_path: "/news/:num"
 
 # Following two configs forced by github -- might as well test with them
 safe: true
@@ -45,11 +45,19 @@ nav:
     url: "/"
     text: "Overview"
   -
+    url: "/technology/"
+    text: "Technology"
+  -
+    url: "/products/"
+    text: "Products"
+
+navright:
+  -
+    url: "/about/"
+    text: "About Us"
+  -
     url: "https://blog.ironcorelabs.com/"
     text: "Blog"
-  -
-    url: "#contact"
-    text: "Contact"
 
 # Includes an icon in the footer for each username you enter
 follow-us:
@@ -116,6 +124,9 @@ kramdown:
     coderay_bold_every:        10
     coderay_css:               style
 
+jekyll_auth:
+  ssl: true
+
 # Use the following plug-ins
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
@@ -150,3 +161,10 @@ exclude:
   - .idea
   - w3cErrors
   - .Ulysses-favorites.plist
+  - Genfile
+  - Genfile.lock
+  - .gitignore
+  - Rakefile
+  - config.ru
+  - vendor
+  - .env

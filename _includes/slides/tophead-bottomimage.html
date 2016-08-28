@@ -1,0 +1,34 @@
+{% include slides/slideStart.html classes=include.classes id=include.id header=include.header lightbackground=include.lightbackground %}
+
+        <div class="fix-10-12">
+          {% if include.header %}
+          <h1 class="small ae-1 fromLeft">
+            {% if include.superheader %}<div class="micro superheader">{{ include.superheader }}</div>{% endif %}
+            {{ include.header }}
+            {% if include.subheader %}<div class="micro subheader">{{ include.subheader }}</div>{% endif %}
+          </h1>
+          {% endif %}
+          {% if include.details %}
+          <div class="ae-2 fromLeft">
+            <p class="details" markdown="1">{{ include.details }}</p>
+          </div>
+          {% endif %}
+        </div>
+        {% if include.image or include.imageClass %}
+        <div class="fix-10-12 toCenter image-container" data-action="zoom">
+          {% if include.image %}
+            <img class="wide ae-3" src="{{ include.image }}" alt="{{ include.imageAlt }}" />
+          {% elsif include.imageClass %}
+            <div class="wide ae-3 show-image hide-text {{ include.imageClass }}" data-action="zoom">
+              {{ include.imageClassAlt }}
+            </div>
+          {% endif %}
+          {% if include.imageCaption %}
+            <p class="ae-3 center small caption">{{ include.imageCaption }}</p>
+          {% endif %}
+        </div>
+        {% endif %}
+        {% if include.buttonText and include.buttonUrl %}
+        <a href="{{ include.buttonUrl }}" class="button round uppercase deepRed ae-3 fromCenter cropBottom">{{ include.buttonText }}</a>
+        {% endif %}
+{% include slides/slideEnd.html background=include.background backgroundTop=include.backgroundTop %}

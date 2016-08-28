@@ -1,0 +1,65 @@
+{% include slides/slideStart.html classes=include.classes id=include.id lightbackground=include.lightbackground header=include.header %}
+
+        <div class="fix-10-12">
+          {% if include.header %}
+            <h1 class="small ae-1">
+              {% if include.superheader %}<div class="micro superheader">{{ include.superheader }}</div>{% endif %}
+              {{ include.header }}
+              {% if include.subheader %}<div class="micro subheader">{{ include.subheader }}</div>{% endif %}
+            </h1>
+          {% endif %}
+          {% if include.details %}
+            <div class="ae-2">
+              <p>{{ include.details }}</p>
+            </div>
+          {% endif %}
+
+          <ul class="grid equal left grid-65">
+            <li class="col-6-12 ae-3 equalElement h165">
+              {% if include.box1image %}
+                <img class="h72 w72" src="{{ include.box1image }}" alt="{{ include.box1imageAlt }}"/>
+              {% elsif include.box1imageClass %}
+                <div class="h72 hide-text show-image {{ include.box1imageClass }}">
+                  {{ include.box1imageAlt }}
+                </div>
+              {% endif %}
+              <h3 class="uppercase">{{ include.box1head }}</h3>
+              <p class="small">{{ include.box1body }}</p>
+            </li>
+            <li class="col-6-12 ae-3 equalElement h165">
+              {% if include.box2image %}
+                <img class="h72 w72" width="34" height="34" src="{{ include.box2image }}" alt="{{ include.box2imageAlt }}"/>
+              {% elsif include.box2imageClass %}
+                <div class="h72 hide-text show-image {{ include.box2imageClass }}">
+                  {{ include.box2imageAlt }}
+                </div>
+              {% endif %}
+              <h3 class="uppercase">{{ include.box2head }}</h3>
+              <p class="small">{{ include.box2body }}</p>
+            </li>
+            <li class="col-6-12 ae-3 equalElement h165">
+              {% if include.box3image %}
+                <img class="w72 h72" src="{{ include.box3image }}" alt="{{ include.box3imageAlt }}"/>
+              {% elsif include.box3imageClass %}
+                <div class="h72 hide-text show-image {{ include.box3imageClass }}">
+                  {{ include.box3imageAlt }}
+                </div>
+              {% endif %}
+              <h3 class="uppercase">{{ include.box3head }}</h3>
+              <p class="small">{{ include.box3body }}</p>
+            </li>
+            <li class="col-6-12 ae-3 equalElement h165">
+              {% if include.box4image %}
+                <img class="w72 h72" src="{{ include.box4image }}" alt="{{ include.box4imageAlt }}"/>
+              {% elsif include.box4imageClass %}
+                <div class="h72 hide-text show-image {{ include.box4imageClass }}">
+                  {{ include.box4imageAlt }}
+                </div>
+              {% endif %}
+              <h3 class="uppercase">{{ include.box4head }}</h3>
+              <p class="small">{{ include.box4body }}</p>
+            </li>
+          </ul>
+        </div>
+
+{% include slides/slideEnd.html background=include.background backgroundTop=include.backgroundTop %}

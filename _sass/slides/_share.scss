@@ -1,0 +1,189 @@
+/***
+ *       _____ _
+ *      / ___/| |
+ *     | (___ | |__   __ _ _ __ ___
+ *      \___ \| '_ \ / _` | '__/ _ \
+ *      ____) | | | | (_| | | |  __/
+ *     /_____/|_| |_|\__,_|_|  \___/
+ *
+ *
+ */
+.dropdown {
+  position:fixed;
+  z-index:300;
+  color:#303030;
+  width:160px;
+  background:#fff;
+  font-family:$fontSansSerifBody;
+  -webkit-box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.15), 0 14px 28px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.15), 0 14px 28px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  margin-bottom:50px;
+  border-radius:8px;
+  text-align:center;
+  cursor:default;
+  visibility:hidden;
+  opacity:0;
+  -webkit-transform-origin:top;
+  transform-origin:top;
+  -webkit-transform:translateY(0) scale(0.9);
+  transform:translateY(0) scale(0.9);
+  -webkit-transition:-webkit-transform 0.35s, opacity 0.35s, -webkit-box-shadow 0.35s;
+  transition:transform 0.35s, opacity 0.35s, box-shadow 0.35s;
+}
+
+.dropdown.bottom {
+  -webkit-transform-origin:bottom;
+  transform-origin:bottom;
+}
+
+.dropdown:after {
+	content:"";
+	bottom:100%;
+	left:25px;
+	border:solid transparent;
+	height:0;
+	width:0;
+	position:absolute;
+	pointer-events:none;
+	border-color:rgba(255, 255, 255, 0);
+	border-bottom-color:#fff;
+	border-width:7px;
+	margin-left:-7px;
+}
+
+.dropdown.bottom:after {
+	top:100%;
+  bottom:initial;
+  border-bottom-color:rgba(255, 255, 255, 0);
+	border-top-color:#fff;
+}
+
+.dropdown.right:after {
+  right:18px;
+  left:auto;
+}
+
+.dropdown.show {
+  visibility:visible;
+  opacity:1;
+}
+
+.dropdown.show {
+  -webkit-transform:translateY(20px);
+  transform:translateY(20px);
+}
+
+.dropdown.bottom.show {
+  -webkit-transform:translateY(-20px);
+  transform:translateY(-20px);
+}
+
+.dropdown.show.hide {
+  opacity:0;
+  -webkit-transform:translateY(40px);
+  transform:translateY(40px);
+}
+
+.dropdown.bottom.show.hide {
+  -webkit-transform:translateY(-40px);
+  transform:translateY(-40px);
+}
+
+.slides .dropdown h3 {
+  font-family:$fontSansSerifBody;
+  font-size:1.0625rem;
+  padding:15px 0;
+  font-weight:500;
+  margin:0;
+  text-align:center;
+  opacity:0.65;
+}
+
+.dropdown.share li {
+  float:left;
+  text-align:center;
+  display:block;
+  width:80px;
+  height:50px;
+  padding:14px 0;
+  color:#fff;
+  position:relative;
+  cursor:pointer;
+  opacity:0.9;
+  -webkit-transition:0.15s;
+  transition:0.15s;
+}
+
+.dropdown.share li:hover {
+  opacity:1;
+}
+
+.dropdown.share li:after {
+  content:" ";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  opacity:0;
+  background:rgba(0,0,0,0.1);
+  -webkit-transition:0.25s;
+  transition:0.25s;
+}
+
+.dropdown.share li:active:after {
+  opacity:1;
+  -webkit-transition:0.1s;
+  transition:0.1s;
+}
+
+
+.dropdown.share li svg {
+   width:20px;
+   height:20px;
+   fill:#fff;
+}
+
+.dropdown.share .mail {
+  width:100%;
+  height:50px;
+  color:#7E7E7E;
+  font-size:0.9375rem;
+  padding:15px 0;
+  border-bottom-left-radius:6px;
+  border-bottom-right-radius:6px;
+}
+
+.dropdown.share .mail:after {
+  border-radius: 0 0 7px 7px;
+	background: rgba(0,0,0,0.05);
+}
+
+.dropdown.share .mail:hover {
+   text-decoration:underline;
+}
+
+.dropdown.share .googlePlus {
+   background:#DD4330;
+}
+.dropdown.share .facebook {
+   background:#3b5998;
+}
+.dropdown.share .twitter {
+   background:#55acee;
+}
+.dropdown.share .digg {
+   background:#000000;
+}
+.dropdown.share .delicious {
+   background:#3399ff;
+}
+.dropdown.share .stumbleupon {
+   background:#eb4924;
+}
+.dropdown.share .linkedin {
+   background:#0077b5;
+}
+.dropdown.share .pinterest {
+   background:#cc2127;
+}

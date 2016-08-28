@@ -3,12 +3,50 @@
 //
 
 // Colors
-$blue: #4183C4;
+// Colors
+$white: #fff;
+$black: #303030;
+$red: #F44336;
+$deepRed: #E10700;
+$pink: #E91E63;
+$purple: #9C27B0;
+$deepPurple: #673AB7;
+$indigo: #3F51B5;
+$blue: #2196F3;
+$cyan: #00BCD4;
+$teal: #009688;
+$green: #4CAF50;
+$lightGreen: #8BC34A;
+$lime: #CDDC39;
+$yellow: #FFEB3B;
+$amber: #FFC107;
+$orange: #FF9800;
+$deepOrange: #FF5722;
+$brown: #795548;
+$gray: #9E9E9E;
+$blueGray: #607D8B;
+
+// $blue: #4183C4;
 
 // Grays
-$black: #000;
+// $black: #000;
 $darkerGray: #222;
 $darkGray: #333;
 $gray: #666;
 $lightGray: #eee;
 $white: #fff;
+$navbar-border-radius: 0;
+$navbar-inverse-border: transparent;
+$navbar-margin-bottom: 0;
+
+// Media query cutoffs
+$large-screen-max-size: 1023px;
+$medium-screen-max-size: 767px;
+$small-screen-max-size: 320px;
+
+// Font sizes
+$fontSizeBase: 16px;
+
+$fontSansSerifHeading: 'Raleway', sans-serif;
+$fontSansSerifBody: "Source Sans Pro", 'Helvetica', sans-serif;
+$fontSerifHeading: "Playfair Display", 'Georgia', serif;

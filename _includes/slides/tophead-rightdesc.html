@@ -1,0 +1,26 @@
+{% include slides/slideStart.html classes=include.classes id=include.id lightbackground=include.lightbackground header=include.header %}
+        <div class="fix-12-12">
+          <ul class="grid">
+            <li class="col-12-12 left">
+              {% if include.header %}
+              <h1 class="small ae-1 fromLeft">
+                {% if include.superheader %}<div class="micro superheader">{{ include.superheader }}</div>{% endif %}
+                {{ include.header }}
+                {% if include.subheader %}<div class="micro subheader">{{ include.subheader }}</div>{% endif %}
+              </h1>
+              {% endif %}
+            </li>
+            <li class="col-9-12 toRight right">
+              {% if include.details %}
+              <div class="ae-2 fromBottom">
+                <p class="hero">{{ include.details }}</p>
+              </div>
+              {% endif %}
+              {% if include.buttonText and include.buttonUrl %}
+              <a href="{{ include.buttonUrl }}" class="button round uppercase deepRed ae-3 fromCenter cropBottom">{{ include.buttonText }}</a>
+              {% endif %}
+            </li>
+          </ul>
+        </div>
+
+{% include slides/slideEnd.html background=include.background backgroundTop=include.backgroundTop %}

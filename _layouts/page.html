@@ -1,14 +1,17 @@
 ---
-layout: default
+layout: slides
+transition: scroll
+bodyclasses: whiteSlide
 ---
 
-<div class="container">
-    <article class="page">
+{% include slides/slideStart.html lightbackground="1" %}
 
-      <h1>{{ page.title }}</h1>
+<h1 class="small">{{ page.title }}</h1>
 
-      <div class="entry">
-        {{ content }}
-      </div>
-    </article>
+<div class="left" markdown="1">
+
+
+{{ content }}
+
 </div>
+{% include slides/slideEnd.html %}

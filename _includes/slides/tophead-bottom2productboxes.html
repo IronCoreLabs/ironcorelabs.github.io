@@ -1,0 +1,84 @@
+{% include slides/slideStart.html classes=include.classes id=include.id lightbackground=include.lightbackground header=include.header %}
+
+    {% if include.header %}
+      <h1 class="small ae-1">
+        {% if include.superheader %}<div class="micro superheader">{{ include.superheader }}</div>{% endif %}
+        {{ include.header }}
+        {% if include.subheader %}<div class="micro subheader">{{ include.subheader }}</div>{% endif %}
+      </h1>
+    {% endif %}
+
+    {% if include.details %}
+      <div class="ae-2">
+        <p markdown="1">{{ include.details }}</p>
+      </div>
+    {% endif %}
+
+    <div class="fix-10-12">
+      <ul class="grid later equal">
+        {% if include.box1head or include.box1image or include.box1imageClass or include.box1body %}
+        <li class="col-6-12">
+          <div class="fix-5-12 crop">
+            <div class="pad shadow ae-3">
+              {% if include.box1image %}
+                <img class="ae-4" width="200" height="200" src="{{ include.box1image }}" alt="{{ include.box1imageAlt }}"/>
+              {% elsif include.box1imageClass %}
+                <div class="ae-4 h200 hide-text show-image {{ include.box1imageClass }}">
+                  {{ include.box1imageAlt }}
+                </div>
+              {% endif %}
+
+              {% if include.box1head %}
+                <h3 class="uppercase ae-5">{{ include.box1head }}</h3>
+              {% endif %}
+
+              {% if include.box2body %}
+                <div class="ae-6"><p class="small equalElement" markdown="1">{{ include.box1body }}</p></div>
+              {% endif %}
+
+              {% if include.box1buttonText and include.box1buttonUrl %}
+                <a href="{{ include.box1buttonUrl}}" class="button round uppercase deepRed ae-5">{{ include.box1buttonText }}</a>
+              {% elsif include.box1buttonText %}
+                <div class="button round uppercase disabled gray ae-5">{{ include.box1buttonText }}</div>
+              {% endif %}
+            </div>
+          </div>
+        </li>
+        {% endif %}
+
+
+        {% if include.box2head or include.box2image or include.box2imageClass or include.box2body %}
+        <li class="col-6-12">
+          <div class="fix-5-12 crop">
+            <div class="pad shadow ae-3">
+              {% if include.box2image %}
+                <img class="ae-4" width="200" height="200" src="{{ include.box2image }}" alt="{{ include.box2imageAlt }}"/>
+              {% elsif include.box2imageClass %}
+                <div class="ae-4 h200 hide-text show-image {{ include.box2imageClass }}">
+                  {{ include.box2imageAlt }}
+                </div>
+              {% endif %}
+
+              {% if include.box2head %}
+                <h3 class="uppercase ae-5">{{ include.box2head }}</h3>
+              {% endif %}
+
+              {% if include.box2body %}
+                <div class="ae-6"><p class="small equalElement" markdown="1">{{ include.box2body }}</p></div>
+              {% endif %}
+
+              {% if include.box2buttonText and include.box2buttonUrl %}
+                <a href="{{ include.box2buttonUrl}}" class="button round uppercase deepRed ae-5">{{ include.box2buttonText }}</a>
+              {% elsif include.box2buttonText %}
+                <div class="button round uppercase disabled ae-5">{{ include.box2buttonText }}</div>
+              {% endif %}
+            </div>
+          </div>
+        </li>
+        {% endif %}
+
+
+      </ul>
+    </div>
+
+{% include slides/slideEnd.html background=include.background backgroundTop=include.backgroundTop %}

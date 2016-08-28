@@ -1,117 +1,103 @@
 ---
-layout: default
+layout: slides
+hidelogofirstslide: true
 ---
 
+{% comment %}
+Keywords: API, SDK, end to end encryption, ios, android, javascript,
+
+Hit the value prop
+
+You can sell your software to bigger companies if you have better security.
+
+{% endcomment %}
+
+{% include slides/logo.html
+  id="logo"
+  tagline="Security for developers."
+  background="img/home/vault-bigger-center-crop.jpg"
+%}
+
+{% include slides/header-hero-button-centered.html
+  id="developer"
+  header="Developer-centric"
+  details="Our mission is to improve security for applications, developers and their environments. Apps inevitably have bugs and vulnerabilities, but these need not lead to stolen data."
+  background="img/home/coffee.jpg"
+  buttonText="View Products"
+  buttonUrl="/products/"
+%}
+
+{% include slides/lefthead-rightimage.html
+  id="code"
+  superheader="To fix security breaches:"
+  header="Go to the source"
+  subheader="code"
+  imageClass="img-90PctAppLayer w100pct"
+  background="img/home/code.jpg"
+%}
+
+{% include slides/header-hero-button-centered.html
+  header="Better Security = More sales"
+  id="sales"
+  details="If you sell software to medium and large companies, your security matters. Enterprise companies demand strong protection of their data. Without trust and credibility, you will lose the sale. IronCore brings trust you can leverage to close more deals."
+  background="/img/home/bull-statue.jpg"
+%}
+
+{% include slides/tophead-bottomimage.html
+  id="distributed"
+  header="Data is everywhere"
+  subheader="Apps, Partners, Vendors, Mobile, Cloud, Remote, IoT"
+  image="img/home/PerimeterInsecurity.png"
+  imageAlt="Illustration of porous network border"
+  background="img/home/castle-in-clouds.jpg"
+%}
+
+{% include slides/tophead-rightdesc.html
+  id="fortress"
+  superheader="Antiquated paradigm"
+  header='Fortress <i class="fa fa-arrow-circle-right"></i><span class="sr-only">Equals</span> Failure'
+  details="Keeping a strong perimeter is inadequate in today's environment. Inevitably a bad guy will get in and if your data is unprotected, then you will be breached. If you aren't already."
+  background="img/home/castle.jpg"
+%}
 
 
-  <!-- div id="series_chart_div" style="margin:0 auto; width: 900px; height: 500px;"></div -->
-
-    <div class="container-fluid banner">
-<!--      <div class="banner-image">-->
-<!--        <img src="/img/logos/ironcore-logo-overunder-inverse-transparent.svg">-->
-<!--      </div>-->
-      <div class="banner-text">
-        <h1>Turnkey data security for application developers.</h1>
-      </div>
-    </div>
-
-      {% include nav.html %}
-
-<div class="stripe-wrapper">
-<div class="stripe">
-  <div class="container">
-    <div class="row">
-      <div class="stripe-thumbnail">
-        <img src="/img/home/dev-tools-icon.svg" alt="">
-      </div>
-      <div class="stripe-text">
-        <h2>Drop-in Encryption</h2>
-        <p>
-          Software development organizations find it difficult and expensive to build applications that handle sensitive data or are subject to compliance regulations such as <abbr title="Health Insurance Portability and Accountability Act - requires secure handling of protected health information">HIPAA</abbr> or <abbr title="Payment Card Industry Data Security Standards - requires secure handling of credit card related information">PCI DSS</abbr>.
-The IronCore service provides simple APIs for handling data encryption and sharing for sensitive data. We provide drop-in end-to-end encryption that's transparent to client-side code, works in JavaScript, iOS and Android apps, and keeps data secure at rest, in transit and in-application.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="stripe">
-  <div class="container">
-    <div class="row">
-      <div class="stripe-thumbnail">
-        <img alt="" src="/img/home/differentiate-icon.svg">
-      </div>
-      <div class="stripe-text">
-        <h2>Differentiator for Cloud Applications</h2>
-        <p>
-          Companies building applications for Government, the financial sector, the health industry, retail companies and privacy-conscious consumers can set themselves apart with fully encrypted cloud data. Incumbent solutions rely on plain text data being available to the application at the server.  Consequently, IT admins, developers, customer support representatives, other legitimate users and hackers have access to all of their customers data. With a fully encrypted system, your application will be more desirable to liability-conscious and privacy-concerned customers.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="stripe" >
-  <div class="container">
-    <div class="row">
-      <div class="stripe-thumbnail">
-        <img alt="" src="/img/home/demise-of-perimeter-security-icon.svg">
-      </div>
-      <div class="stripe-text">
-        <h2>Perimeter Security Problems</h2>
-        <p>Mobile devices, cloud computing, partner data sharing, remote workers, the Internet of Things and other trends are eroding the effectiveness of perimeter security models.  Firewalls and intrusion detection systems are insufficient to protect sensitive data including customer data.</p>
-        <p><a class="btn btn-default" href="https://blog.ironcorelabs.com/the-inevitable-demise-of-perimeter-security-9863ef372294" role="button">Read more &raquo;</a></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="stripe" >
-  <div class="container">
-    <div class="row">
-      <div class="stripe-thumbnail">
-        <img alt="" src="/img/posts/states-with-breach-disclosure-laws-400-gray.png">
-      </div>
-      <div class="stripe-text">
-        <h2>Breach Disclosure Laws</h2>
-        <p>47 states require companies to disclose if unencrypted customer data was potentially accessed by unauthorized persons including insiders.  In the U.S., on average it costs $201 per record accessed to disclose breaches and untold millions in lost customer trust.</p>
-        <p><a class="btn btn-default" href="https://blog.ironcorelabs.com/breach-disclosure-laws-and-consequences-f7e14edca29e" role="button">Read more &raquo;</a></p>
-      </div>
-    </div>
-  </div>
-</div>
+{% include slides/header-hero-button-centered.html
+  header="Reputation is Key"
+  id="reputation"
+  details="A data breach can really hurt the trust your customers have in you. If they find out. By law, companies must disclose when customer data is accessed if the data is personally identifiable (as defined by the laws of the states and countries where your customers reside) or, in the U.S., is covered by HIPAA. In all cases, <strong>you only need disclose if <i>unencrypted</i> data is accessed</strong>."
+  buttonUrl="https://blog.ironcorelabs.com/breach-disclosure-laws-and-consequences-f7e14edca29e"
+  buttonText="Learn more"
+  background="/img/home/curtains.jpg"
+%}
 
 
-<div class="stripe">
-  <div class="container">
-    <div class="row">
-      <div class="stripe-thumbnail">
-        <img alt="IronCore Labs" src="/img/logos/ironcore-logo-overunder.svg">
-      </div>
-      <div class="stripe-text">
-        <h2>Solid Solutions</h2>
-        <p>
-          IronCore is dedicated to building accessible solutions to insecure data in a highly connected and border-less world.
-        </p>
-        <p>
-          Our solution is <strong>currently under development</strong>, but if you are interested in the beta, when it is available, or would like to follow our progress, please sign up for our (very low volume) mailing list, below, or follow us on social media.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+{% comment %}
+Remove.
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 twitter-container" id="twitter-container">
-      <a class="twitter-timeline" data-chrome="noscrollbar noborders" data-tweet-limit="3" data-dnt="true" href="https://twitter.com/IronCoreLabs">
-        <i class="fa fa-twitter fa-spin"></i>
-        Tweets by @IronCoreLabs
-      </a>
-    </div>
-  </div>
-</div>
+{% include slides/bigquote.html
+  quote="If you have built castles in the air, your work need not be lost; that is where they should be. Now put the foundations under them."
+  author="Thoreau"
+  classes="fade-4"
+  background="img/home/clouds.jpg"
+%}
+{% endcomment %}
 
-</div>
+{% include slides/tophead-rightdesc.html
+  id="provable"
+  superheader="Provable access control"
+  header='The difference between <br>&ldquo;I think&rdquo; and &ldquo;I know.&rdquo;&trade;'
+  details="A lot of companies think (or hope) they're giving you security, but we can prove it. Our access control is backed by encryption."
+  background="img/home/lightning.jpg"
+%}
 
-<!--<i class="fa fa-cubes"></i> <i class="fa fa-key"></i> <i class="fa fa-puzzle-piece"></i> <i class="fa fa-shield"></i> <i class="fa fa-terminal"></i> <i class="fa fa-lock"></i> <i class="fa fa-code"></i>-->
+{% include slides/header-hero-button-centered.html
+  id="zero"
+  classes="fade-8"
+  header="Zero Hassle"
+  details="IronCore data is unlocked at the point of use only and kept locked at all other times. Servers have zero knowledge, developers have zero hassle. Key management, encryption, sharing and permissions are all handled automatically so developers can focus on their core value propostion."
+  background="img/home/zoom.jpg"
+  buttonText="Learn More"
+  buttonUrl="/technology/"
+%}
+
+{% include slides/mailchimp.html id="maillist" header="Mail List Signup" background="img/home/boy-listens.jpg" %}
