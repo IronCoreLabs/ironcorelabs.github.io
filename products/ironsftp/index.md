@@ -19,7 +19,7 @@ IronSFTP is an open-source [fork of OpenSSH][ironssh] and drop-in replacement fo
 
 The user experience with IronSFTP is nearly identical to standard SFTP with new commands for sharing files with other users.
    "
-   image="../../img/products/ironsftp/ironsftp-demo7.gif"
+   image="../../img/products/ironsftp/ironsftp-demo8.gif"
    imageAlt="Demo of sftp and ironsftp side-by-side"
 %}
 {% include slides/tophead-3coltext.html
