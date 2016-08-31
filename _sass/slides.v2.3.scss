@@ -225,6 +225,9 @@ h2.hero {
 .copyright {
   font-size: 0.5rem;
   opacity: 0.5;
+  a {
+    text-decoration: underline;
+  }
 }
 .lastSlideOnly {
   display: none;

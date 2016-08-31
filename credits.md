@@ -21,12 +21,14 @@ Icons are either hand-made by IronCore or leverage icons found on [The Noun Proj
 * ![Clouds](/img/home/clouds.jpg) by Gabriela Parra via [Unsplash](https://unsplash.com/@gabriela_parra?photo=BdQk6Qm3vAU). _Creative Commons Zero license._
 * ![Code](/img/home/code.jpg) by Markus Spiske via [Unsplash](https://unsplash.com/photos/xekxE_VR0Ec).  _Creative Commons Zero license._
 * ![Coffee](/img/home/coffee.jpg) by Potapova Valeriya via [123rf](https://www.123rf.com/search.php?word=48017035&imgtype=&Submit=+&t_word=&t_lang=en&orderby=0&mediapopup=48017035). _Standard license._
+* ![Curtains](/img/home/curtains.jpg) by Orlova Maria via [Unsplash](https://unsplash.com/search/photo-1467635624863-33cf388d9a2e?photo=EF6z_6R94zQ). _Creative Commons Zero license._
 * ![Lightning](/img/home/lightning.jpg) by Dominik QN via [Unsplash](https://unsplash.com/photos/fpMO_P1GPHA).   _Creative Commons Zero license._
 * ![Vault](/img/home/vault-bigger-center-crop.jpg) by Kirsty Pargeter via [123rf](https://www.123rf.com/search.php?word=9148113&imgtype=&Submit=+&t_word=&t_lang=en&orderby=0&mediapopup=9148113). _Standard license._
 * ![Train zoom](/img/home/zoom.jpg) by Mirko Vitali via [123rf](https://www.123rf.com/search.php?word=36239642&imgtype=&Submit=+&t_word=&t_lang=en&orderby=0&mediapopup=36239642). _Standard license._
 
 ## Technology Page
 
+* ![Building corner](/img/tech/office-building.jpg) by Mihail Ribkin via [Unsplash](https://unsplash.com/photos/VjmlDjePHjE). _Creative Commons Zero license._
 * ![Chicago sunset](/img/tech/chicago-sunset.jpg) by Kevin Young via [Unsplash](https://unsplash.com/photos/-icmOdYWXuQ).  _Creative Commons Zero license._
 * ![Desk wood](/img/tech/desk-wood.jpg) by Andrew Illarionov via [Unsplash](https://unsplash.com/photos/-WW8jBak7bo).   _Creative Commons Zero license._
 * ![Keys pile](/img/tech/key-pile2.jpg) by Patrick Walsh, licensed to IronCore Labs only.
@@ -47,8 +49,8 @@ Icons are either hand-made by IronCore or leverage icons found on [The Noun Proj
 * ![Rock climbing](/img/about/rock-climbing.jpg) by photobac via [123rf](https://www.123rf.com/search.php?word=16694699&imgtype=&Submit=+&t_word=&t_lang=en&orderby=0&mediapopup=16694699). _Standard license_.
 * ![Sattelite](/img/about/space.jpg) by SpaceX via [Unsplash](https://unsplash.com/photos/VBNb52J8Trk). _Creative Commons Zero license._
 * ![Trains](/img/about/trains.jpg) by Mirko Vitali via [123rf](https://www.123rf.com/search.php?word=36239642&imgtype=&Submit=+&t_word=&t_lang=en&orderby=0&mediapopup=36239642). _Standard license_.
-* ![Using mobile phone](/img/about/using-mobile-phone.jpg) by Unknown via Designmodo slides "img-40". Designmodo [asserts](http://designmodo.com/slides/faq/) this is a Creative Commons Zero images.
-* ![Writing](/img/about/writing.jpg) by Unknown via Designmodo slides "img-57". Designmodo [asserts](http://designmodo.com/slides/faq/) this is a Creative Commons Zero images.
+* ![Using mobile phone](/img/about/using-mobile-phone.jpg) by Unknown via Designmodo slides "img-40". Designmodo [asserts](http://designmodo.com/slides/faq/) this is a Creative Commons Zero image.
+* ![Writing](/img/about/writing.jpg) by Unknown via Designmodo slides "img-57". Designmodo [asserts](http://designmodo.com/slides/faq/) this is a Creative Commons Zero image.
 
 ## Open Source Used
 
