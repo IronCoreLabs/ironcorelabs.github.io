@@ -44,7 +44,7 @@ The user experience with IronSFTP is nearly identical to standard SFTP with new 
 
 ### RedHat, CentOS, Debian and Ubuntu
 
-IronSFTP requires OpenSSL 1.0.2 or above. This means it will only work on newer operating systems including RedHat Enterprise 7; CentOS 7; Fedora 22, 23, 24; Debian Stretchy; and Ubuntu Wily, Xenial, Yakkety.  Packages for these operating systems are hosted on packagecloud.io.  To install deb and rpm packages:
+IronSFTP requires OpenSSL 1.0.2 or above. This means it will only work on newer operating systems including RedHat Enterprise 7; CentOS 7; Fedora 23, 24; Debian Stretchy; and Ubuntu Wily, Xenial, Yakkety.  Packages for these operating systems are hosted on packagecloud.io.  To install deb and rpm packages:
 
 1. Add the [packagcloud.io repository][packagecloud]
 2. For Debian and Ubuntu: `sudo apt-get install ironssh`. <br>For RedHat and CentOS: `sudo yum install ironssh`.
@@ -62,7 +62,7 @@ To build from source, make sure you have a version of OpenSSL that is 1.0.2 or g
     > cd ironssh
     > autoreconf
     > ./configure --with-ssl-dir=/usr/local/opt/openssl
-    > make ironsftp && make install
+    > make && make install
 {% endhighlight %}
 
 
