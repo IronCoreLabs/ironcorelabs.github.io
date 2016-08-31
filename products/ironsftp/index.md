@@ -15,7 +15,7 @@ bodyclasses: whiteSlide
    header="Overview"
    id="overview"
    details="
-IronSFTP is an open-source [fork of OpenSSH][ironssh] and drop-in replacement for command-line SFTP. **IronSFTP** brings painless end-to-end encryption to existing servers running SSH. Encryption keys are automatically derived from the SSH key and the public keys are published to the server.  Uploaded files are encrypted to the person uploading and optionally to other users. Key files and encryption are compatible with [GPG 2.1+][gpg21] and uses the \"[safe][safecurves]\" elliptic curve Curve25519.
+IronSFTP is an open-source [fork of OpenSSH][ironssh] and alternative to command-line SFTP. **IronSFTP** brings painless end-to-end encryption to existing servers running SSH. Encryption keys are automatically derived from the SSH key and the public keys are published to the server.  Uploaded files are encrypted to the person uploading and optionally to other users. Key files and encryption are compatible with [GPG 2.1+][gpg21] and uses the \"[safe][safecurves]\" elliptic curve Curve25519.
 
 The user experience with IronSFTP is nearly identical to standard SFTP with new commands for sharing files with other users.
    "
