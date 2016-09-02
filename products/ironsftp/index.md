@@ -51,7 +51,7 @@ IronSFTP requires OpenSSL 1.0.2 or above. This means it will only work on newer 
 
 ### MacOS
 
-Homebrew installation will be coming soon. In the meantime, see instructions for building from source.
+IronSFTP can be installed using this command: `brew install ironcorelabs/ironcore/ironssh`.
 
 ### Building From Source
 
