@@ -51,6 +51,7 @@ Our goal is to eliminate the daily breaches seen in the news. If sensitive data 
 ## Press Releases
 
 * [IronCore Finds Major Drop in Application Security]({{ site.baseurl }}/press/ironcore-finds-major-drop-in-app-security/), July 1, 2016
+* [IronCore Labs wins "Pitch Fest" for High-Tech Start-Up Companies]({{ site.baseurl }}/press/ironcore-wins-montana-pitchfest/), September 23, 2016
 
 </div>
 {% include slides/slideEnd.html background="/img/about/writing.jpg" %}
