@@ -19,3 +19,6 @@ w3cErrors
 .Ulysses-favorites.plist
 .Ulysses-Group.plist
 _sass/output
+.bundle/
+vendor
+.jekyll-metadata

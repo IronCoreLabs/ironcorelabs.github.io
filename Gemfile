@@ -14,7 +14,7 @@ gem 'jemoji'#, '~> 0.6.2'
 gem 'sass'
 gem 'compass'
 gem 'bootstrap-sass', '~> 3.3.4.1'
-gem 'font-awesome-sass', '~> 4.3.2.1'
+gem 'font-awesome-sass', '~> 4.7.0'
 
 gem 'jekyll-auth'
 
