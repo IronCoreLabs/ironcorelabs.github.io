@@ -50,6 +50,9 @@ nav:
   -
     url: "/products/"
     text: "Products"
+  -
+    url: "https://demo.ironcorelabs.com"
+    text: "Explore API"
 
 navright:
   -

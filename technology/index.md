@@ -18,7 +18,7 @@ bodyClasses: whiteSlide
   author="<a href='https://www.wired.com/2014/11/hacker-lexicon-end-to-end-encryption/' target='_blank'><u>Wired</u></a>"
   classes="fade-6"
   imageClass="img-desk-key h300"
-  imageCaption="Storing keys on the server is like locking a drawer but leaving the key on the desk. Pointless."
+  imageCaption="Storing decrypted keys on the server is like locking a drawer but leaving the key on the desk. Pointless."
   background="/img/tech/desk-wood.jpg"
 %}
 
@@ -27,7 +27,7 @@ bodyClasses: whiteSlide
   header="True Security and Privacy"
   box1imageClass="img-zero-visibility h100"
   box1head="Zero Knowledge"
-  box1body='With IronCore, private keys stay on client devices. Servers never see private keys. Equally important, private keys are never shared with other devices, users or servers.'
+  box1body='With IronCore, private keys stay on client devices. Servers never see decrypted private keys. Equally important, private keys are never shared with other devices, users or servers.'
   box2imageClass="img-padlock-inside h100"
   box2head="End-to-End"
   box2body="Encryption and decryption happen only at the point of use, on client devices like laptops and mobile phones. Data is locked through its full lifecycle: in-transit, at-rest and at every stage in-between including in-memory on the server."
