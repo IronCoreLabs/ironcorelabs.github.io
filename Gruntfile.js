@@ -159,6 +159,7 @@ module.exports = function(grunt) {
           '_drafts/*',
           'img/**/*.{jpg,png,svg}',
           '*.{html,yml,md}',
+          '**/*.{html,yml,md}',
           '**/index.{html,md}',
           '*.xml',
           '!_site/**/*', // not anything in the output dir

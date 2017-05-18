@@ -53,6 +53,7 @@ Our goal is to eliminate the daily breaches seen in the news. If sensitive data 
 * [IronCore Finds Major Drop in Application Security]({{ site.baseurl }}/press/ironcore-finds-major-drop-in-app-security/), July 1, 2016
 * [IronCore Labs wins "Pitch Fest" for High-Tech Start-Up Companies]({{ site.baseurl }}/press/ironcore-wins-montana-pitchfest/), September 23, 2016
 * [IronCore Labs Joins Techstars Boulder '17]({{ site.baseurl }}/press/ironcore-joins-techstars-family/), January 23, 2017
+* [IronCore Labs Raises $1.5m in Seed Round Funding Led by Next Frontier Capital]({{ site.baseurl }}/press/ironcore-raises-seed-round/), May 18, 2017
 
 </div>
 {% include slides/slideEnd.html background="/img/about/writing.jpg" %}

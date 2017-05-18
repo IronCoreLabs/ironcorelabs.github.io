@@ -6,9 +6,10 @@ bodyclasses: whiteSlide
 
 {% include slides/slideStart.html lightbackground="1" %}
 
-<h1 class="small">{{ page.title }}</h1>
+<h1 class="left small fix-10-12">{{ page.title }}</h1>
+{% if page.subtitle %}<h2 class="left small fix-10-12">{{ page.subtitle }}</h2>{% endif %}
 
-<div class="left" markdown="1">
+<div class="left fix-10-12" markdown="1">
 
 
 {{ content }}
