@@ -11,6 +11,7 @@ if (/\.local$/.test(hostname) || window.location.protocol == "file:") {
 switch (hostname) {
     case 'ironcore-website-beta.herokuapp.com':
     case 'ironcorelabs.com':
+    case '1e113iyjja_s_ironcorelabs_com.p.cloudflare.works':
     case 'localhost':
     case 'local':
         break;
