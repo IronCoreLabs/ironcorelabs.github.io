@@ -5,6 +5,21 @@
 
     <link id="feedLink" rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }} RSS" href="https://blog.ironcorelabs.com/feed">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/slides.v2.3.css">
+    <script type="text/javascript">
+      var _bftn_options = {
+        /*
+        * Choose from 'money', 'stop', and 'slow'. Omit this property to get the
+        * default theme.
+        */
+        theme: 'slow', // @type {string}
+
+        /*
+        * Always show the widget. Useful for testing.
+        */
+        always_show_widget: false // @type {Boolean}
+      };
+    </script>
+    <script src="https://widget.battleforthenet.com/widget.js" async></script>
   </head>
   <body id="{{ page.path | remove: ".html" | remove: ".md" | replace: "/", "-" | handleize }}" class="fast animated slides {% if page.transition %}{{ page.transition }}{% elsif layout.transition %}{{ layout.transition }}{% else %}cards{% endif %} {{ layout.bodyclasses }} {{ page.bodyclasses }}">
     {% unless page.hidenav %}
