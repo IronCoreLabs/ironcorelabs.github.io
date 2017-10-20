@@ -22,6 +22,6 @@
     "immutable": "~3.8.1",
     "underscore": "~1.8.3",
     "modernizr": "~3.3.1",
-    "twitter-fetcher": "git://github.com/jasonmayes/Twitter-Post-Fetcher.git#^16.0.2"
+    "twitter-fetcher": "git://github.com/jasonmayes/Twitter-Post-Fetcher.git#master"
   }
 }
