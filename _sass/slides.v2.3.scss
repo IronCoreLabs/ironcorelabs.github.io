@@ -461,12 +461,18 @@ h2.hero {
     margin-bottom: 10px;
   }
 }
-#sales {
+#sales, #customercontrol {
   h2 {
     font-size: 4rem;
     @media screen and (max-width:$medium-screen-max-size) {
       font-size: 2rem;
     }
+  }
+}
+#distributed {
+  h1 {
+    top: 2.5em;
+    position: absolute;
   }
 }
 #maillist {
@@ -733,4 +739,26 @@ input:focus:valid {
 .code pre {
   line-height: 1.4em;
   font-family: $fontMonospace;
+}
+
+.wrap ul:not(.grid) {
+  list-style: disc inside;
+  margin-bottom: 30px;
+  text-indent: -2em;
+  margin-left: 2em;
+  li {
+    font-size: 1.625rem;
+    font-family: $fontSansSerifBody;
+    line-height: 1.385;
+    opacity: 0.8;
+  }
+}
+
+#technology-index {
+  strong, b, .bold {
+    font-weight: 700;
+  }
+  .wrap {
+    padding: calc(2% + 50px) calc(8% + 15px);
+  }
 }
