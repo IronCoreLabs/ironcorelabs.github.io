@@ -5,17 +5,23 @@ hidelogofirstslide: true
 
 {% comment %}
 Keywords: API, SDK, end to end encryption, ios, android, javascript,
-
-Hit the value prop
-
-You can sell your software to bigger companies if you have better security.
-
 {% endcomment %}
 
 {% include slides/logo.html
   id="logo"
   tagline="Security for developers."
+  tagline="Data control for everyone."
+  tagline="Transformative data control."
   background="img/home/vault-bigger-center-crop.jpg"
+%}
+
+{% include slides/header-hero-button-centered.html
+  id="customercontrol"
+  header="Control"
+  details="In a perfect world, any piece of data can only be read by users who are authorized to unlock it, with no risk of breach by someone who exploits a bug, hacks a database, or steals a password. Data owners know exactly how their data is being used, by whom, and can monitor and revoke that access, including from vendors, at any time. <strong>This is Customer Controlled Data.</strong>"
+  background="/img/home/big-key.jpg"
+  buttonText="Customer Controlled Data Announcement"
+  buttonUrl="https://blog.ironcorelabs.com/announcing-customer-controlled-data-59991a5e6cb6"
 %}
 
 {% include slides/header-hero-button-centered.html
@@ -27,15 +33,6 @@ You can sell your software to bigger companies if you have better security.
   buttonUrl="/products/"
 %}
 
-{% include slides/lefthead-rightimage.html
-  id="code"
-  superheader="To fix security breaches:"
-  header="Go to the source"
-  subheader="code"
-  imageClass="img-90PctAppLayer w100pct"
-  background="img/home/code.jpg"
-%}
-
 {% include slides/header-hero-button-centered.html
   header="Better Security = More sales"
   id="sales"
@@ -43,13 +40,14 @@ You can sell your software to bigger companies if you have better security.
   background="/img/home/bull-statue.jpg"
 %}
 
-{% include slides/tophead-bottomimage.html
-  id="distributed"
-  header="Data is everywhere"
-  subheader="Apps, Partners, Vendors, Mobile, Cloud, Remote, IoT"
-  image="img/home/PerimeterInsecurity.png"
-  imageAlt="Illustration of porous network border"
-  background="img/home/castle-in-clouds.jpg"
+{% include slides/tophead-rightdesc.html 
+  id="gdpr"
+  header="Global Data Privacy Regulations (GDPR)"
+  superheader="Right-to-be-Forgotten"
+  details="In May 2018, the world's strongest privacy protections will take effect with penalties of up to 20% of global revenue as a penalty for not complying. IronCore's data control solution makes requirements around data subject rights easy to implement."
+  background="/img/home/eu-face.jpg"
+  buttonText="GDPR Explainer"
+  buttonUrl="https://blog.ironcorelabs.com/businessplainer-about-the-eu-right-to-be-forgotten-and-the-gdpr-141f388b5277"
 %}
 
 {% include slides/tophead-rightdesc.html
@@ -60,27 +58,14 @@ You can sell your software to bigger companies if you have better security.
   background="img/home/castle.jpg"
 %}
 
-
 {% include slides/header-hero-button-centered.html
   header="Reputation is Key"
   id="reputation"
   details="A data breach can really hurt the trust your customers have in you. If they find out. By law, companies must disclose when customer data is accessed if the data is personally identifiable (as defined by the laws of the states and countries where your customers reside) or, in the U.S., is covered by HIPAA. In all cases, <strong>you only need disclose if <i>unencrypted</i> data is accessed</strong>."
   buttonUrl="https://blog.ironcorelabs.com/breach-disclosure-laws-and-consequences-f7e14edca29e"
-  buttonText="Learn more"
-  background="/img/home/curtains.jpg"
+  buttonText="Breach Disclosure Laws"
+  background="/img/home/castle-in-clouds.jpg"
 %}
-
-
-{% comment %}
-Remove.
-
-{% include slides/bigquote.html
-  quote="If you have built castles in the air, your work need not be lost; that is where they should be. Now put the foundations under them."
-  author="Thoreau"
-  classes="fade-4"
-  background="img/home/clouds.jpg"
-%}
-{% endcomment %}
 
 {% include slides/tophead-rightdesc.html
   id="provable"
@@ -90,13 +75,17 @@ Remove.
   background="img/home/lightning.jpg"
 %}
 
+{%comment%}
+TODO: TEASE ORTHOGONAL ACCESS?
+{%endcomment%}
+
 {% include slides/header-hero-button-centered.html
   id="zero"
   classes="fade-8"
   header="Zero Hassle"
-  details="IronCore data is unlocked at the point of use only and kept locked at all other times. Servers have zero knowledge, developers have zero hassle. Key management, encryption, sharing and permissions are all handled automatically so developers can focus on their core value propostion."
+  details="IronCore data is unlocked at the point of use only and kept locked at all other times. Servers have zero knowledge, developers have zero hassle. Key management, encryption, sharing and permissions are all handled automatically so developers can focus on their core value proposition."
   background="img/home/zoom.jpg"
-  buttonText="Learn More"
+  buttonText="Technology Details"
   buttonUrl="/technology/"
 %}
 
