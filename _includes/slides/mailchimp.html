@@ -2,8 +2,8 @@
         <div class="fix-10-12">
           <div class="ae-3">
             <h2>
-              <div class="micro">IronCore News</div>
-              <div>Stay Informed</div>
+              <div class="micro">{% if include.subhead %}{{ include.subhead }}{% else %}IronCore News{% endif %}</div>
+              <div>{% if include.header %}{{ include.header }}{% else %}Stay Informed{% endif %}</div>
             </h2>
           </div>
           <br>
@@ -15,7 +15,7 @@
               <input type="email" value="" name="EMAIL" autocapitalize="off" autocorrect="off" id="subscribe-email" required placeholder="Your e-mail" pattern="^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$" class="rounded input-38"/>
               <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b2443ca319e79ea90fd735d2f_2d486411bb" tabindex="-1" value=""></div>
               <input type="submit" value="Get Updates" name="subscribe" class="button deepRed uppercase rounded"/>
-              <ul>
+              <ul {% if include.hidecheckboxes %}style="display:none;"{% endif %}>
                 <li>
                   <input type="checkbox" class="mailchimpcheckbox" value="4" name="group[10813][4]" id="mce-group[10813]-10813-4" checked>
                   <label for="mce-group[10813]-10813-4">Beta Waitlist</label>

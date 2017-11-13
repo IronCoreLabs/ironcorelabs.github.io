@@ -195,3 +195,13 @@ For any given app, logins remain unchanged from what they would otherwise be. On
   classes="fade-9 autoHeight"
   background="/img/tech/chicago-sunset.jpg"
 %}
+
+{% include slides/mailchimp.html 
+  id="waitlistsignup" 
+  header="Waitlist Signup" 
+  classes="fade-8" 
+  background="/img/tech/laptop-cliff.jpg" 
+  hidecheckboxes=true
+  subhead="Get Early Access"
+  header="Waiting List"
+%}
