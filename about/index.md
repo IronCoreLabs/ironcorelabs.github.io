@@ -39,7 +39,7 @@ Second sentence too wordy.
 <div markdown="1">
 ## Where we're going
 
-Our goal is to eliminate the daily breaches seen in the news. If sensitive data is well protected, then [breaches are non-events][breachdisclosure] and public disclosure isn't required. Strong data security will bring us to a world with stronger national security, better privacy, and safer intellectual property leading to more successful companies with fewer bouts of theft and espionage.
+Our goal is to eliminate the daily breaches seen in the news. If sensitive data is well protected, then [breaches are non-events][breachdisclosure] and public disclosure isn't required. Strong data security will bring us to a world with stronger national security, better privacy, and safer intellectual property. Our mission is to make the world a safer place to do digital business.
 
 </div>
 {% include slides/slideEnd.html background="/img/about/trains.jpg" %}
