@@ -47,12 +47,9 @@ nav:
   -
     url: "/technology/"
     text: "Technology"
-  -
-    url: "/products/"
-    text: "Products"
-  -
-    url: "https://demo.ironcorelabs.com"
-    text: "Explore API"
+  #-
+  #  url: "/products/"
+  #  text: "Products"
 
 navright:
   -
