@@ -507,8 +507,8 @@ h2.hero {
     text-align: center;
     line-height: 1.4rem;
   }
-  input[type=checkbox] {
-    display: none;
+  input[type=checkbox], .mailchimpcheckbox {
+    display: none !important;
     font-size: 1.4rem;
     cursor: pointer;
   }
@@ -722,4 +722,15 @@ input:focus:valid {
   outline:none;
   border: 1px solid $green;
   box-shadow: 0 0 10px $green;
+}
+.highlight .gutter {
+  font-family: $fontMonospace;
+  color: #999;
+  padding-right: 1em;
+  line-height: 1.4em;
+}
+
+.code pre {
+  line-height: 1.4em;
+  font-family: $fontMonospace;
 }
