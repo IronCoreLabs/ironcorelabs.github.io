@@ -15,7 +15,7 @@ excerpt: IronCore Labs is transforming how SaaS companies handle their customers
 
 _We're not doing it right._
 
-Data is the fuel that powers SaaS.  Yet in the rare instances where the data is encrypted, it's typically just encrypted _"in transit and at rest,"_ which translates to _"HTTPS and Transparent Disk Encryption."_ Sadly, these protections are pretty limited and lack cryptographic access controls.
+Data is the fuel that powers SaaS.  In the rare instances where the data is encrypted, it's typically just encrypted _"in transit and at rest,"_ which translates to _"HTTPS and Transparent Disk Encryption."_ Sadly, these protections are limited and lack cryptographic access controls.
 
 Transparent disk encryption leaves data just as visible to an attacker as to a legitimate user. HTTPS isn't much better. It stops casual interception of data, but it doesn't ensure that the person receiving data should be allowed access. It also fails to secure the data at the endpoints.
 
@@ -23,7 +23,7 @@ In short, the standard approach to encryption handles two narrow threats: stolen
 
 ![](/img/tech/in-transit-and-at-rest.png)
 
-Most SaaS companies largely ignore security concerns when they're small. As they grow, they add network perimeter technologies like firewalls and intrusion prevention appliances, security incident event management platforms, and staff to monitor them. For B2B SaaS, this evolution is driven by larger customers that demand more intense infosecurity reviews during the sales cycle.
+Most SaaS companies ignore security concerns when they're small. As they grow, they add network perimeter technologies like firewalls and intrusion prevention appliances, security incident event management platforms, and staff to monitor them. For B2B SaaS, this evolution is driven by larger customers that demand more intense infosecurity reviews during the sales cycle.
 
 Unfortunately, investing in network perimeter technologies was the solution for a bygone era. Outdated regulations and infosecurity standards assume a network environment of decades past.
 
@@ -39,15 +39,15 @@ We've evolved from walking floppy disks between computers to a world of cloud se
 
 ## First Principles
 
-If we were starting over and building a ground-up model of security, we'd start by securing the data, and we'd finish by making physical storage of the data irrelevant to its security. Here are the other key parts of how the digital world would work if it were built with a foundation of security and an understanding of the challenges of today's environment:
+If we were starting over and building a ground-up model of security, we'd start by securing the data, and we'd finish by making physical storage of the data irrelevant to its security. Here are the other key parts of how the digital world would work if it were built on a foundation of security and an understanding of the challenges of today's environment:
 
-* **Access Decisions:** data owners, not partners or vendors, would determine who is able to read their data.
+* **Access Decisions:** data owners, not partners or vendors, would determine who can read their data.
 * **Borderless Control:** data would be owner-controlled even when stored with third-parties or offline.
 * **Monitoring:** owners would monitor how their data is used and by whom and could detect abuses of access.
 * **True End-to-End Encryption:** data would be encrypted at all times other than when actively in use.
 * **Simplicity:** no special knowledge or actions would be required of users or data owners.
 * **Adding and Revoking Access:** owners would add or remove authorized users at any time without touching the data.
-* **Zero-knowledge:** no trusted middle-man determines access and no unauthorized service or user can view the data.
+* **Zero-knowledge:** no trusted middle-man determines access, and no unauthorized service or user can view the data.
 * **Scale:** there would be no limitation on the number of files or users; changing access and rotating keys would be a constant-time operation.
 * **Provable:** security would be knowable, provable, and not based on assumptions about the workings and interactions between complex and disparate access control systems.
 
@@ -75,7 +75,7 @@ This is why large organizations demand extensive infosec reviews, with lengthy s
 
 ![Provable security: the difference between 'I think' and 'I KNOW'](/img/tech/i-think-vs-i-know.png)
 
-In a world of **customer-controlled data**, organizations need no longer hope their partners have good-enough security. The security travels with the data and the usage of that data is monitored. With control comes trust, and trust brings options, flexibility, and, for SaaS vendors who embrace it, more sales.
+In a world of **customer-controlled data**, organizations need no longer hope their partners have good-enough security. The security travels with the data, and the usage of that data is monitored. With control comes trust, and trust brings options, flexibility, and, for SaaS vendors who embrace it, more sales.
 
 </div>
 {% include slides/slideEnd.html %}
@@ -97,7 +97,7 @@ In a world of **customer-controlled data**, organizations need no longer hope th
 
 With orthogonal access control, the decision of who to encrypt to is separated from the decision of who can decrypt.  To do this, we abstract classes of users and services into groups, encrypt to the appropriate group, and determine at another point in time who the members of the group are. Only the group members' private keys can unlock the data.
 
-For example, there might be a SSN-Readers group for a company that consists only of employees authorized to see social security numbers. The group is owned by an administrator who holds the group's private key and can use that key to add and remove members.  When a document is encrypted to this group, members can decrypt the data with their own private keys, but no one else can. Even the administrator can't read the data if they aren't a member of the group.
+For example, there might be an SSN-Readers group for a company that consists only of employees authorized to see social security numbers. The group is owned by an administrator who holds the group's private key and can use that key to add and remove members.  When a document is encrypted to this group, members can decrypt the data with their private keys, but no one else can. Even the administrator can't read the data if they aren't a member of the group.
 
 We do this at scale and without shared secrets. Groups can be any size, even millions of users, and adding and removing members are constant time operations regardless of how many documents or users there are.
 
@@ -115,7 +115,7 @@ In academia, the focus is on delegation, such as when an assistant is empowered 
 
 For example, consider the case where we have a Top Secret document and only want users with Top Secret clearance to read it. Suppose Alice and Bob both are members of the TopSecret group. Alice shares a document with the TopSecret group by encrypting the document directly to that group's public key. We use envelope encryption, so an AES-256 symmetric key encrypts the document and that key is itself encrypted to the TopSecret group public key.
 
-When Bob wants to decrypt the document, he has to send the document envelope to IronCore for transformation. IronCore's service takes the encrypted document key and transforms it so that Bob will be able to decrypt it with his key. At no point in that process does IronCore have access to the unencrypted document key. Nor could IronCore perform the transformation for a user who isn't a member of the TopSecret group. When Bob gets the transformed data back, he decrypts it locally with his private key, and gets the AES key that decrypts the document. All of this happens in a fraction of a second.
+When Bob wants to decrypt the document, he has to send the document envelope to IronCore for transformation. IronCore's service takes the encrypted document key and transforms it so that Bob will be able to decrypt it with his key. At no point in that process does IronCore have access to the unencrypted document key. Nor could IronCore perform the transformation for a user who isn't a member of the TopSecret group. When Bob gets the transformed data back, he decrypts it locally with his private key and gets the AES key that decrypts the document. All of this happens in a fraction of a second.
 
 ### Group Management
 
@@ -131,7 +131,7 @@ When Bob wants to decrypt the document, he has to send the document envelope to 
 
 ### Encryption and Decryption
 
-Independent of adding and removing members from the group, encryption just needs to know the public key of the user(s) or group(s) to share with. With IronCore's SDK, this is hangled automatically for the developer.
+Independent of adding and removing members from the group, encryption just needs to know the public key of the user(s) or group(s) to share with. With IronCore's SDK, this is handled automatically for the developer.
 
 Decrypting has an extra step that's handled automatically: the document originally encrypted to some group must be transformed as if it were encrypted to a user.
 
@@ -180,7 +180,7 @@ IronCore integrates with existing applications and hooks into existing username 
 
 On initialization of the IronCore SDK, the calling application signs an assertion establishing the identity of the current user. The calling application chooses an identifier that makes sense and then uses that identifier later when sharing protected data. IronCore integrates seamlessly with almost any existing app and authentication scheme.
 
-To add controlled data into an application, the developer only needs to consider the points of use for the data. Before saving data, the app calls the IronCore SDK, and after fetching data, the app calls the SDK. Or, optionally, a single call will handle encryption, decryption, and storage operations.
+To add controlled data into an application, the developer only needs to consider the points of use of the data. Before saving data, the app calls the IronCore SDK, and after fetching data, the app calls the SDK. Or, optionally, a single call will handle encryption, decryption, and storage operations.
 
 </div>
 {% include slides/slideEnd.html background="/img/tech/abstract-boxes.jpeg"%}
@@ -190,7 +190,7 @@ To add controlled data into an application, the developer only needs to consider
   header="True Security, Privacy, and Control"
   box1imageClass="img-zero-visibility h100"
   box1head="Zero-Knowledge"
-  box1body='All participants, servers, and services, including IronCore, are zero-knowledge unless they\'ve been expressly granted access. IronCore never sees decrypted private keys and is never able to decyrpt data. But group owners can decide who has access to data encrypted to a group and they have full visibility into who\'s using that access. Data owners are the opposite of zero-knowledge: they have full knowledge of who is using their data and where and when.'
+  box1body='All participants, servers, and services, including IronCore, are zero-knowledge unless they\'ve been expressly granted access. IronCore never sees decrypted private keys and is never able to decrypt data. But group owners can decide who has access to data encrypted to a group, and they have full visibility into who\'s using that access. Data owners are the opposite of zero-knowledge: they have full knowledge of who is using their data and where and when.'
   box2imageClass="img-padlock-inside h100"
   box2head="End-to-End"
   box2body="Encryption and decryption happen only at the point of use, on client devices like laptops and mobile phones, or in backend services that have been granted access. Data is locked through its full lifecycle: in-transit, at-rest and at every stage in-between if not actively in use."
