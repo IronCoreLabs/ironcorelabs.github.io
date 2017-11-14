@@ -730,15 +730,14 @@ input:focus:valid {
   box-shadow: 0 0 10px $green;
 }
 .highlight .gutter {
-  font-family: $fontMonospace;
   color: #999;
   padding-right: 1em;
-  line-height: 1.4em;
 }
 
-.code pre {
+.highlight {
   line-height: 1.4em;
   font-family: $fontMonospace;
+  font-size: 150%;
 }
 
 .wrap ul:not(.grid) {
@@ -760,5 +759,11 @@ input:focus:valid {
   }
   .wrap {
     padding: calc(2% + 50px) calc(8% + 15px);
+  }
+  p img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    display: block;
   }
 }
