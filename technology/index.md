@@ -7,7 +7,7 @@ lightbackground: 1
 excerpt: IronCore Labs is transforming how SaaS companies handle their customers' data. We help developers end-to-end encrypt the data in their apps so it remains secure no matter where it lives.
 ---
 
-{% include slides/slideStart.html id="manifesto" classes="fade-8 autoHeight" %}
+{% include slides/slideStart.html id="manifesto" classes="fade-9 autoHeight" %}
 <div class="left" markdown="1">
 
 # Technology
@@ -25,9 +25,9 @@ In short, the standard approach to encryption handles two narrow threats: stolen
 
 Most SaaS companies largely ignore security concerns when they're small. As they grow, they add network perimeter technologies like firewalls and intrusion prevention appliances, security incident event management platforms, and staff to monitor them. For B2B SaaS, this evolution is driven by larger customers that demand more intense infosecurity reviews during the sales cycle.
 
-Unfortunately, investing in network perimeter technologies is the solution for a different era than the one we live in today. Outdated regulations and infosecurity standards assume a network environment of decades past.
+Unfortunately, investing in network perimeter technologies was the solution for a bygone era. Outdated regulations and infosecurity standards assume a network environment of decades past.
 
-![](/img/tech/data-sharing-complexity-history.png "Graphical timeline of increasing complexity of networks from the 80's until now")
+![Graphical timeline of increasing complexity of networks from the 80's until now](/img/tech/data-sharing-complexity-history.png)
 
 We've evolved from walking floppy disks between computers to a world of cloud services, remote employees, mobile devices, IoT, and no clear perimeter that contains the data. **The complexity of managing access in this environment is beyond the point where a human can reason about it**.
 
@@ -73,7 +73,7 @@ Businesses, Governments, and other organizations need to control their data ever
 
 This is why large organizations demand extensive infosec reviews, with lengthy spreadsheets, before purchasing and why, in many cases, they don't even consider a service that might otherwise make them more competitive.
 
-![](/img/tech/i-think-vs-i-know.png "Provable security: the difference between 'I think' and 'I KNOW'")
+![Provable security: the difference between 'I think' and 'I KNOW'](/img/tech/i-think-vs-i-know.png)
 
 In a world of **customer-controlled data**, organizations need no longer hope their partners have good-enough security. The security travels with the data and the usage of that data is monitored. With control comes trust, and trust brings options, flexibility, and, for SaaS vendors who embrace it, more sales.
 
@@ -131,8 +131,6 @@ When Bob wants to decrypt the document, he has to send the document envelope to 
 
 ### Encryption and Decryption
 
-![](/img/tech/orthogonal-encrypt-file.png)
-
 Independent of adding and removing members from the group, encryption just needs to know the public key of the user(s) or group(s) to share with. With IronCore's SDK, this is hangled automatically for the developer.
 
 Decrypting has an extra step that's handled automatically: the document originally encrypted to some group must be transformed as if it were encrypted to a user.
@@ -155,7 +153,7 @@ The SDKs make working with secure data painless and handle all details of key ma
 When using IronCore's optional storage service, the interface is similar to a NoSQL key/value store, but with some optional extra features. For example, IronCore’s IronWebSDK is implemented using cross-browser JavaScript. In that environment, fetching a document looks like this:
 
 ```javascript
-ironsdk.document.decryptFromStore("mykey")
+ironsdk.document.decryptFromStore("docID")
    .then(function (document) {
       var data = JSON.parse(fromBytes(document.data));
       // do something with the data
@@ -165,10 +163,10 @@ ironsdk.document.decryptFromStore("mykey")
 Users and groups have identifiers that are set by the developer. To create a document and then share it with one or more users or groups, the code would work like this:
 
 ```javascript
-var newdoc = ironsdk.document.encryptToStore("dockey", data)
+ironsdk.document.encryptToStore("docID", toBytes(data))
     .then(function(docDetails) {
-      ironsdk.document.grantAccess("dockey", [userAndGroupIds])
-        .then(function(responseObject) {
+      ironsdk.document.grantAccess("docID", [userAndGroupIds])
+        .then(function(shareResult) {
           // handle success
       });
     }).catch(function(error) {
@@ -176,9 +174,13 @@ var newdoc = ironsdk.document.encryptToStore("dockey", data)
     });
 ```
 
-## Identity
+## Integration
 
-For any given app, logins remain unchanged from what they would otherwise be. On initialization of the IronCore SDK, a signed JWT assertion must be provided to establish the identity of the current user. When we generate new keys, we tie this assertion to the public key for a verifiable link between the two. This also allows developers to look up users by whatever identifier they are comfortable using and to share with those users just by referencing those identifiers. IronCore integrates seamlessly with almost any existing app and authentication scheme.
+IronCore integrates with existing applications and hooks into existing username and password systems.
+
+On initialization of the IronCore SDK, the calling application signs an assertion establishing the identity of the current user. The calling application chooses an identifier that makes sense and then uses that identifier later when sharing protected data. IronCore integrates seamlessly with almost any existing app and authentication scheme.
+
+To add controlled data into an application, the developer only needs to consider the points of use for the data. Before saving data, the app calls the IronCore SDK, and after fetching data, the app calls the SDK. Or, optionally, a single call will handle encryption, decryption, and storage operations.
 
 </div>
 {% include slides/slideEnd.html background="/img/tech/abstract-boxes.jpeg"%}
