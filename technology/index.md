@@ -15,7 +15,7 @@ excerpt: IronCore Labs is transforming how SaaS companies handle their customers
 
 _We're not doing it right._
 
-Data is the fuel that powers SaaS.  In the rare instances where the data is encrypted, it's typically just encrypted _"in transit and at rest,"_ which translates to _"HTTPS and Transparent Disk Encryption."_ Sadly, these protections are limited and lack cryptographic access controls.
+Data is the fuel that powers SaaS.  In the rare instances where the data is encrypted, it's typically just encrypted _"in transit and at rest,"_ which typically translates to _"HTTPS and Transparent Disk Encryption."_ Sadly, these protections are lack cryptographic access controls.
 
 Transparent disk encryption leaves data just as visible to an attacker as to a legitimate user. HTTPS isn't much better. It stops casual interception of data, but it doesn't ensure that the person receiving data should be allowed access. It also fails to secure the data at the endpoints.
 
@@ -42,7 +42,7 @@ We've evolved from walking floppy disks between computers to a world of cloud se
 If we were starting over and building a ground-up model of security, we'd start by securing the data, and we'd finish by making physical storage of the data irrelevant to its security. Here are the other key parts of how the digital world would work if it were built on a foundation of security and an understanding of the challenges of today's environment:
 
 * **Access Decisions:** data owners, not partners or vendors, would determine who can read their data.
-* **Borderless Control:** data would be owner-controlled even when stored with third-parties or offline.
+* **Borderless Control:** data would be owner-controlled even when stored with third parties or offline.
 * **Monitoring:** owners would monitor how their data is used and by whom and could detect abuses of access.
 * **True End-to-End Encryption:** data would be encrypted at all times other than when actively in use.
 * **Simplicity:** no special knowledge or actions would be required of users or data owners.
@@ -67,7 +67,7 @@ Users and data owners need not know about encryption or keys because the securit
 
 **In the future, each of us will control who can access our data.** 
 
-Imagine a time where we grant our doctor access to our medical records and then, when we switch doctors, we revoke the first doctor's access. More importantly, we track who those doctors shared our data with, including third-parties like insurers, billing companies, cloud software companies, outsourced labs, research institutions, and so on. **We wouldn't just trust these folks with our data: we'd monitor how they use it, and revoke their access if they abuse the privilege.**
+Imagine granting your doctor access to your medical records, then revoking that access when you switch doctors. More importantly, suppose you could track other parties with whom your doctor shared data, including insurers, billing companies, cloud software companies, outsourced labs, research institutions, and so on. **You wouldn’t need to just trust these folks with your data: you could monitor how they use it, and you could revoke their access if they abuse the privilege.**
 
 Businesses, Governments, and other organizations need to control their data every bit as much as we do. Trusting sensitive data to yet another cloud service provider is a huge leap of faith. Each new service complicates an organization's ability to understand their risks and who has access to their data. Without that understanding, they can't meet contractual and regulatory requirements around privacy and security.
 
@@ -75,7 +75,7 @@ This is why large organizations demand extensive infosec reviews, with lengthy s
 
 ![Provable security: the difference between 'I think' and 'I KNOW'](/img/tech/i-think-vs-i-know.png)
 
-In a world of **customer-controlled data**, organizations need no longer hope their partners have good-enough security. The security travels with the data, and the usage of that data is monitored. With control comes trust, and trust brings options, flexibility, and, for SaaS vendors who embrace it, more sales.
+In a world of **customer-controlled data**, organizations organizations no longer need to hope their partners have good-enough security. The security travels with the data, and the usage of that data is monitored. With control comes trust, and trust brings options, flexibility, and, for SaaS vendors who embrace it, more sales.
 
 </div>
 {% include slides/slideEnd.html %}
@@ -97,7 +97,7 @@ In a world of **customer-controlled data**, organizations need no longer hope th
 
 With orthogonal access control, the decision of who to encrypt to is separated from the decision of who can decrypt.  To do this, we abstract classes of users and services into groups, encrypt to the appropriate group, and determine at another point in time who the members of the group are. Only the group members' private keys can unlock the data.
 
-For example, there might be an SSN-Readers group for a company that consists only of employees authorized to see social security numbers. The group is owned by an administrator who holds the group's private key and can use that key to add and remove members.  When a document is encrypted to this group, members can decrypt the data with their private keys, but no one else can. Even the administrator can't read the data if they aren't a member of the group.
+For example, a company might have an SSN-Readers group consisting of employees authorized to see social security numbers. The group is owned by an administrator who holds the group's private key and can use that key to add and remove members.  When a document is encrypted to this group, members can decrypt the data with their private keys, but no one else can. Even the administrator can't read the data if they aren't a member of the group.
 
 We do this at scale and without shared secrets. Groups can be any size, even millions of users, and adding and removing members are constant time operations regardless of how many documents or users there are.
 
@@ -109,7 +109,7 @@ We do this at scale and without shared secrets. Groups can be any size, even mil
 
 ## Cryptographic Transformation
 
-We use a technique that's long been discussed in academia that allows delegation of access. **Academia calls it "proxy re-encryption," but we prefer the more intuitive, "cryptographic transformation."**  In our case, we use a variant that is unidirectional, multi-hop, and adds multi-party computation to protect group private keys.
+We use a technique that's long been discussed in academia that allows delegation of access. **Academia calls it "proxy re-encryption," but we prefer the more intuitive name, "cryptographic transformation."**  In our case, we use a variant that is unidirectional, multi-hop, and adds multi-party computation to protect group private keys.
 
 In academia, the focus is on delegation, such as when an assistant is empowered to read the boss's encrypted emails. Our improvements optimize for use cases that revolve around access control at scale. Our approach ensures that only certain classes of users can read specific classes of data.
 
@@ -119,11 +119,11 @@ When Bob wants to decrypt the document, he has to send the document envelope to 
 
 ### Group Management
 
-**Step 1:** An Administrator creates a group. That administrator possesses the partial secret key for that group and can securely share that partial key with other administrators if desired.
+**Step 1:** An Administrator creates a group. That administrator possesses the secret key for that group and can securely share that key with other administrators if desired.
 
 ![](/img/tech/orthogonal-member-key-generation.png)
 
-**Step 2:** The Administrator adds a member to the group. She does this by taking the partial private key of the group, and the public key of the desired user, and combines them into a member key that allows the transformation of encrypted data from the group to the user. This member key is generated locally and then sent to IronCore's servers.
+**Step 2:** The Administrator adds a member to the group. She does this by taking the private key of the group, and the public key of the desired user, and combines them into a member key that allows the transformation of encrypted data from the group to the user. This member key is generated locally and then sent to IronCore's servers.
 
 ![](/img/tech/orthogonal-membership.png)
 
@@ -131,7 +131,7 @@ When Bob wants to decrypt the document, he has to send the document envelope to 
 
 ### Encryption and Decryption
 
-Independent of adding and removing members from the group, encryption just needs to know the public key of the user(s) or group(s) to share with. With IronCore's SDK, this is handled automatically for the developer.
+Securely sharing a document is independent of managing group membership. Encrypting a document only requires the public keys of the users or groups that should be granted access. With IronCore's SDK, this is handled automatically for the developer.
 
 Decrypting has an extra step that's handled automatically: the document originally encrypted to some group must be transformed as if it were encrypted to a user.
 
@@ -146,11 +146,11 @@ After the transformation, the document is decrypted locally by IronCore's SDK. I
 
 # Simple Developer Experience
 
-Developers can elect to either store documents with IronCore, or to store them in the location most convenient for the application.  In either case, the developer interface is much the same.
+Developers can elect to either store documents with IronCore or to store them in the location most convenient for the application.  In either case, the developer interface is much the same.
 
-The SDKs make working with secure data painless and handle all details of key management, sharing, groups, group membership, revocation, encryption, and decryption for the developer. SDKs can be used by server-side services and client-side applications, including web applications.
+The SDKs make working with secure data painless and handle all details of key management, sharing, groups, group membership, revocation, encryption, and decryption for the developer. SDKs can be used by server-side services and client-side applications, including web applications. The IronWeb SDK is implemented using JavaScript that is compatible with a wide range of browsers and browser versions.
 
-When using IronCore's optional storage service, the interface is similar to a NoSQL key/value store, but with some optional extra features. For example, IronCore’s IronWebSDK is implemented using cross-browser JavaScript. In that environment, fetching a document looks like this:
+When using IronCore's optional storage service, the interface is similar to a NoSQL key/value store, but with some optional extra features. In a Javascript environment, fetching a document looks like:
 
 ```javascript
 ironsdk.document.decryptFromStore("docID")
@@ -160,7 +160,7 @@ ironsdk.document.decryptFromStore("docID")
   }).catch(notifyFetchFailureFn);
 ```
 
-Users and groups have identifiers that are set by the developer. To create a document and then share it with one or more users or groups, the code would work like this:
+Users and groups are identified using IDs that are provided by the system that embeds the IronCore SDK; IronCore uses these provided IDs, so you don’t need to perform any mapping between systems. To create a document and then share it with one or more users or groups, the code would work like this:
 
 ```javascript
 ironsdk.document.encryptToStore("docID", toBytes(data))
