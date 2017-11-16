@@ -10,8 +10,8 @@ lightbackground: 1
   classes="fade-8"
   details="We believe the current generation of cloud applications are fundamentally insecure."
   col1="When we think about what we might want to build next: kick-ass cloud CRM, ERP, health EMR, digital markets or financial management, we know that the first thing we need to build is an exceptionally strong foundation for security."
-  col2="This foundation needs to be far stronger than current practices and much more than just network-based [perimeter protection][perimsec].  Confidential paper documents aren't just left out for anyone to stumble-upon.  The digital world needs equivalent and equally usable security for digital data."
-  col3="[90% of security incidents][worseningsecurity] are due to application vulnerabilities. The application typically has full access to all users' data so a hacker exploiting the app leads to disastrous results. **We're here to change that equation.**"
+  col2="This foundation needs to be far stronger than current practices and much more than just network-based [perimeter protection][perimsec].  Confidential paper documents aren't just left out for anyone to stumble upon.  The digital world needs equivalent and equally usable security for digital data."
+  col3="[90% of security incidents][worseningsecurity] are due to application vulnerabilities. The application typically has full access to all users' data, so a hacker exploiting the app leads to disastrous results. **We're here to change that equation.**"
   background="/img/about/space.jpg"
 %}
 
@@ -39,7 +39,7 @@ Second sentence too wordy.
 <div markdown="1">
 ## Where we're going
 
-Our goal is to eliminate the daily breaches seen in the news. If sensitive data is well protected, then [breaches are non-events][breachdisclosure] and public disclosure isn't required. Strong data security will bring us to a world with stronger national security, better privacy, and safer intellectual property leading to more successful companies with fewer bouts of theft and espionage.
+Our goal is to eliminate the daily breaches seen in the news. If sensitive data is well protected, then [breaches are non-events][breachdisclosure] and public disclosure isn't required. Strong data security will bring us to a world with stronger national security, better privacy, and safer intellectual property. Our mission is to make the world a safer place to do digital business.
 
 </div>
 {% include slides/slideEnd.html background="/img/about/trains.jpg" %}

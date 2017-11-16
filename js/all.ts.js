@@ -12,6 +12,7 @@ switch (hostname) {
     case 'ironcore-website-beta.herokuapp.com':
     case 'ironcorelabs.com':
     case 'localhost':
+    case '127.0.0.1':
     case 'local':
         break;
     default:

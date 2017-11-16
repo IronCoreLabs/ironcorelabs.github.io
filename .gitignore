@@ -22,3 +22,4 @@ _sass/output
 .bundle/
 vendor
 .jekyll-metadata
+.vscode

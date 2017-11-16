@@ -45,8 +45,13 @@ $medium-screen-max-size: 767px;
 $small-screen-max-size: 320px;
 
 // Font sizes
-$fontSizeBase: 16px;
+$fontSizeBase: 14px;
 
-$fontSansSerifHeading: 'Raleway', sans-serif;
-$fontSansSerifBody: "Source Sans Pro", 'Helvetica', sans-serif;
-$fontSerifHeading: "Playfair Display", 'Georgia', serif;
+// TODO: Optimize to just what I use
+@import url('https://fonts.googleapis.com/css?family=Ubuntu|Hind|Myriad%20Pro');
+$fontSansSerifHeading: 'Ubuntu', sans-serif;
+$fontSansSerifBody: "proxima-nova", "Hind", 'Helvetica', sans-serif;
+
+$fontSerifHeading: 'Georgia', serif;
+
+$fontMonospace: "Myriad Pro", monospace;

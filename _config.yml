@@ -43,13 +43,14 @@ defaults:
 nav:
   -
     url: "/"
-    text: "Overview"
+    text: "Home"
   -
     url: "/technology/"
     text: "Technology"
-  -
-    url: "/products/"
-    text: "Products"
+
+  #-
+  #  url: "/products/"
+  #  text: "Products"
 
 navright:
   -
