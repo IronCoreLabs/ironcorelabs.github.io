@@ -13,7 +13,7 @@ excerpt: IronCore Labs is transforming how SaaS companies handle their customers
 # Technology
 ## Prelude: A Manifesto
 
-_We're not doing it right._
+_Software is fragile._
 
 Data is the fuel that powers SaaS.  In the rare instances where the data is encrypted, it's typically just encrypted _"in transit and at rest,"_ which typically translates to _"HTTPS and Transparent Disk Encryption."_ Sadly, these protections are lack cryptographic access controls.
 
@@ -65,7 +65,7 @@ Users and data owners need not know about encryption or keys because the securit
 
 ## Customer Controlled Data
 
-**In the future, each of us will control who can access our data.** 
+**In the future, we will all control who can access our data.** 
 
 Imagine granting your doctor access to your medical records, then revoking that access when you switch doctors. More importantly, suppose you could track other parties with whom your doctor shared data, including insurers, billing companies, cloud software companies, outsourced labs, research institutions, and so on. **You wouldn’t need to just trust these folks with your data: you could monitor how they use it, and you could revoke their access if they abuse the privilege.**
 
@@ -75,7 +75,7 @@ This is why large organizations demand extensive infosec reviews, with lengthy s
 
 ![Provable security: the difference between 'I think' and 'I KNOW'](/img/tech/i-think-vs-i-know.png)
 
-In a world of **customer-controlled data**, organizations organizations no longer need to hope their partners have good-enough security. The security travels with the data, and the usage of that data is monitored. With control comes trust, and trust brings options, flexibility, and, for SaaS vendors who embrace it, more sales.
+In a world of **customer-controlled data**, organizations no longer need to hope their partners have good-enough security. The security travels with the data, and the usage of that data is monitored. With control comes trust, and trust brings options, flexibility, and, for SaaS vendors who embrace it, more sales.
 
 </div>
 {% include slides/slideEnd.html %}
@@ -111,7 +111,7 @@ We do this at scale and without shared secrets. Groups can be any size, even mil
 
 We use a technique that's long been discussed in academia that allows delegation of access. **Academia calls it "proxy re-encryption," but we prefer the more intuitive name, "cryptographic transformation."**  In our case, we use a variant that is unidirectional, multi-hop, and adds multi-party computation to protect group private keys.
 
-In academia, the focus is on delegation, such as when an assistant is empowered to read the boss's encrypted emails. Our improvements optimize for use cases that revolve around access control at scale. Our approach ensures that only certain classes of users can read specific classes of data.
+In academia, the focus is on delegation, such as when an assistant is granted permission to read the boss's encrypted emails. Our improvements optimize for use cases that revolve around access control at scale. Our approach ensures that only certain classes of users can read specific classes of data.
 
 For example, consider the case where we have a Top Secret document and only want users with Top Secret clearance to read it. Suppose Alice and Bob both are members of the TopSecret group. Alice shares a document with the TopSecret group by encrypting the document directly to that group's public key. We use envelope encryption, so an AES-256 symmetric key encrypts the document and that key is itself encrypted to the TopSecret group public key.
 
@@ -160,7 +160,7 @@ ironsdk.document.decryptFromStore("docID")
   }).catch(notifyFetchFailureFn);
 ```
 
-Users and groups are identified using IDs that are provided by the system that embeds the IronCore SDK; IronCore uses these provided IDs, so you don’t need to perform any mapping between systems. To create a document and then share it with one or more users or groups, the code would work like this:
+Users and groups are identified using IDs that are provided by the system that embeds the IronCore SDK; IronCore uses these provided IDs, so you don’t need to perform any mapping between systems. To create a document and then share it with one or more users or groups, the code works like this:
 
 ```javascript
 ironsdk.document.encryptToStore("docID", toBytes(data))
@@ -205,5 +205,5 @@ To add controlled data into an application, the developer only needs to consider
   background="/img/tech/laptop-cliff.jpg" 
   hidecheckboxes=true
   subhead="Get Early Access"
-  header="Waiting List"
+  header="Join Waiting List"
 %}
