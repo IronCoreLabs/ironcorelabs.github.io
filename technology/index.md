@@ -15,7 +15,7 @@ excerpt: IronCore Labs is transforming how SaaS companies handle their customers
 
 _Software is fragile._
 
-Data is the fuel that powers SaaS.  In the rare instances where the data is encrypted, it's typically just encrypted _"in transit and at rest,"_ which typically translates to _"HTTPS and Transparent Disk Encryption."_ Sadly, these protections are lack cryptographic access controls.
+Data is the fuel that powers SaaS.  In the rare instances where the data is encrypted, it's typically just encrypted _"in transit and at rest,"_ which typically translates to _"HTTPS and Transparent Disk Encryption."_ Sadly, these protections lack cryptographic access controls.
 
 Transparent disk encryption leaves data just as visible to an attacker as to a legitimate user. HTTPS isn't much better. It stops casual interception of data, but it doesn't ensure that the person receiving data should be allowed access. It also fails to secure the data at the endpoints.
 
