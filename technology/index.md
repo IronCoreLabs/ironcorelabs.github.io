@@ -23,9 +23,9 @@ In short, the standard approach to encryption handles two narrow threats: stolen
 
 ![](/img/tech/in-transit-and-at-rest.png)
 
-Most SaaS companies ignore security concerns when they're small. As they grow, they add network perimeter technologies like firewalls and intrusion prevention appliances, security incident event management platforms, and staff to monitor them. For B2B SaaS, this evolution is driven by larger customers that demand more intense infosecurity reviews during the sales cycle.
+Most SaaS companies ignore security concerns when they're small. As they grow, they add network perimeter technologies like firewalls and intrusion prevention appliances, security incident event management platforms, and staff to monitor them. For B2B SaaS, this evolution is driven by larger customers that demand more intense information security reviews during the sales cycle.
 
-Unfortunately, investing in network perimeter technologies was the solution for a bygone era. Outdated regulations and infosecurity standards assume a network environment of decades past.
+Unfortunately, investing in network perimeter technologies was the solution for a bygone era. Outdated regulations and information security standards assume a network environment of decades past.
 
 ![Graphical timeline of increasing complexity of networks from the 80's until now](/img/tech/data-sharing-complexity-history.png)
 
@@ -71,7 +71,7 @@ Imagine granting your doctor access to your medical records, then revoking that 
 
 Businesses, Governments, and other organizations need to control their data every bit as much as we do. Trusting sensitive data to yet another cloud service provider is a huge leap of faith. Each new service complicates an organization's ability to understand their risks and who has access to their data. Without that understanding, they can't meet contractual and regulatory requirements around privacy and security.
 
-This is why large organizations demand extensive infosec reviews, with lengthy spreadsheets, before purchasing and why, in many cases, they don't even consider a service that might otherwise make them more competitive.
+This is why large organizations demand extensive information security reviews, with lengthy spreadsheets, before purchasing and why, in many cases, they don't even consider a service that might otherwise make them more competitive.
 
 ![Provable security: the difference between 'I think' and 'I KNOW'](/img/tech/i-think-vs-i-know.png)
 
