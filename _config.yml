@@ -115,7 +115,7 @@ kramdown:
   entity_output:  as_char
   toc_levels:     1..6
   smart_quotes:   lsquo,rsquo,ldquo,rdquo
-  parse_block_html: true
+  # parse_block_html: true
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     css_class: 'highlight'
