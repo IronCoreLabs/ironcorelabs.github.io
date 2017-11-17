@@ -645,11 +645,6 @@ code {
   background-color: #eee;
 }
 
-pre > code {
-  font-size: 110%;
-  line-height: 150%;
-}
-
 .contactButtons {
   li {
     display: inline-block;
@@ -729,15 +724,15 @@ input:focus:valid {
   border: 1px solid $green;
   box-shadow: 0 0 10px $green;
 }
-.highlight .gutter {
+div.highlight .gutter, div.highlight .rouge-gutter {
   color: #999;
   padding-right: 1em;
 }
 
 .highlight {
-  line-height: 1.4em;
+  line-height: 1.2em;
   font-family: $fontMonospace;
-  font-size: 150%;
+  font-size: 1.4rem;
 }
 
 .wrap ul:not(.grid) {
