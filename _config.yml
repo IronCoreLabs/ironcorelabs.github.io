@@ -115,21 +115,24 @@ kramdown:
   entity_output:  as_char
   toc_levels:     1..6
   smart_quotes:   lsquo,rsquo,ldquo,rdquo
-  enable_coderay: true
-
-  coderay:
-    coderay_wrap:              div
-    coderay_line_numbers:      inline
-    coderay_line_number_start: 1
-    coderay_tab_width:         4
-    coderay_bold_every:        10
-    coderay_css:               style
+  parse_block_html: true
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    line_numbers: true
+    start_line: 1
+    wrap: div
+    line_numbers: inline
+    line_number_start: 1
+    tab_width: 4
+    bold_every: 10
+    css: style
 
 jekyll_auth:
   ssl: true
 
 # Use the following plug-ins
-gems:
+plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jemoji
   - jekyll-mentions
