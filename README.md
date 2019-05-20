@@ -111,3 +111,7 @@ In the world of odd, we style based on nth-child CSS selectors so that, for exam
 | Opera   | No                              |
 
 So much for consistency with webkit.  Some standards funkiness here.  I resolved the problem by putting an extra div wrapper around the stripe divs and that seems to have tamed the craziness.
+
+
+Copyright (c)  2018-present  IronCore Labs, Inc.
+All rights reserved.
